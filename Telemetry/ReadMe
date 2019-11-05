@@ -1,0 +1,7 @@
+These peices of code take a .txt file that contains a continuous string of 1s and 0s and encodes them into an image. The output of the encoder is a new image that contains the origional image that has the string of bits encoded into it. The decoder then takes the image as an input and returns a .txt file of the string of bits. The code that accepts 640x480 is able to encode 115200 bits and returns an image that is 660x480 and has redundant storage for each bit. 
+
+The code is still pretty rough as I have not yet commented it nor organized it. This is also my first time using python so some of the convention is probably wrong.
+
+Currently the code is able to handle most exceptions, but if the number of bits isnt divisible by 8, the last byte encoded will be incorrect due to the decoder adding 0s infront of the last couple bits to make it a byte. I will fix this as soon as we determine if we can get the transmission time low enough. Other than that it can handle missing data and missing images as well as not enough data. too much data just causes the extra data on the end to not be encoded.
+
+-Jacob
