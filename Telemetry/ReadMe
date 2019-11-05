@@ -1,3 +1,5 @@
+You will need Python's PILLOW Library for this code to work
+
 These peices of code take a .txt file that contains a continuous string of 1s and 0s and encodes them into an image. The output of the encoder is a new image that contains the origional image that has the string of bits encoded into it. The decoder then takes the image as an input and returns a .txt file of the string of bits. The code that accepts 640x480 is able to encode 115200 bits and returns an image that is 660x480 and has redundant storage for each bit. 
 
 The code is still pretty rough as I have not yet commented it nor organized it. This is also my first time using python so some of the convention is probably wrong.
