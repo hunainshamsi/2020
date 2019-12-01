@@ -42,12 +42,25 @@ void setup() {
 
   // turn on interrupt handler for certain pins - we need to decide which pins will
   // be connected to flight event lines
+
+  Serial.begin(9600);
 }
 
 
 
 void loop() {
 
+  // do the serial stuff with RPI
+  if (Serial.available())
+  {
+    int byte_ = Serial.read();
+    Serial.print((char)byte_);
+    Serial.print(" ");
+    
+    if (byte_ == 'E')
+      Serial.println(" ");
+  }
+  
   switch(mission_state)
   {
     case EXTEND:
