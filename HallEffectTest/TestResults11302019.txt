@@ -1,0 +1,907 @@
+Hall Effect Sensor Test Results
+Success: False
+Unintended behavior:
+Bringing the magnets close to sensor 1 will cause both sensor 1 and 2 to read 0. Bringing the magnets close to sensor 2 will only cause sensor 2 to read 0, which is the desired effect. Bringing the magnets close to sensor 3 will cause all three sensors to read zero. However, there is no false magnet detections in the sense that the retracted status is not activated unless one of the sensors is in the presence of the magnets. Appended is the data from the test. I suspect that the coupling occurs through the ground plane, which is the only common link between the three I can think of. Perhaps further testing connect to the Earth ground will shed light on this occurrence
+
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+326			278			270			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+111			41			198			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			38			188			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			36			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			33			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			32			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			33			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			34			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			35			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			34			176			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			35			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			36			173			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			166			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			164			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			164			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			40			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			167			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			166			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			36			174			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			38			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			37			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			36			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			33			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			33			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+32			7			70			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			3			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+17			1			40			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+48			14			98			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+70			23			136			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+80			27			150			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+84			30			158			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+88			31			163			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+91			33			167			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			34			170			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			36			172			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			37			174			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			38			175			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			39			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			40			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			1			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			1			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+1			1			0			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			1			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+15			7			27			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+30			13			55			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			9			38			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			8			37			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			8			37			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			7			36			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+12			4			23			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+66			24			124			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+78			28			145			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+84			30			155			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+86			30			160			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+88			30			163			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			0			157			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			0			157			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			0			157			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			30			167			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+91			31			171			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			31			172			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			161			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			161			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			161			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			161			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			162			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			162			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			36			175			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			39			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			42			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			0			168			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			0			167			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			38			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			37			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			37			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			36			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			33			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			33			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			32			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			32			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			33			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			36			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			37			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			183			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			40			184			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			42			185			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			43			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			42			187			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+79			31			144			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+55			19			107			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+42			12			90			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+68			22			133			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+77			25			148			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+82			27			156			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+86			29			161			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			32			165			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+92			33			168			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			32			165			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			36			173			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			40			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			0			165			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			0			165			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			40			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			40			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			168			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			167			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			166			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			36			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			37			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			36			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			33			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			34			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			31			173			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			35			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			35			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			35			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			36			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			36			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			37			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			37			185			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			39			184			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			39			184			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			37			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			38			166			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			40			164			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+87			33			152			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+82			31			145			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+69			25			132			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+90			34			164			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			37			174			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			39			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			39			189			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+108			38			196			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			38			195			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+108			38			196			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			33			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			33			176			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			34			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			36			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			35			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+94			35			173			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			36			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			40			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			40			189			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			39			183			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			40			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			39			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			39			189			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			40			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			40			188			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			39			172			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			35			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			34			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			34			183			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			34			184			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+87			29			162			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+90			31			166			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			30			166			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+89			30			165			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+90			31			166			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+92			32			170			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+95			34			175			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+94			34			173			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			35			176			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+97			35			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+98			36			179			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+100			37			181			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			180			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			38			182			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			185			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			41			188			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			39			187			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			40			188			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			41			189			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			42			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			42			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			40			185			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			41			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+109			43			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			41			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			40			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			40			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			40			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			38			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+109			42			194			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			38			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			37			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			36			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			36			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			37			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			37			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			37			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			36			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			38			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+103			36			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			36			191			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			34			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+101			34			188			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			36			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			38			194			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			37			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			37			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			38			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			38			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			38			195			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			194			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+108			40			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			38			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+111			42			199			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+109			41			196			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+111			42			199			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+108			40			194			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+108			40			195			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+107			39			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			37			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+106			38			193			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			38			192			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			36			190			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+18			3			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+27			6			57			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+76			26			145			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+88			31			163			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			33			171			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			34			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+39			13			80			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+79			28			148			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+81			29			150			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+92			32			170			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+96			35			177			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+102			37			184			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+105			40			186			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+104			38			187			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+99			37			178			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+39			13			79			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+35			10			74			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+46			15			93			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+31			8			69			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			5			56			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+10			0			27			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+17			2			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			3			43			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+12			3			22			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			10			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+27			12			51			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			10			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			11			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+26			12			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+26			0			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			0			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			0			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			0			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			0			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			3			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			2			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			1			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			1			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			2			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			2			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			0			43			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			0			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			0			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			0			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			6			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			42			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			42			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+26			10			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			5			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			4			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			5			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			5			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			6			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			50			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			9			50			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			9			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			9			50			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			8			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			8			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+26			10			53			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			6			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			5			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			3			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			5			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+14			0			35			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			3			43			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			4			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			5			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			5			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			6			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			49			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			8			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			7			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			8			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			7			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			8			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			7			48			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			6			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+18			4			39			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			5			44			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			5			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			4			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			3			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			3			43			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			5			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			6			35			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			9			45			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+19			5			39			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+18			4			36			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			17			25			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+10			7			16			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+6			4			10			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			51			154			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+114			44			204			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			0			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+93			37			167			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+132			51			230			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+139			53			244			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+142			54			250			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+143			0			235			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+142			0			235			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+141			52			252			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+143			53			255			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+144			53			256			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+145			54			258			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+145			0			242			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+147			0			243			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+148			0			244			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+149			58			262			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+149			60			262			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			245			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+0			0			247			Y
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+151			61			262			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+88			73			143			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+64			62			112			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+61			64			105			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+76			78			109			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+62			67			100			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+62			67			98			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+50			52			87			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+64			30			68			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+48			28			62			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+40			35			66			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+45			38			68			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+53			45			72			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+60			49			76			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+30			23			58			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+12			19			30			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+28			46			46			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+36			50			53			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+38			50			55			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+45			56			61			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+43			52			58			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+43			50			57			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+43			49			56			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+44			50			57			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+47			52			59			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+45			49			57			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+44			48			56			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			30			47			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			41			53			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+24			42			54			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+22			37			51			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+25			41			53			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+23			39			54			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+28			47			61			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+29			47			62			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+21			41			42			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			41			38			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			42			39			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+17			36			34			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			43			38			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+17			40			36			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+20			45			39			N
+Sensor 1		Sensor 2		Sensor 3		Retracted?
+30			10			60			N
