@@ -54,11 +54,11 @@ void loop() {
   if (Serial.available())
   {
     int byte_ = Serial.read();
-    Serial.print((char)byte_);
-    Serial.print(" ");
     
     if (byte_ == 'E')
       Serial.println(" ");
+    else
+      Serial.print((char)byte_); 
   }
   
   switch(mission_state)

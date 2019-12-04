@@ -1,42 +1,72 @@
-from __future__ import print_function
-
 import cv2
 import numpy as np
 #from matplotlib import pyplot as plt
 
 import serial
 from time import sleep
+import os, datetime
+
+
+# pi camera stuff
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+
+
+BLUR_RADIUS = 31
+FRAME_RATE = 30
+
 
 port = "/dev/ttyACM0"
 baudrate = 9600
 
+#ser = serial.Serial(port, baudrate)
 
-ser = serial.Serial(port, baudrate)
-
-
-
-
-while True:
-    sleep(1)
+cam = PiCamera()
+cam.resolution = (640, 480) # this is enough
+cam.framerate = FRAME_RATE
+rawCapture = PiRGBArray(cam, size=(640, 480))
+sleep(0.1)
     
-    img = cv2.imread('sun_1.png',0)
-    img2 = img.copy()
-    template = cv2.imread('template.png',0)
-    w, h = template.shape[::-1]
-      
-    img = img2.copy()
-
-    # Apply template Matching
-    res = cv2.matchTemplate(img,template,cv2.TM_CCOEFF_NORMED)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-
-    tx_str = str(max_loc[0]) + " " + str(max_loc[1]) + "E"
-    b = bytes(tx_str, 'utf-8')
-    ser.write(b)
-    print("sent: ", max_loc)
-
+count = 0
+for frame in cam.capture_continuous(rawCapture ,format="rgb", use_video_port=True):
+    img = frame.array
     
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
+    # grayscale and blur to avoid noise disrupting readings
+    bw = img.copy()    
+    bw = cv2.cvtColor(bw, cv2.COLOR_RGB2GRAY)
+    bw = cv2.GaussianBlur(bw, (BLUR_RADIUS, BLUR_RADIUS), 0)
+    (minV, maxV, minL, maxL) = cv2.minMaxLoc(bw)
+    
+    
+    filename = 'outputs/raw_%09d.png'%count
+    cv2.imwrite(filename, img)
+    
+    # annotate with a circle
+    cv2.circle(img, maxL, BLUR_RADIUS, (255, 0, 0), 2)
+    
+    #filename = 'outputs/annot_%09d.png'%count
+    #cv2.imwrite(filename, img)
+    count += 1
+
+    cv2.imshow("RESULT", img)
+    key = cv2.waitKey(1) & 0xFF
+    
+    rawCapture.truncate(0)
+    
+    if key == ord("q"):
+        break
+
+# turn the image sequences into video
+t = datetime.datetime.now().strftime("%H_%M_%S")
+
+os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/raw_"+t+".mp4")
+#os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/annotated_"+str(datetime.time())+".mp4")
+
+os.system("rm outputs/*.png")
+
+# OLD METHOD - too complex, too slow, and template needs to be exact...
 '''
 img = cv2.imread('sun_1.png',0)
 img2 = img.copy()
