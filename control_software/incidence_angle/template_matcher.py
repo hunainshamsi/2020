@@ -12,14 +12,14 @@ from picamera.array import PiRGBArray
 from picamera import PiCamera
 
 
-BLUR_RADIUS = 31
+BLUR_RADIUS = 65
 FRAME_RATE = 30
 
 
 port = "/dev/ttyACM0"
 baudrate = 9600
 
-#ser = serial.Serial(port, baudrate)
+ser = serial.Serial(port, baudrate)
 
 cam = PiCamera()
 cam.resolution = (640, 480) # this is enough
@@ -39,15 +39,17 @@ for frame in cam.capture_continuous(rawCapture ,format="rgb", use_video_port=Tru
     bw = cv2.GaussianBlur(bw, (BLUR_RADIUS, BLUR_RADIUS), 0)
     (minV, maxV, minL, maxL) = cv2.minMaxLoc(bw)
     
+    data_packet = str(maxL)
+    ser.write(data_packet.encode('utf-8'))
     
-    filename = 'outputs/raw_%09d.png'%count
-    cv2.imwrite(filename, img)
+    #filename = 'outputs/raw_%09d.png'%count
+    #cv2.imwrite(filename, img)
     
     # annotate with a circle
     cv2.circle(img, maxL, BLUR_RADIUS, (255, 0, 0), 2)
     
-    #filename = 'outputs/annot_%09d.png'%count
-    #cv2.imwrite(filename, img)
+    filename = 'outputs/annot_%09d.png'%count
+    cv2.imwrite(filename, img)
     count += 1
 
     cv2.imshow("RESULT", img)
@@ -61,10 +63,10 @@ for frame in cam.capture_continuous(rawCapture ,format="rgb", use_video_port=Tru
 # turn the image sequences into video
 t = datetime.datetime.now().strftime("%H_%M_%S")
 
-os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/raw_"+t+".mp4")
+#os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/raw_"+t+".mp4")
 #os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/annotated_"+str(datetime.time())+".mp4")
 
-os.system("rm outputs/*.png")
+#os.system("rm outputs/*.png")
 
 # OLD METHOD - too complex, too slow, and template needs to be exact...
 '''
