@@ -1,0 +1,474 @@
+@import url(bootstrap.css);
+html, body {
+	overflow-x: hidden;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	height: 100%;
+	padding-top: 45px; 
+	background-color: #eee!important;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+	font-family: 'Montserrat', sans-serif!important;
+}
+
+p{
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 0px!important;
+}
+
+a.hide-a {
+	text-decoration: none;
+	color: white;
+}
+
+a.hide-a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+*:focus {
+    outline: none!important;
+}
+
+.navbar-padding-right {
+	padding-right: 5px;
+}
+
+.jumbotron-index {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/index_Cover.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-projects {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2015/rocksat2015Background.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-about {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 65%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/index_Cover.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2014 {
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	height: 500px;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2014/teamphoto.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2015 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/members_jumbo.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2016 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2016/team_photo.jpg");
+	margin-bottom: 0px!important;
+}
+
+.about-body {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #424242;
+	color: #eee;
+}
+
+.about-text-block {
+		font-size: 1.2em;
+}
+
+.projects-text-block {
+		font-size: 1.1em;
+}
+
+.body-text > h1 {
+	font-size: 5.0em;
+	color: #cbb;
+	font-family: 'Lora', serif!important;
+}
+
+.body-text {
+	padding-top: 150px;
+}
+
+.projects-body {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	background-color: #424242;
+	color: white;
+}
+
+.jumbotron-members {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 65%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	background-image: url("../images/team_working.jpg");
+	margin-bottom: 0px!important;
+}
+
+.index-carousel {
+	height: 75%;
+}
+
+.great-minds {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.h1-great-minds {
+	font-family: 'Roboto', sans-serif!important;
+	font-size: 3.5em;
+}
+
+.h1-sponsers {
+	font-size: 3.0em;
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+.hr-home{
+	border: 0;
+    height: 1px;
+    background: #333;
+}
+
+.hr-projects{
+	border: 0;
+    height: 1px;
+    background: #eee;
+}
+
+.hr-about{
+	border: 0;
+    height: 1px;
+    background: #bbd;
+}
+
+.hr-body {
+	border-bottom: 4px solid #bbb;
+}
+
+.jumbotron > .overlay > .container {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin: auto;
+	color: white;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+	width: 600px;
+	height: 210px;
+}
+
+.jumbotron > .overlay-index > .index-tour {
+	position: absolute;
+	color: white;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.index-tour {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.index-main-overlay {
+	margin-top: 100px;
+	color: white;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.index-content-1 {
+	min-height: 500px;
+	background-color: #1D2D53;
+}
+
+.index-content-2 {
+	min-height: 500px;
+	background-color: #424242;
+}
+
+.index-projects-block {
+	color: white;
+	padding-top: 50px;
+	font-family: 'Montserrat', sans-serif!important;
+}
+
+.index-projects-block-1 {
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-family: 'Montserrat', sans-serif!important;
+}
+
+.index-projects-block-2 {
+	padding-bottom: 50px;
+}
+
+.index-content-3 {
+	position: relative;
+	background-color: #422828;
+}
+
+.index-member-block {
+	color: white;
+	padding-top: 50px;
+}
+
+.index-members-padding {
+	padding-bottom: 20px;
+}
+
+.img-rocksat-logos {
+	border-radius: 50%;
+	display: block;
+	margin: 20px auto;
+	max-width: 80%;
+}
+
+.img-payload {
+	margin-bottom: 20px;
+	max-height: 750px;
+}
+
+.index-content-3 > h1{
+	font-family: 'Montserrat', sans-serif!important;
+}
+
+.index-content-3-btn{
+	padding-bottom: 50px;
+}
+
+.layered-content {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	background-color: #E8E8E8;
+	position:relative;
+}
+
+.layered-projects {
+	padding-top: 10px;
+	position:relative;
+}
+
+.spec-table {
+	width: 75%;
+	color: black;
+}
+
+.img-center {
+	display: block;
+	margin: 0 auto;
+}
+
+.fill-page {
+	min-height: 100%;
+}
+
+.fa-envelope-square {
+	color: #db4437;
+	padding-left: 10px;
+}
+
+.fa-facebook-square {
+	color: #3b5998;
+	padding-left: 10px;
+}
+
+.fa-twitter-square {
+	color: #55acee;
+	padding-left: 10px;
+}
+
+.fa-instagram {
+	color: #00FFFF;
+	padding-left: 10px;
+}
+
+.members-thumbnail {
+	margin-top: 30px;
+	height: 275px;
+	width: 225px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.members-margin {
+	padding-top: 20px;
+}
+
+.members-name {
+	padding-top: 10px;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.members-info {
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.member-holder {
+	background-image: url("../images/members/holder.jpg");
+}
+
+.footer {
+	background-color: rgb(34, 34, 34);
+	border-color: #52b88b;
+	padding-bottom: 5px;
+}
+
+.layered-footer {
+	margin: 10px 20px;
+}
+
+.footer-text {
+	color: #ecf0f1;
+	font-size: 1.1em;
+	text-align: left;
+	padding-bottom: 5px;
+}
+
+.footer-pull {
+	text-align: right;
+}
+
+@media (max-width: 1000px) {
+	.footer-text {
+		text-align: center;
+	}
+	.footer-pull {
+		text-align: center;
+	}
+}
+
+#index-tour {
+	cursor: pointer;
+}
+
+.custom-btn {
+	background-image: linear-gradient(#660000 0px, #660000 100%)!important;
+	border-bottom-color: #660000!important;
+	background-color: #660000!important;
+	border-left-color: #660000!important;
+	border-right-color: #660000!important;
+	border-top-color: #660000!important;
+}
+
+
+.logo-header {
+	margin-right:10px;
+	margin-top: -10px;
+	float: left;
+	padding-bottom: 5px;
+}
+
+.btn-index { 
+  color: #ffffff; 
+  background-color: #222222; 
+  border-color: #222222; 
+} 
+ 
+.btn-index:hover, 
+.btn-index:focus, 
+.btn-index:active, 
+.btn-index.active, 
+.open .dropdown-toggle.btn-index { 
+  color: #ffffff!important; 
+  background-color: #161616; 
+  border-color: #222222; 
+} 
+ 
+.btn-index:active, 
+.btn-index.active, 
+.open .dropdown-toggle.btn-index { 
+  background-image: none; 
+} 
+ 
+.btn-index.disabled, 
+.btn-index[disabled], 
+fieldset[disabled] .btn-index, 
+.btn-index.disabled:hover, 
+.btn-index[disabled]:hover, 
+fieldset[disabled] .btn-index:hover, 
+.btn-index.disabled:focus, 
+.btn-index[disabled]:focus, 
+fieldset[disabled] .btn-index:focus, 
+.btn-index.disabled:active, 
+.btn-index[disabled]:active, 
+fieldset[disabled] .btn-index:active, 
+.btn-index.disabled.active, 
+.btn-index[disabled].active, 
+fieldset[disabled] .btn-index.active { 
+  background-color: #222222; 
+  border-color: #222222; 
+} 
+ 
+.btn-index .badge { 
+  color: #222222; 
+  background-color: #ffffff; 
+}
