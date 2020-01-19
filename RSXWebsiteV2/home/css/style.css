@@ -106,7 +106,7 @@ a.hide-a:hover{
 	position: relative;
 	padding-left: 0;
 	padding: 0;
-	background-image: url("../images/members_jumbo.jpg");
+	background-image: url("../images/rocksat-2015/members_jumbo.jpg");
 	margin-bottom: 0px!important;
 }
 
@@ -121,6 +121,48 @@ a.hide-a:hover{
 	padding-left: 0;
 	padding: 0;
 	background-image: url("../images/rocksat-2016/team_photo.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2017 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2017/team_photo.jpg");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2018 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2018/team_photo.png");
+	margin-bottom: 0px!important;
+}
+
+.jumbotron-2020 {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 90%;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	padding-left: 0;
+	padding: 0;
+	background-image: url("../images/rocksat-2020/team_photo.png");
 	margin-bottom: 0px!important;
 }
 
