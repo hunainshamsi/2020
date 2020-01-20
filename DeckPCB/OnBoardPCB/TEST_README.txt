@@ -1,0 +1,1 @@
+TEST README for confirming that GIT command line is working.
