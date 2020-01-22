@@ -414,8 +414,21 @@ a.hide-a:hover{
 	text-align: center;
 }
 
+.members-leadinfo {
+	font-size: 1.6em;
+	text-align: center;
+}
+
 .member-holder {
 	background-image: url("../images/members/holder.jpg");
+}
+
+.member-krisstone {
+	background-image: url("../images/members/KrisStone.png");
+}
+
+.member-brennanrausch {
+	background-image: url("../images/members/BrennanRausch.jpg");
 }
 
 .footer {
