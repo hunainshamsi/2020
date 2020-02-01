@@ -53,12 +53,11 @@ void setup() {
 
 
 void loop() {
-  uint16_t temp = readTempSensor(); // conversion will happen in these functions
+  
+  // read all the sensor data
+  uint16_t temp = readTempSensor();ns
   Accel_Data accel = readAccelData();
-
-  // has this been descoped?
   uint8_t range = readRangeFinder();
-
   Panel_Power_Data panel_power = readPanelData();
 
   // Now, we need to put all this data into a serial frame which we will send to the Pi
@@ -72,25 +71,10 @@ void loop() {
     else
       turnStepper(1); // command RETRACT
   }
-  
-  int photo_diode = analogRead(0);
-  
-  Serial.print(photo_diode);
-  Serial.println("");
-  
-  // dummy task for now - echo data out
-  // do the serial stuff with RPI
-//  if (Serial.available())
-//  {
-//    int byte_ = Serial.read();
-//    
-//    if (byte_ == 'E')
-//      Serial.println(" ");
-//    else
-//      Serial.print((char)byte_); 
-//  }
 }
 
+
+// TODO
 void writeOLEDMsg(uint8_t * msg)
 {
   
@@ -99,7 +83,14 @@ void writeOLEDMsg(uint8_t * msg)
 
 void sensorDataToPi(uint16_t temp, Accel_Data accel, uint8_t range, Panel_Power_Data panel_power)
 {
+  // tentative packet format: temp, a_x, a_y, a_z, range, volt, curr, \n
+  char buffer[100];
+  int volt_dec = 1000*(panel_power.voltage - (int)panel_power.voltage);
+  int curr_dec = 1000*(panel_power.current - (int)panel_power.current);
+  sprintf(buffer, "%d, %d, %d, %d, %d, %0d.%d, %0d.%d\n", temp, accel.x, accel.y, accel.z,
+            range, (int)panel_power.voltage, volt_dec, (int)panel_power.current, curr_dec);
   
+  Serial.write(buffer);
 }
 
 
@@ -130,8 +121,8 @@ Panel_Power_Data readPanelData()
 {
   // analog reads
   Panel_Power_Data power;
-  power.voltage = 0;
-  power.current = 0;
+  power.voltage = 0.0;
+  power.current = 0.0;
 
   return power;
 }
