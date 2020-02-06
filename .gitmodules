@@ -1,0 +1,3 @@
+[submodule "DeckPCB/Deck_Plate_PCB/Default_Footprint_Libraries/kicad-footprints"]
+	path = DeckPCB/Deck_Plate_PCB/Default_Footprint_Libraries/kicad-footprints
+	url = https://github.com/KiCad/kicad-footprints.git
