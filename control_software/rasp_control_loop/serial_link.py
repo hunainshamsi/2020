@@ -1,4 +1,4 @@
-import serial, binascii, os
+import serial, binascii, os, cv2 # cv2 just for debugging
 
 class SerialConnection:
 	# open the serial connection
@@ -20,32 +20,35 @@ class SerialConnection:
 			pack = data_packet.decode('utf-8')
 			pack = pack[0:len(pack)-2]
 			
-			print(pack)
-
 			# call the function to receive an image
 			if (pack == 'SNAP'):
 				self.receive_image()
 				
 	# specialized function to recieve full image
-	def receive_image(self):
-		img_file = open("test_img.jpg", "w")
-				
+	def receive_image(self):				
 		data_in = ''
-		
 		while True:
 			addon = self.seri.readline().decode('utf-8')[0:-2]
-			print(addon)
 			
 			if addon != 'DONE':
 				data_in = data_in + addon
 			else:
 				break
-		
-		print(data_in)
 
 		data_in = binascii.a2b_hex(data_in)
 		
-		filename = "ttl_images/1.jpg"
+		# save images sequentially
+		ind = 0
+		for filen in os.listdir('outputs/ttl_images'):
+			num = int(filen.split('.')[0])
+			if num > ind:
+				ind = num
+		filename = "outputs/ttl_images/%09d.jpg"%(ind+1)
 		
 		with open(filename, "wb") as f:
 			f.write(data_in)
+			
+		cur_img = cv2.imread(filename, cv2.IMREAD_COLOR)
+		# show the image, but this is for debugging - won't do this in flight.
+		cv2.imshow("cur_img", cur_img)
+		key = cv2.waitKey(1) & 0xFF

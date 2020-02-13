@@ -103,6 +103,7 @@ void sensorDataToPi(uint16_t temp, Accel_Data accel, uint8_t range, Panel_Power_
 
 void TTLImageToPi()
 {
+  Serial.println("SNAP");
   uint16_t jpglen = cam.frameLength();
 
   // Read all the data up to # bytes!
@@ -134,6 +135,8 @@ void TTLImageToPi()
 // only thing we have to do here, we will read image in the sending part
 bool takeTTLPicture()
 {
+  cam.begin();
+  delay(500); // to be safe, we can afford it
   return cam.takePicture();
 }
 
