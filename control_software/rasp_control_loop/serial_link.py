@@ -1,4 +1,4 @@
-import serial
+import serial, binascii, os
 
 class SerialConnection:
 	# open the serial connection
@@ -17,4 +17,35 @@ class SerialConnection:
 			
 			# TODO
 			# eventually, we'll probably write this to a file
-			print(data_packet.decode('utf-8'))
+			pack = data_packet.decode('utf-8')
+			pack = pack[0:len(pack)-2]
+			
+			print(pack)
+
+			# call the function to receive an image
+			if (pack == 'SNAP'):
+				self.receive_image()
+				
+	# specialized function to recieve full image
+	def receive_image(self):
+		img_file = open("test_img.jpg", "w")
+				
+		data_in = ''
+		
+		while True:
+			addon = self.seri.readline().decode('utf-8')[0:-2]
+			print(addon)
+			
+			if addon != 'DONE':
+				data_in = data_in + addon
+			else:
+				break
+		
+		print(data_in)
+
+		data_in = binascii.a2b_hex(data_in)
+		
+		filename = "ttl_images/1.jpg"
+		
+		with open(filename, "wb") as f:
+			f.write(data_in)

@@ -39,20 +39,20 @@ class IncidenceAngleCamera:
 			(minV, maxV, minL, maxL) = cv2.minMaxLoc(bw)
 			
 			# push the raw image to a file
-			filename = 'outputs/raw_%09d.png'%count
+			filename = 'outputs/raspi_images/raw/%09d.png'%count
 			cv2.imwrite(filename, cur_img)
 			
 			# annotate with a circle
 			cv2.circle(cur_img, maxL, 10, (255, 0, 0), 2)
 			
 			# push the annotated image to a file
-			filename = 'outputs/annot_%09d.png'%count
+			filename = 'outputs/raspi_images/annotated/%09d.png'%count
 			cv2.imwrite(filename, cur_img)
 			
 			# increment count for next image write
 			count += 1
 			
-			# show the image, but this is for debugging
+			# show the image, but this is for debugging - won't do this in flight.
 			cv2.imshow("cur_img", cur_img)
 			self.capture.truncate(0)
 			key = cv2.waitKey(1) & 0xFF
@@ -67,7 +67,7 @@ class IncidenceAngleCamera:
 	def make_video_from_images(self):
 		t = datetime.datetime.now().strftime("%H_%M_%S")
 
-		os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/raw_"+t+".mp4")
-		os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raw_%09d.png -vcodec png -y outputs/annotated_"+str(datetime.time())+".mp4")
+		os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raspi_images/raw/%09d.png -vcodec png -y outputs/VIDEO/raw_"+t+".mp4")
+		os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raspi_images/annotated/%09d.png -vcodec png -y outputs/VIDEO/annotated/"+t+".mp4")
 
-		os.system("rm outputs/*.png")
+		os.system("rm outputs/raspi_images/*.png")

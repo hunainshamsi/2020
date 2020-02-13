@@ -13,17 +13,16 @@ img_dim = [240, 120]
 
 # parameters for serial link
 port = "/dev/ttyACM0"
-baud = 9600
-
-
-
-
+baud = 115200
 
 
 if __name__ == "__main__":
-
+ 
     # open the serial link using our class
     ser = SerialConnection(port, baud)
+    
+    # dummy test to try to receive an image
+    ser.receive_bytes()
 
     cam = IncidenceAngleCamera(blur_radius, img_dim[0], img_dim[1])
 
