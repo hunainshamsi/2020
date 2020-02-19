@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name Logic_Level_Bidirectional)(type KiCad)(uri "$(KIPRJMOD)/Logic_Level_Bidirectional.pretty")(options "")(descr ""))
-)

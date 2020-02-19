@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Logic_Level_Bidirectional-eagle-import)(type Legacy)(uri ${KIPRJMOD}/Logic_Level_Bidirectional-eagle-import.lib)(options "")(descr ""))
-)

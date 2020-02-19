@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "mar. 31 mars 2015"
-Rev ""
-Comp ""
+Title "VT RockSat-X 2020 Payload PCB"
+Date "2020-02-11"
+Rev "A"
+Comp "Virginia Tech RockSat-X"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -164,7 +164,7 @@ Text Label 10400 1150 0    60   ~ 0
 SCL
 Text Label 10400 1350 0    60   ~ 0
 AREF
-Text Notes 8375 575  0    60   ~ 0
+Text Notes 8450 650  0    79   Italic 16
 Shield for Arduino Mega Rev 3
 Text Notes 10700 1000 0    60   ~ 0
 Holes
@@ -375,10 +375,6 @@ Wire Notes Line
 	10450 1000 10450 500 
 Wire Notes Line
 	11200 1000 10450 1000
-Wire Notes Line
-	9850 650  9850 475 
-Wire Notes Line
-	8350 650  9850 650 
 Wire Wire Line
 	9100 1650 9350 1650
 Wire Wire Line
@@ -597,67 +593,1321 @@ Wire Notes Line
 $Comp
 L INA219_Breakout:Adafruit_INA219_Breakout U1
 U 1 1 5E3EA18F
-P 1250 1050
-F 0 "U1" H 1350 700 50  0000 L CNN
-F 1 "Adafruit_INA219_Breakout" H 850 1450 50  0000 L CNN
-F 2 "Deck_Plate_PCB:Adafruit_INA219_Breakout_header" H 1200 1050 50  0001 C CNN
-F 3 "" H 1200 1050 50  0001 C CNN
-	1    1250 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:DB37_Female_MountingHoles J1
-U 1 1 5E3F281B
-P 2700 7350
-F 0 "J1" V 2900 9200 50  0000 C CNN
-F 1 "DB37_Female_MountingHoles" V 2900 6100 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-37_Female_Vertical_P2.77x2.84mm_MountingHoles" H 2700 7350 50  0001 C CNN
-F 3 " ~" H 2700 7350 50  0001 C CNN
-	1    2700 7350
-	0    1    1    0   
-$EndComp
-$Comp
-L Regulator_Switching:LM2576T-5 U2
-U 1 1 5E3CA0E6
-P 1550 5100
-F 0 "U2" H 1900 4850 50  0000 C CNN
-F 1 "LM2576T-5" H 1350 5350 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 1550 4850 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 1550 5100 50  0001 C CNN
-	1    1550 5100
-	1    0    0    -1  
+P 2350 3250
+F 0 "U1" H 2300 3600 50  0000 L CNN
+F 1 "Adafruit_INA219_Breakout" H 1600 2900 50  0000 L CNN
+F 2 "Deck_Plate_PCB:Adafruit_INA219_Breakout_header" H 2300 3250 50  0001 C CNN
+F 3 "" H 2300 3250 50  0001 C CNN
+	1    2350 3250
+	-1   0    0    1   
 $EndComp
 $Comp
 L Deck_Plate_PCB:D24V25F9 U3
 U 1 1 5E3CFF0D
-P 2700 4900
-F 0 "U3" H 2950 4400 50  0000 L CNN
-F 1 "D24V25F9" H 2800 5000 50  0000 L CNN
-F 2 "Deck_Plate_PCB:D24V25F9" H 2700 4900 50  0001 C CNN
-F 3 "https://www.pololu.com/product/2854" H 2700 4900 50  0001 C CNN
-	1    2700 4900
+P 3750 1250
+F 0 "U3" H 3850 1350 50  0000 L CNN
+F 1 "D24V25F9" H 3750 750 50  0000 L CNN
+F 2 "Deck_Plate_PCB:D24V25F9" H 3750 1250 50  0001 C CNN
+F 3 "https://www.pololu.com/product/2854" H 3750 1250 50  0001 C CNN
+	1    3750 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Deck_Plate_PCB:SunnyBuddy_Breakout U4
+U 1 1 5E3E5578
+P 650 3450
+F 0 "U4" H 1600 3500 50  0000 L CNN
+F 1 "SunnyBuddy_Breakout" H 1200 4000 50  0000 L CNN
+F 2 "Deck_Plate_PCB:SunnyBuddy_Breakout" H 1100 3900 50  0001 C CNN
+F 3 "https://www.sparkfun.com/products/12885" H 1100 3900 50  0001 C CNN
+	1    650  3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:DB15_Female_MountingHoles J2
-U 1 1 5E3DC5D1
-P 5700 7350
-F 0 "J2" V 5900 8100 50  0000 C CNN
-F 1 "DB15_Female_MountingHoles" V 5900 7200 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-15_Female_Vertical_P2.77x2.84mm_MountingHoles" H 5700 7350 50  0001 C CNN
-F 3 " ~" H 5700 7350 50  0001 C CNN
-	1    5700 7350
+L Regulator_Switching:LM2576T-5 U5
+U 1 1 5E43EF8B
+P 1550 1000
+F 0 "U5" H 1900 750 50  0000 C CNN
+F 1 "LM2576T-5" H 1350 1250 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 1550 750 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 1550 1000 50  0001 C CNN
+	1    1550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Deck_Plate_PCB:LIDAR-LITE_V4_Range U7
+U 1 1 5E458126
+P 450 5350
+F 0 "U7" H 1850 5550 50  0000 C CNN
+F 1 "LIDAR-LITE_V4_Range" H 1550 6450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1900 6300 50  0001 C CNN
+F 3 "https://static.garmin.com/pumac/LIDAR-Lite%20LED%20v4%20Instructions_EN-US.pdf" H 1900 6300 50  0001 C CNN
+	1    450  5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB37_Male_MountingHoles J2
+U 1 1 5E4749AA
+P 2650 7300
+F 0 "J2" V 2875 7268 50  0000 C CNN
+F 1 "DB37_Male_MountingHoles" V 2966 7268 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-37_Male_Vertical_P2.77x2.84mm_MountingHoles" H 2650 7300 50  0001 C CNN
+F 3 " ~" H 2650 7300 50  0001 C CNN
+	1    2650 7300
 	0    1    1    0   
 $EndComp
 $Comp
-L Deck_Plate_PCB:SunnyBuddy_Breakout U?
-U 1 1 5E3E5578
-P 550 4550
-F 0 "U?" H 1500 4600 50  0000 L CNN
-F 1 "SunnyBuddy_Breakout" H 1100 5100 50  0000 L CNN
-F 2 "" H 1000 5000 50  0001 C CNN
-F 3 "" H 1000 5000 50  0001 C CNN
-	1    550  4550
+L Connector:DB15_Male_MountingHoles J3
+U 1 1 5E47F177
+P 5950 7300
+F 0 "J3" V 6149 7255 50  0000 C CNN
+F 1 "DB15_Male_MountingHoles" V 6240 7255 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-15_Male_Vertical_P2.77x2.84mm_MountingHoles" H 5950 7300 50  0001 C CNN
+F 3 " ~" H 5950 7300 50  0001 C CNN
+	1    5950 7300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 1150 3900 1150
+Text Label 3900 1150 0    50   ~ 0
+NASA_28V
+$Comp
+L power:GND #PWR?
+U 1 1 5E497F61
+P 3900 1000
+F 0 "#PWR?" H 3900 750 50  0001 C CNN
+F 1 "GND" V 3905 872 50  0000 R CNN
+F 2 "" H 3900 1000 50  0001 C CNN
+F 3 "" H 3900 1000 50  0001 C CNN
+	1    3900 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 1050 3900 1050
+Wire Wire Line
+	3750 950  3750 1050
+Connection ~ 3750 1050
+Wire Wire Line
+	3750 850  3900 850 
+Text Label 3900 850  0    50   ~ 0
+9V_Bus
+Wire Wire Line
+	3750 1250 3800 1250
+NoConn ~ 3800 1250
+Wire Wire Line
+	1050 900  900  900 
+Wire Wire Line
+	2050 1100 2200 1100
+Wire Wire Line
+	2050 900  2200 900 
+Text Label 900  900  2    50   ~ 0
+NASA_28V
+$Comp
+L power:GND #PWR?
+U 1 1 5E4BE0DA
+P 1550 1400
+F 0 "#PWR?" H 1550 1150 50  0001 C CNN
+F 1 "GND" H 1555 1227 50  0000 C CNN
+F 2 "" H 1550 1400 50  0001 C CNN
+F 3 "" H 1550 1400 50  0001 C CNN
+	1    1550 1400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1550 1400 1550 1300
+Wire Wire Line
+	1050 1100 1050 1300
+Wire Wire Line
+	1050 1300 1550 1300
+Connection ~ 1550 1300
+$Comp
+L Device:L L?
+U 1 1 5E4D2D47
+P 2350 950
+F 0 "L?" H 2402 996 50  0000 L CNN
+F 1 "100uH" H 2402 905 50  0000 L CNN
+F 2 "" H 2350 950 50  0001 C CNN
+F 3 "~" H 2350 950 50  0001 C CNN
+	1    2350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D?
+U 1 1 5E4D4C4D
+P 2200 1250
+F 0 "D?" V 2154 1329 50  0000 L CNN
+F 1 "1N5822" V 2245 1329 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2200 1075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2200 1250 50  0001 C CNN
+	1    2200 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 1100 2350 1100
+Connection ~ 2200 1100
+Wire Wire Line
+	2200 900  2200 800 
+Wire Wire Line
+	2200 800  2350 800 
+$Comp
+L Device:C C?
+U 1 1 5E4DEAED
+P 2750 950
+F 0 "C?" H 2865 996 50  0000 L CNN
+F 1 "1000uF" H 2865 905 50  0000 L CNN
+F 2 "" H 2788 800 50  0001 C CNN
+F 3 "~" H 2750 950 50  0001 C CNN
+	1    2750 950 
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 800 
+Wire Wire Line
+	2350 800  2750 800 
+Wire Wire Line
+	2750 1400 2750 1100
+Wire Wire Line
+	2200 1400 2750 1400
+Wire Wire Line
+	2750 800  2950 800 
+Connection ~ 2750 800 
+Text Label 2950 800  0    50   ~ 0
+5V_Bus_1
+$Comp
+L Regulator_Switching:LM2576T-5 U?
+U 1 1 5E50A4EC
+P 1550 1950
+F 0 "U?" H 1900 1700 50  0000 C CNN
+F 1 "LM2576T-5" H 1350 2200 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 1550 1700 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2576.pdf" H 1550 1950 50  0001 C CNN
+	1    1550 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1850 900  1850
+Wire Wire Line
+	2050 2050 2200 2050
+Wire Wire Line
+	2050 1850 2200 1850
+Text Label 900  1850 2    50   ~ 0
+NASA_28V
+$Comp
+L power:GND #PWR?
+U 1 1 5E50A4FA
+P 1550 2350
+F 0 "#PWR?" H 1550 2100 50  0001 C CNN
+F 1 "GND" H 1555 2177 50  0000 C CNN
+F 2 "" H 1550 2350 50  0001 C CNN
+F 3 "" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2350 1550 2250
+Wire Wire Line
+	1050 2050 1050 2250
+Wire Wire Line
+	1050 2250 1550 2250
+Connection ~ 1550 2250
+$Comp
+L Device:L L?
+U 1 1 5E50A508
+P 2350 1900
+F 0 "L?" H 2402 1946 50  0000 L CNN
+F 1 "100uH" H 2402 1855 50  0000 L CNN
+F 2 "" H 2350 1900 50  0001 C CNN
+F 3 "~" H 2350 1900 50  0001 C CNN
+	1    2350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5822 D?
+U 1 1 5E50A512
+P 2200 2200
+F 0 "D?" V 2154 2279 50  0000 L CNN
+F 1 "1N5822" V 2245 2279 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2200 2025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 2200 2200 50  0001 C CNN
+	1    2200 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 2050 2350 2050
+Connection ~ 2200 2050
+Wire Wire Line
+	2200 1850 2200 1750
+Wire Wire Line
+	2200 1750 2350 1750
+$Comp
+L Device:C C?
+U 1 1 5E50A520
+P 2750 1900
+F 0 "C?" H 2865 1946 50  0000 L CNN
+F 1 "1000uF" H 2865 1855 50  0000 L CNN
+F 2 "" H 2788 1750 50  0001 C CNN
+F 3 "~" H 2750 1900 50  0001 C CNN
+	1    2750 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 1750
+Wire Wire Line
+	2350 1750 2750 1750
+Wire Wire Line
+	2750 2350 2750 2050
+Wire Wire Line
+	2200 2350 2750 2350
+Wire Wire Line
+	2750 1750 2950 1750
+Connection ~ 2750 1750
+Text Label 2950 1750 0    50   ~ 0
+5V_Bus_2
+Text Notes 550  650  0    79   Italic 16
+Power Management\n
+Wire Wire Line
+	3900 1050 3900 1000
+Wire Notes Line
+	4300 2600 4300 500 
+Wire Wire Line
+	1100 3000 1000 3000
+Wire Wire Line
+	1100 3100 1000 3100
+Text Label 1000 3000 2    50   ~ 0
+Solar_IN+
+Text Label 1000 3100 2    50   ~ 0
+Solar_IN-
+Text Label 1000 3200 2    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR?
+U 1 1 5E583441
+P 1150 3500
+F 0 "#PWR?" H 1150 3250 50  0001 C CNN
+F 1 "GND" H 1155 3327 50  0000 C CNN
+F 2 "" H 1150 3500 50  0001 C CNN
+F 3 "" H 1150 3500 50  0001 C CNN
+	1    1150 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E584151
+P 650 3400
+F 0 "R?" H 720 3446 50  0000 L CNN
+F 1 "220" H 720 3355 50  0000 L CNN
+F 2 "" V 580 3400 50  0001 C CNN
+F 3 "~" H 650 3400 50  0001 C CNN
+	1    650  3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E58B250
+P 1000 3650
+F 0 "D?" H 993 3866 50  0000 C CNN
+F 1 "LED" H 993 3775 50  0000 C CNN
+F 2 "" H 1000 3650 50  0001 C CNN
+F 3 "~" H 1000 3650 50  0001 C CNN
+	1    1000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  3200 1100 3200
+Wire Wire Line
+	650  3650 850  3650
+Wire Wire Line
+	1150 3650 1150 3500
+Wire Wire Line
+	1100 3300 1100 3500
+Wire Wire Line
+	1100 3500 1150 3500
+Connection ~ 1150 3500
+Wire Wire Line
+	650  3550 650  3650
+Wire Wire Line
+	650  3200 650  3250
+Text Notes 600  3900 0    39   Italic 8
+- Powering Li-Ion Battery 2200 mAh 3.7V\n- Current and Voltage sensor in-line with Solar input
+Wire Wire Line
+	2500 3000 2600 3000
+Wire Wire Line
+	2500 3100 2600 3100
+Wire Wire Line
+	2500 3200 2600 3200
+Wire Wire Line
+	2500 3300 2600 3300
+Wire Wire Line
+	2500 3500 2600 3500
+Text Label 2600 3000 0    50   ~ 0
+Solar_IN+
+Text Label 2600 3100 0    50   ~ 0
+Solar_IN-
+Text Label 2600 3550 0    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR?
+U 1 1 5E618328
+P 2600 3400
+F 0 "#PWR?" H 2600 3150 50  0001 C CNN
+F 1 "GND" V 2605 3272 50  0000 R CNN
+F 2 "" H 2600 3400 50  0001 C CNN
+F 3 "" H 2600 3400 50  0001 C CNN
+	1    2600 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 3400 2600 3400
+Text Label 2600 3300 0    50   ~ 0
+SCL
+Text Label 2600 3200 0    50   ~ 0
+SDA
+Wire Wire Line
+	2600 3500 2600 3550
+Wire Notes Line
+	3200 3950 3200 2600
+$Comp
+L Deck_Plate_PCB:SF_Logic_Level_Conv U6
+U 1 1 5E44B27B
+P 2600 5150
+F 0 "U6" H 3600 5250 50  0000 C CNN
+F 1 "SF_Logic_Level_Conv" H 3600 6050 50  0000 C CNN
+F 2 "Deck_Plate_PCB:SF_Logic_Level_Conv" V 3500 5900 50  0001 C CNN
+F 3 "https://www.sparkfun.com/products/12009" H 3500 5900 50  0001 C CNN
+	1    2600 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4600 3900 4600
+Text Label 3900 4600 0    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR?
+U 1 1 5E6D1B94
+P 3100 4700
+F 0 "#PWR?" H 3100 4450 50  0001 C CNN
+F 1 "GND" V 3105 4572 50  0000 R CNN
+F 2 "" H 3100 4700 50  0001 C CNN
+F 3 "" H 3100 4700 50  0001 C CNN
+	1    3100 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6D2FB6
+P 3750 4700
+F 0 "#PWR?" H 3750 4450 50  0001 C CNN
+F 1 "GND" V 3755 4572 50  0000 R CNN
+F 2 "" H 3750 4700 50  0001 C CNN
+F 3 "" H 3750 4700 50  0001 C CNN
+	1    3750 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 4400 3900 4400
+Text Label 3900 4400 0    50   ~ 0
+2(**)
+Wire Wire Line
+	3750 4500 3900 4500
+Text Label 3900 4500 0    50   ~ 0
+3(**)
+Wire Wire Line
+	3100 4500 2950 4500
+Text Label 2950 4500 2    50   ~ 0
+GPIO_B
+Wire Wire Line
+	3750 4900 3900 4900
+Text Label 3900 4900 0    50   ~ 0
+20(SDA)
+Wire Wire Line
+	3750 4800 3900 4800
+Text Label 3900 4800 0    50   ~ 0
+21(SCL)
+Wire Wire Line
+	3100 4400 2950 4400
+Text Label 2950 4400 2    50   ~ 0
+GPIO_A
+Wire Wire Line
+	2950 4800 3100 4800
+Text Label 2950 4800 2    50   ~ 0
+I2C_SCL
+Wire Wire Line
+	3100 4900 2950 4900
+Text Label 2950 4900 2    50   ~ 0
+I2C_SDA
+NoConn ~ 1050 5000
+NoConn ~ 1050 4850
+NoConn ~ 2000 4850
+NoConn ~ 2000 5000
+$Comp
+L power:GND #PWR?
+U 1 1 5E743786
+P 1050 4400
+F 0 "#PWR?" H 1050 4150 50  0001 C CNN
+F 1 "GND" V 1055 4272 50  0000 R CNN
+F 2 "" H 1050 4400 50  0001 C CNN
+F 3 "" H 1050 4400 50  0001 C CNN
+	1    1050 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 4400 2150 4400
+Text Label 2150 4400 0    50   ~ 0
+5V_Bus_2
+Wire Wire Line
+	2000 4550 2150 4550
+Text Label 2150 4550 0    50   ~ 0
+I2C_SDA
+Wire Wire Line
+	2000 4700 2150 4700
+Text Label 2150 4700 0    50   ~ 0
+GPIO_A
+Wire Wire Line
+	1050 4700 900  4700
+Text Label 900  4700 2    50   ~ 0
+GPIO_B
+Wire Wire Line
+	1050 4550 900  4550
+Text Label 900  4550 2    50   ~ 0
+I2C_SCL
+Text Label 900  6050 2    50   ~ 0
+A2
+Text Label 900  5950 2    50   ~ 0
+A1
+Text Label 900  5850 2    50   ~ 0
+A0
+Wire Wire Line
+	1050 6050 900  6050
+Wire Wire Line
+	1050 5950 900  5950
+Wire Wire Line
+	1050 5850 900  5850
+Text Label 950  5450 2    50   ~ 0
+5V_Bus_2
+$Comp
+L power:GND #PWR?
+U 1 1 5E69F523
+P 950 5650
+F 0 "#PWR?" H 950 5400 50  0001 C CNN
+F 1 "GND" V 955 5522 50  0000 R CNN
+F 2 "" H 950 5650 50  0001 C CNN
+F 3 "" H 950 5650 50  0001 C CNN
+	1    950  5650
+	0    1    1    0   
+$EndComp
+NoConn ~ 1050 5550
+NoConn ~ 1050 5750
+Wire Wire Line
+	1050 5650 950  5650
+Wire Wire Line
+	1050 5450 950  5450
+$Comp
+L Deck_Plate_PCB:ADXL377 U8
+U 1 1 5E4698B1
+P 450 6400
+F 0 "U8" H 1350 6600 50  0000 L CNN
+F 1 "ADXL377" H 1150 7500 50  0000 L CNN
+F 2 "Deck_Plate_PCB:ADXL337" H 1000 7450 50  0001 C CNN
+F 3 "https://www.adafruit.com/product/1413?gclid=CjwKCAiAvonyBRB7EiwAadauqf3mSuyoNSTvERmHQLaSv81swBi-mUUAE4xEuJO0DA1pGMFpS__yShoCsiQQAvD_BwE" H 1000 7450 50  0001 C CNN
+	1    450  6400
+	1    0    0    -1  
+$EndComp
+Text Notes 2350 4400 2    79   Italic 16
+Sensor Management Circuitry\n\n\n
+Wire Wire Line
+	3100 4600 2800 4600
+Text Label 2800 4600 2    50   ~ 0
+???
+Text Notes 2750 6750 2    79   Italic 16
+NASA Power and Telemetry Interface\n\n
+Text Notes 7050 6650 0    39   Italic 8
+- TODO: Add TTL Serial Camera Symbol and Footprint\n
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5E456111
+P 1900 3200
+F 0 "BT?" H 1750 3050 50  0000 L CNN
+F 1 "Battery_Cell" V 2050 3000 50  0000 L CNN
+F 2 "" V 1900 3260 50  0001 C CNN
+F 3 "~" V 1900 3260 50  0001 C CNN
+	1    1900 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3000 1900 3000
+Wire Wire Line
+	1900 3300 1700 3300
+Text Notes 8300 900  2    79   Italic 16
+RaspberryPi Interface\n\n\n
+$Comp
+L power:GND #PWR?
+U 1 1 5E603271
+P 7000 3350
+F 0 "#PWR?" H 7000 3100 50  0001 C CNN
+F 1 "GND" H 7005 3177 50  0000 C CNN
+F 2 "" H 7000 3350 50  0001 C CNN
+F 3 "" H 7000 3350 50  0001 C CNN
+	1    7000 3350
+	1    0    0    -1  
+$EndComp
+Text Label 6150 1950 2    50   ~ 0
+Bit_11
+Wire Wire Line
+	6300 1950 6150 1950
+Text Label 6150 2050 2    50   ~ 0
+Bit_12
+Wire Wire Line
+	6300 2050 6150 2050
+$Comp
+L power:GND #PWR?
+U 1 1 5E5E8C93
+P 7300 3350
+F 0 "#PWR?" H 7300 3100 50  0001 C CNN
+F 1 "GND" H 7305 3177 50  0000 C CNN
+F 2 "" H 7300 3350 50  0001 C CNN
+F 3 "" H 7300 3350 50  0001 C CNN
+	1    7300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E5E892C
+P 7200 3350
+F 0 "#PWR?" H 7200 3100 50  0001 C CNN
+F 1 "GND" H 7205 3177 50  0000 C CNN
+F 2 "" H 7200 3350 50  0001 C CNN
+F 3 "" H 7200 3350 50  0001 C CNN
+	1    7200 3350
+	1    0    0    -1  
+$EndComp
+Text Label 8050 1250 0    50   ~ 0
+Bit_2
+Wire Wire Line
+	7900 1250 8050 1250
+Text Label 8050 2150 0    50   ~ 0
+Bit_8
+Wire Wire Line
+	7900 2150 8050 2150
+Text Label 8050 2250 0    50   ~ 0
+Bit_9
+Wire Wire Line
+	7900 2250 8050 2250
+Text Label 6150 2550 2    50   ~ 0
+Bit_16
+Wire Wire Line
+	6300 2550 6150 2550
+Text Label 6150 2450 2    50   ~ 0
+Bit_15
+Wire Wire Line
+	6300 2450 6150 2450
+Text Label 6150 2350 2    50   ~ 0
+Bit_14
+Wire Wire Line
+	6300 2350 6150 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5E59D276
+P 6900 3350
+F 0 "#PWR?" H 6900 3100 50  0001 C CNN
+F 1 "GND" H 6905 3177 50  0000 C CNN
+F 2 "" H 6900 3350 50  0001 C CNN
+F 3 "" H 6900 3350 50  0001 C CNN
+	1    6900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E59C862
+P 5800 1700
+F 0 "#PWR?" H 5800 1450 50  0001 C CNN
+F 1 "GND" H 5805 1527 50  0000 C CNN
+F 2 "" H 5800 1700 50  0001 C CNN
+F 3 "" H 5800 1700 50  0001 C CNN
+	1    5800 1700
+	1    0    0    -1  
+$EndComp
+Text Label 5800 700  0    50   ~ 0
+TTL_RX
+Wire Wire Line
+	5800 800  5800 700 
+$Comp
+L Device:R R?
+U 1 1 5E590153
+P 5800 950
+F 0 "R?" H 5870 996 50  0000 L CNN
+F 1 "10K" H 5870 905 50  0000 L CNN
+F 2 "" V 5730 950 50  0001 C CNN
+F 3 "~" H 5800 950 50  0001 C CNN
+	1    5800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E58F78F
+P 5800 1550
+F 0 "R?" H 5870 1596 50  0000 L CNN
+F 1 "10K" H 5870 1505 50  0000 L CNN
+F 2 "" V 5730 1550 50  0001 C CNN
+F 3 "~" H 5800 1550 50  0001 C CNN
+	1    5800 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1250 5800 1400
+Connection ~ 5800 1250
+Wire Wire Line
+	5800 1100 5800 1250
+Wire Wire Line
+	6300 1250 5800 1250
+Text Label 6150 1150 2    50   ~ 0
+TTL_TX
+Wire Wire Line
+	6300 1150 6150 1150
+$Comp
+L power:GND #PWR?
+U 1 1 5E56BFDB
+P 6700 3350
+F 0 "#PWR?" H 6700 3100 50  0001 C CNN
+F 1 "GND" H 6705 3177 50  0000 C CNN
+F 2 "" H 6700 3350 50  0001 C CNN
+F 3 "" H 6700 3350 50  0001 C CNN
+	1    6700 3350
+	1    0    0    -1  
+$EndComp
+Text Label 6900 650  2    50   ~ 0
+5V_Bus_1
+Wire Wire Line
+	6900 750  6900 650 
+$Comp
+L power:GND #PWR?
+U 1 1 5E55F054
+P 7400 3350
+F 0 "#PWR?" H 7400 3100 50  0001 C CNN
+F 1 "GND" H 7405 3177 50  0000 C CNN
+F 2 "" H 7400 3350 50  0001 C CNN
+F 3 "" H 7400 3350 50  0001 C CNN
+	1    7400 3350
+	1    0    0    -1  
+$EndComp
+Text Label 6150 2650 2    50   ~ 0
+Strobe
+Wire Wire Line
+	6300 2650 6150 2650
+NoConn ~ 6300 1850
+Text Label 8050 1950 0    50   ~ 0
+Bit_7
+Wire Wire Line
+	7900 1950 8050 1950
+Text Label 8050 1150 0    50   ~ 0
+Bit_1
+Wire Wire Line
+	7900 1150 8050 1150
+Text Label 8050 2350 0    50   ~ 0
+Bit_10
+Wire Wire Line
+	7900 2350 8050 2350
+Text Label 6150 2250 2    50   ~ 0
+Bit_13
+Wire Wire Line
+	6300 2250 6150 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5E51B350
+P 6800 3350
+F 0 "#PWR?" H 6800 3100 50  0001 C CNN
+F 1 "GND" H 6805 3177 50  0000 C CNN
+F 2 "" H 6800 3350 50  0001 C CNN
+F 3 "" H 6800 3350 50  0001 C CNN
+	1    6800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E519DCE
+P 7100 3350
+F 0 "#PWR?" H 7100 3100 50  0001 C CNN
+F 1 "GND" H 7105 3177 50  0000 C CNN
+F 2 "" H 7100 3350 50  0001 C CNN
+F 3 "" H 7100 3350 50  0001 C CNN
+	1    7100 3350
+	1    0    0    -1  
+$EndComp
+Text Label 8050 1850 0    50   ~ 0
+Bit_6
+Wire Wire Line
+	7900 1850 8050 1850
+Text Label 8050 1750 0    50   ~ 0
+Bit_5
+Wire Wire Line
+	7900 1750 8050 1750
+Text Label 8050 1550 0    50   ~ 0
+Bit_4
+Wire Wire Line
+	7900 1550 8050 1550
+Text Label 8050 1450 0    50   ~ 0
+Bit_3
+Wire Wire Line
+	7900 1450 8050 1450
+NoConn ~ 7900 2750
+NoConn ~ 6300 1450
+NoConn ~ 7900 2850
+NoConn ~ 7900 2550
+NoConn ~ 7900 2450
+NoConn ~ 7000 750 
+NoConn ~ 6300 1650
+NoConn ~ 6300 1550
+NoConn ~ 6300 2750
+NoConn ~ 7300 750 
+NoConn ~ 7200 750 
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 5E42F7E2
+P 7100 2050
+F 0 "J1" H 7750 800 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 7700 3300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 7100 2050 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 7100 2050 50  0001 C CNN
+	1    7100 2050
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8350 3600 5800 3600
+Wire Notes Line
+	5800 3600 5800 2000
+Wire Notes Line
+	5800 2000 5650 2000
+Wire Notes Line
+	5650 2000 5650 500 
+Wire Notes Line
+	8350 650  10450 650 
+$Comp
+L Device:R R?
+U 1 1 5E680CDD
+P 7500 4150
+F 0 "R?" H 7570 4196 50  0000 L CNN
+F 1 "5K" H 7570 4105 50  0000 L CNN
+F 2 "" V 7430 4150 50  0001 C CNN
+F 3 "~" H 7500 4150 50  0001 C CNN
+	1    7500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6836BD
+P 7500 4650
+F 0 "R?" H 7570 4696 50  0000 L CNN
+F 1 "5K" H 7570 4605 50  0000 L CNN
+F 2 "" V 7430 4650 50  0001 C CNN
+F 3 "~" H 7500 4650 50  0001 C CNN
+	1    7500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q?
+U 1 1 5E683CE9
+P 7750 4400
+F 0 "Q?" H 7954 4446 50  0000 L CNN
+F 1 "2N7000" H 7954 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7950 4325 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 7750 4400 50  0001 L CNN
+	1    7750 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E68566C
+P 7850 4850
+F 0 "R?" H 7920 4896 50  0000 L CNN
+F 1 "10K" H 7920 4805 50  0000 L CNN
+F 2 "" V 7780 4850 50  0001 C CNN
+F 3 "~" H 7850 4850 50  0001 C CNN
+	1    7850 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E685BE6
+P 7500 4800
+F 0 "#PWR?" H 7500 4550 50  0001 C CNN
+F 1 "GND" H 7500 4650 50  0000 C CNN
+F 2 "" H 7500 4800 50  0000 C CNN
+F 3 "" H 7500 4800 50  0000 C CNN
+	1    7500 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4500 7500 4400
+Wire Wire Line
+	7500 4400 7550 4400
+Connection ~ 7500 4400
+Wire Wire Line
+	7500 4400 7500 4300
+Wire Wire Line
+	7850 4600 7850 4650
+Wire Wire Line
+	7850 4200 7850 4050
+Wire Wire Line
+	7500 4000 7500 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5E6C73F2
+P 7850 5000
+F 0 "#PWR?" H 7850 4750 50  0001 C CNN
+F 1 "GND" H 7850 4850 50  0000 C CNN
+F 2 "" H 7850 5000 50  0000 C CNN
+F 3 "" H 7850 5000 50  0000 C CNN
+	1    7850 5000
+	1    0    0    -1  
+$EndComp
+Text Label 7850 4050 0    50   ~ 0
+5V_Bus_2
+Text Label 7500 3900 0    50   ~ 0
+TE_Rb
+Wire Wire Line
+	7850 4650 8100 4650
+Connection ~ 7850 4650
+Wire Wire Line
+	7850 4650 7850 4700
+Text Label 8100 4650 0    50   ~ 0
+TE_B
+$Comp
+L Device:R R?
+U 1 1 5E6D8B7E
+P 6450 4150
+F 0 "R?" H 6520 4196 50  0000 L CNN
+F 1 "5K" H 6520 4105 50  0000 L CNN
+F 2 "" V 6380 4150 50  0001 C CNN
+F 3 "~" H 6450 4150 50  0001 C CNN
+	1    6450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6D8B88
+P 6450 4650
+F 0 "R?" H 6520 4696 50  0000 L CNN
+F 1 "5K" H 6520 4605 50  0000 L CNN
+F 2 "" V 6380 4650 50  0001 C CNN
+F 3 "~" H 6450 4650 50  0001 C CNN
+	1    6450 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q?
+U 1 1 5E6D8B92
+P 6700 4400
+F 0 "Q?" H 6904 4446 50  0000 L CNN
+F 1 "2N7000" H 6904 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6900 4325 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6700 4400 50  0001 L CNN
+	1    6700 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6D8B9C
+P 6800 4850
+F 0 "R?" H 6870 4896 50  0000 L CNN
+F 1 "10K" H 6870 4805 50  0000 L CNN
+F 2 "" V 6730 4850 50  0001 C CNN
+F 3 "~" H 6800 4850 50  0001 C CNN
+	1    6800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6D8BA6
+P 6450 4800
+F 0 "#PWR?" H 6450 4550 50  0001 C CNN
+F 1 "GND" H 6450 4650 50  0000 C CNN
+F 2 "" H 6450 4800 50  0000 C CNN
+F 3 "" H 6450 4800 50  0000 C CNN
+	1    6450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 4500 6450 4400
+Wire Wire Line
+	6450 4400 6500 4400
+Connection ~ 6450 4400
+Wire Wire Line
+	6450 4400 6450 4300
+Wire Wire Line
+	6800 4600 6800 4650
+Wire Wire Line
+	6800 4200 6800 4050
+Wire Wire Line
+	6450 4000 6450 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5E6D8BB7
+P 6800 5000
+F 0 "#PWR?" H 6800 4750 50  0001 C CNN
+F 1 "GND" H 6800 4850 50  0000 C CNN
+F 2 "" H 6800 5000 50  0000 C CNN
+F 3 "" H 6800 5000 50  0000 C CNN
+	1    6800 5000
+	1    0    0    -1  
+$EndComp
+Text Label 6800 4050 0    50   ~ 0
+5V_Bus_2
+Text Label 6450 3900 0    50   ~ 0
+TE_Ra
+Wire Wire Line
+	6800 4650 7050 4650
+Connection ~ 6800 4650
+Wire Wire Line
+	6800 4650 6800 4700
+Text Label 7050 4650 0    50   ~ 0
+TE_A
+Text Notes 8300 4050 2    79   Italic 16
+Timer Event Handling\n\n\n
+Wire Notes Line
+	6300 5250 6300 3600
+Wire Notes Line
+	6300 5250 8350 5250
+$Comp
+L Device:R R?
+U 1 1 5E725DD3
+P 5000 1000
+F 0 "R?" H 5070 1046 50  0000 L CNN
+F 1 "R" H 5070 955 50  0000 L CNN
+F 2 "" V 4930 1000 50  0001 C CNN
+F 3 "~" H 5000 1000 50  0001 C CNN
+	1    5000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E726B18
+P 4500 1450
+F 0 "R?" V 4293 1450 50  0000 C CNN
+F 1 "R" V 4384 1450 50  0000 C CNN
+F 2 "" V 4430 1450 50  0001 C CNN
+F 3 "~" H 4500 1450 50  0001 C CNN
+	1    4500 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NPN_BCE Q?
+U 1 1 5E727DAC
+P 4900 1450
+F 0 "Q?" H 5091 1496 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 5091 1405 50  0000 L CNN
+F 2 "" H 5100 1550 50  0001 C CNN
+F 3 "~" H 4900 1450 50  0001 C CNN
+	1    4900 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 1650 5000 1750
+Wire Wire Line
+	5000 1900 5000 2000
+Wire Wire Line
+	5000 1250 5000 1150
+Wire Wire Line
+	5000 850  5000 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5E771FE5
+P 5000 2000
+F 0 "#PWR?" H 5000 1750 50  0001 C CNN
+F 1 "GND" H 5005 1827 50  0000 C CNN
+F 2 "" H 5000 2000 50  0001 C CNN
+F 3 "" H 5000 2000 50  0001 C CNN
+	1    5000 2000
+	1    0    0    -1  
+$EndComp
+Text Label 4350 1700 0    50   ~ 0
+BurnWireSignal
+Wire Wire Line
+	4350 1450 4350 1700
+Text Label 5000 1750 0    50   ~ 0
+BurnResistorOut
+Text Label 5000 1900 0    50   ~ 0
+BurnResistorGND
+Text Label 5000 750  0    50   ~ 0
+5V_Bus_1
+Text Notes 5400 1050 2    79   Italic 16
+Burn Wire Circuit\n\n\n\n
+Wire Notes Line
+	500  2600 5800 2600
+$Comp
+L Deck_Plate_PCB:TTL_Camera U?
+U 1 1 5E7B135A
+P 1600 5900
+F 0 "U?" H 2300 6000 50  0000 L CNN
+F 1 "TTL_Camera" H 2150 6500 50  0000 L CNN
+F 2 "" H 1600 5900 50  0001 C CNN
+F 3 "" H 1600 5900 50  0001 C CNN
+	1    1600 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 5400 1950 5400
+Wire Wire Line
+	2050 5500 1950 5500
+Wire Wire Line
+	2050 5600 1950 5600
+Wire Wire Line
+	2050 5700 1950 5700
+Text Label 1950 5400 2    50   ~ 0
+5V_Bus_2
+$Comp
+L power:GND #PWR?
+U 1 1 5E80010A
+P 1950 5500
+F 0 "#PWR?" H 1950 5250 50  0001 C CNN
+F 1 "GND" V 1955 5372 50  0000 R CNN
+F 2 "" H 1950 5500 50  0001 C CNN
+F 3 "" H 1950 5500 50  0001 C CNN
+	1    1950 5500
+	0    1    1    0   
+$EndComp
+Text Label 1950 5600 2    50   ~ 0
+TTL_RX
+Text Label 1950 5700 2    50   ~ 0
+TTL_TX
+Text Notes 7050 6750 0    39   Italic 8
+- TODO: Define D-Sub connections\n
+Text Notes 7050 6850 0    39   Italic 8
+- TODO: ADD 220uF caps between NASA PWR and GND\n
+$Comp
+L Deck_Plate_PCB:LM20 U?
+U 1 1 5E822D4F
+P 2600 6100
+F 0 "U?" H 3400 6200 50  0000 L CNN
+F 1 "LM20" H 3250 6900 50  0000 L CNN
+F 2 "" H 2700 6300 50  0001 C CNN
+F 3 "" H 2700 6300 50  0001 C CNN
+	1    2600 6100
+	1    0    0    -1  
+$EndComp
+Text Label 2550 6050 2    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR?
+U 1 1 5E8386E3
+P 3150 6050
+F 0 "#PWR?" H 3150 5800 50  0001 C CNN
+F 1 "GND" V 3155 5922 50  0000 R CNN
+F 2 "" H 3150 6050 50  0001 C CNN
+F 3 "" H 3150 6050 50  0001 C CNN
+	1    3150 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 5650 3000 5650
+Text Label 3000 5650 2    50   ~ 0
+PayloadTemp
+$Comp
+L Device:C C?
+U 1 1 5E86A525
+P 2850 5900
+F 0 "C?" H 2965 5946 50  0000 L CNN
+F 1 "1uF" H 2965 5855 50  0000 L CNN
+F 2 "" H 2888 5750 50  0001 C CNN
+F 3 "~" H 2850 5900 50  0001 C CNN
+	1    2850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5750 3150 5750
+Wire Wire Line
+	2850 6050 3150 6050
+Wire Wire Line
+	3150 6050 3150 5850
+Connection ~ 3150 6050
+$Comp
+L Device:R R?
+U 1 1 5E8AC1FB
+P 2550 5900
+F 0 "R?" H 2620 5946 50  0000 L CNN
+F 1 "1K" H 2620 5855 50  0000 L CNN
+F 2 "" V 2480 5900 50  0001 C CNN
+F 3 "~" H 2550 5900 50  0001 C CNN
+	1    2550 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 5750 2850 5750
+Connection ~ 2850 5750
+$Comp
+L power:GND #PWR?
+U 1 1 5E8DD9B2
+P 3150 5550
+F 0 "#PWR?" H 3150 5300 50  0001 C CNN
+F 1 "GND" V 3155 5422 50  0000 R CNN
+F 2 "" H 3150 5550 50  0001 C CNN
+F 3 "" H 3150 5550 50  0001 C CNN
+	1    3150 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Deck_Plate_PCB:Big_Easy_Driver U?
+U 1 1 5E8F016A
+P 3350 6900
+F 0 "U?" H 4850 7600 50  0000 C CNN
+F 1 "Big_Easy_Driver" H 4450 8500 50  0000 C CNN
+F 2 "" H 3350 6900 50  0001 C CNN
+F 3 "" H 3350 6900 50  0001 C CNN
+	1    3350 6900
+	1    0    0    -1  
+$EndComp
+Text Label 3900 6150 2    50   ~ 0
+5V_Bus_2
+$Comp
+L power:GND #PWR?
+U 1 1 5E90513D
+P 4050 6100
+F 0 "#PWR?" H 4050 5850 50  0001 C CNN
+F 1 "GND" V 4055 5972 50  0000 R CNN
+F 2 "" H 4050 6100 50  0001 C CNN
+F 3 "" H 4050 6100 50  0001 C CNN
+	1    4050 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 6000 3900 6000
+Wire Wire Line
+	3900 6000 3900 6150
+Wire Wire Line
+	5000 5400 5100 5400
+Text Label 5100 5400 0    50   ~ 0
+Step
+Wire Wire Line
+	5000 5500 5100 5500
+Text Label 5100 5500 0    50   ~ 0
+Dir
+Wire Wire Line
+	5000 5600 5100 5600
+Text Label 5100 5600 0    50   ~ 0
+9V_Bus
+$Comp
+L power:GND #PWR?
+U 1 1 5E94AE65
+P 5000 5700
+F 0 "#PWR?" H 5000 5450 50  0001 C CNN
+F 1 "GND" V 5005 5572 50  0000 R CNN
+F 2 "" H 5000 5700 50  0001 C CNN
+F 3 "" H 5000 5700 50  0001 C CNN
+	1    5000 5700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 5800 5100 5800
+Text Label 5100 5800 0    50   ~ 0
+Motor_B-
+Wire Wire Line
+	5000 5900 5100 5900
+Wire Wire Line
+	5000 6000 5100 6000
+Wire Wire Line
+	5000 6100 5100 6100
+Text Label 5100 5900 0    50   ~ 0
+Motor_B+
+Text Label 5100 6000 0    50   ~ 0
+Motor_A-
+Text Label 5100 6100 0    50   ~ 0
+Motor_A+
+Wire Notes Line
+	4400 3950 4400 5200
+Wire Notes Line
+	4400 5200 5550 5200
+Wire Notes Line
+	5550 6450 450  6450
+$Comp
+L Deck_Plate_PCB:LM20 U?
+U 1 1 5E9BF4AF
+P 4750 3700
+F 0 "U?" H 5550 3800 50  0000 L CNN
+F 1 "LM20" H 5400 4500 50  0000 L CNN
+F 2 "" H 4850 3900 50  0001 C CNN
+F 3 "" H 4850 3900 50  0001 C CNN
+	1    4750 3700
+	1    0    0    -1  
+$EndComp
+Text Label 4700 3650 2    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR?
+U 1 1 5E9BF4BA
+P 5300 3650
+F 0 "#PWR?" H 5300 3400 50  0001 C CNN
+F 1 "GND" V 5305 3522 50  0000 R CNN
+F 2 "" H 5300 3650 50  0001 C CNN
+F 3 "" H 5300 3650 50  0001 C CNN
+	1    5300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3250 5150 3250
+Text Label 5150 3250 2    50   ~ 0
+SolarArrayTemp
+$Comp
+L Device:C C?
+U 1 1 5E9BF4C6
+P 5000 3500
+F 0 "C?" H 5115 3546 50  0000 L CNN
+F 1 "1uF" H 5115 3455 50  0000 L CNN
+F 2 "" H 5038 3350 50  0001 C CNN
+F 3 "~" H 5000 3500 50  0001 C CNN
+	1    5000 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3350 5300 3350
+Wire Wire Line
+	5000 3650 5300 3650
+Wire Wire Line
+	5300 3650 5300 3450
+Connection ~ 5300 3650
+$Comp
+L Device:R R?
+U 1 1 5E9BF4D4
+P 4700 3500
+F 0 "R?" H 4770 3546 50  0000 L CNN
+F 1 "1K" H 4770 3455 50  0000 L CNN
+F 2 "" V 4630 3500 50  0001 C CNN
+F 3 "~" H 4700 3500 50  0001 C CNN
+	1    4700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3350 5000 3350
+Connection ~ 5000 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5E9BF4E0
+P 5300 3150
+F 0 "#PWR?" H 5300 2900 50  0001 C CNN
+F 1 "GND" V 5305 3022 50  0000 R CNN
+F 2 "" H 5300 3150 50  0001 C CNN
+F 3 "" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Deck_Plate_PCB:Pi_Cam U?
+U 1 1 5E9ED3E3
+P 3500 3450
+F 0 "U?" H 4150 3700 50  0000 C CNN
+F 1 "Pi_Cam" H 3750 4000 50  0000 C CNN
+F 2 "" H 3500 3450 50  0001 C CNN
+F 3 "" H 3500 3450 50  0001 C CNN
+	1    3500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3050 4450 3050
+Text Label 4450 3050 0    50   ~ 0
+Ribbon_Cable
+Text Notes 2050 2900 2    79   Italic 16
+Solar Charging Circuitry\n\n
+Text Notes 5100 2900 2    79   Italic 16
+Solar Array Endplate Circuitry\n\n
+Wire Notes Line
+	500  3950 6300 3950
+Wire Notes Line
+	5550 6550 6950 6550
+Wire Notes Line
+	5550 5200 5550 6550
 $EndSCHEMATC
