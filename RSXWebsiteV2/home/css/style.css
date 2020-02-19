@@ -414,8 +414,61 @@ a.hide-a:hover{
 	text-align: center;
 }
 
+.members-leadinfo {
+	font-size: 1.6em;
+	text-align: center;
+}
+
 .member-holder {
 	background-image: url("../images/members/holder.jpg");
+}
+
+.member-krisstone {
+	background-image: url("../images/members/KrisStone.png");
+}
+
+.member-brennanrausch {
+	background-image: url("../images/members/BrennanRausch.jpg");
+}
+
+.member-surabhisrivastava {
+	background-image: url("../images/members/SurabhiSrivastava.jpg");
+}
+
+.member-dannyflynn {
+	background-image: url("../images/members/DannyFlynn.png");
+}
+
+.member-ericwilliams {
+	background-image: url("../images/members/EricWilliams.jpg");
+}
+
+.member-farideddinbazzal {
+	background-image: url("../images/members/FarideddinBazzal.jpg");
+}
+
+.member-mattbrockmeyer {
+	background-image: url("../images/members/MattBrockmeyer.jpg");
+}
+
+.member-spencerbuebel {
+	background-image: url("../images/members/SpencerBuebel.jpg");
+}
+
+.member-riyasareen {
+	background-image: url("../images/members/RiyaSareen.jpeg");
+}
+
+.member-kathrynrobertson {
+	background-image: url("../images/members/KathrynRobertson.jpg");
+}
+
+.member-nicholasjones {
+	background-image: url("../images/members/NicholasJones.jpg");
+}
+
+.member-hunainshamsi {
+	background-image: url("../images/members/HunainShamsi.jpg");
 }
 
 .footer {
