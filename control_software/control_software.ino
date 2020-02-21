@@ -5,15 +5,26 @@
 // library for serial TTL camera
 #include <SoftwareSerial.h> // for some reason, doesn't compile without...
 #include <Adafruit_VC0706.h>
+#include <Wire.h>
+#include <Adafruit_INA219.h>
 
 // Arduino Mega code to read from sensors, send data to Pi,
 // and extrend/retract panels when necessary based on interrupts.
 
+// Pin definitions: Subject to change...
+#define ACCEL_X A8
+#define ACCEL_Y A9
+#define ACCEL_Z A10
+
+#define TEMP A15
+
+
+
 // struct holding accel data (after conversion)
 struct Accel_Data {
-  uint8_t x;
-  uint8_t y;
-  uint8_t z;
+  uint16_t x;
+  uint16_t y;
+  uint16_t z;
 };
 
 // straight forward - struct holding power data
@@ -24,11 +35,11 @@ struct Panel_Power_Data {
 
 // Function stubs
 void initSensors();
-uint16_t readTempSensor();
-Accel_Data readAccelData();
+int16_t readTempSensor();
+struct Accel_Data readAccelData();
 uint8_t readRangeFinder();
 bool takeTTLPicture();
-Panel_Power_Data readPanelData();
+struct Panel_Power_Data readPanelData();
 void turnStepper(bool dir);
 void sensorDataToPi(uint16_t temp, Accel_Data accel, uint8_t range, Panel_Power_Data panel_power);
 void TTLImageToPi();
@@ -46,6 +57,7 @@ volatile uint8_t mission_state = NORMAL;
 
 // camera handle will also be global so we can call in loop
 Adafruit_VC0706 cam = Adafruit_VC0706(&Serial1);
+Adafruit_INA219 volt_cur_sensor;
 
 void setup() {
   // Initialize communication with all sensors
@@ -56,17 +68,22 @@ void setup() {
 
   // start serial link with RPi - this is crucial for data transfer
   Serial.begin(115200);
+  
+  //Serial.println("Begin");
 }
 
 
 
 void loop() {
-  
+  //Serial.println("Loop");  
   // read all the sensor data
-  uint16_t temp = readTempSensor();
+  int16_t temp = readTempSensor();
+  
   Accel_Data accel = readAccelData();
   uint8_t range = readRangeFinder();
   Panel_Power_Data panel_power = readPanelData();
+  
+  //delay(2000);
 
   // Now, we need to put all this data into a serial frame which we will send to the Pi
   sensorDataToPi(temp, accel, range, panel_power);
@@ -141,19 +158,29 @@ bool takeTTLPicture()
 }
 
 
-uint16_t readTempSensor()
+int16_t readTempSensor()
 {
   // analog read - use formula to convert
-  return 0;
+  int analog_in = analogRead(TEMP);
+
+  double voltage = 5.0 * double(analog_in) / 1023.0;
+  double a = -0.00000388;
+  double b = -0.0115;
+  double c = 1.8639 - voltage; // because we need to solve for zero of quadratic
+  
+  double temp = (-1*b - sqrt(b*b - 4*a*c)) / (2*a);
+  
+  return int(temp);
 }
 
-Accel_Data readAccelData()
+struct Accel_Data readAccelData()
 {
   // analog read?
   struct Accel_Data accel;
-  accel.x = 0;
-  accel.y = 0;
-  accel.z = 0;
+  accel.x = analogRead(ACCEL_X);
+  accel.y = analogRead(ACCEL_Y);
+  accel.z = analogRead(ACCEL_Z);
+  
   return accel;
 }
 
@@ -164,13 +191,12 @@ uint8_t readRangeFinder()
   return range;
 }
 
-Panel_Power_Data readPanelData()
+struct Panel_Power_Data readPanelData()
 {
-  // analog reads
   Panel_Power_Data power;
-  power.voltage = 0.0;
-  power.current = 0.0;
-
+  power.voltage = volt_cur_sensor.getBusVoltage_V() + (volt_cur_sensor.getShuntVoltage_mV() / 1000.0);
+  power.current = volt_cur_sensor.getCurrent_mA();
+  
   return power;
 }
 
@@ -185,6 +211,9 @@ void initSensors()
   else
     Serial.println("No TTL Serial Camera");
   cam.setImageSize(VC0706_160x120); // other options: VC0706_320x240, VC0706_640x480
+  
+  // init I2C for current/voltage sensor
+  volt_cur_sensor.begin();
 }
 
 void turnStepper(bool dir)

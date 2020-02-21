@@ -38,6 +38,8 @@ class IncidenceAngleCamera:
 			# find the maximum brightness location
 			(minV, maxV, minL, maxL) = cv2.minMaxLoc(bw)
 			
+			print(maxL)
+			
 			# push the raw image to a file
 			filename = 'outputs/raspi_images/raw/%09d.png'%count
 			cv2.imwrite(filename, cur_img)
@@ -71,3 +73,8 @@ class IncidenceAngleCamera:
 		os.system("ffmpeg -r "+str(FRAME_RATE)+" -i outputs/raspi_images/annotated/%09d.png -vcodec png -y outputs/VIDEO/annotated/"+t+".mp4")
 
 		os.system("rm outputs/raspi_images/*.png")
+
+
+#if __name__ == "__main__":
+#	cam = IncidenceAngleCamera(65, 640, 480)
+#	cam.cont_stream()
