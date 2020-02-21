@@ -75,6 +75,6 @@ class IncidenceAngleCamera:
 		os.system("rm outputs/raspi_images/*.png")
 
 
-#if __name__ == "__main__":
-#	cam = IncidenceAngleCamera(65, 640, 480)
-#	cam.cont_stream()
+if __name__ == "__main__":
+	cam = IncidenceAngleCamera(111, 1920, 1080)
+	cam.cont_stream()

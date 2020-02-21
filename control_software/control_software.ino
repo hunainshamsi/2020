@@ -1,4 +1,4 @@
-// RockSat-X 2020
+                      // Virginia Tech RockSat-X 2020
 // file: control_software.ino
 // maintainer: Spencer Buebel (stbuebel@vt.edu)
 
@@ -7,6 +7,8 @@
 #include <Adafruit_VC0706.h>
 #include <Wire.h>
 #include <Adafruit_INA219.h>
+#include <stdint.h>
+#include <LIDARLite_v4LED.h>
 
 // Arduino Mega code to read from sensors, send data to Pi,
 // and extrend/retract panels when necessary based on interrupts.
@@ -15,7 +17,6 @@
 #define ACCEL_X A8
 #define ACCEL_Y A9
 #define ACCEL_Z A10
-
 #define TEMP A15
 
 
@@ -37,7 +38,8 @@ struct Panel_Power_Data {
 void initSensors();
 int16_t readTempSensor();
 struct Accel_Data readAccelData();
-uint8_t readRangeFinder();
+uint16_t readRangeFinder();
+uint8_t distanceSingle(uint16_t * distance);
 bool takeTTLPicture();
 struct Panel_Power_Data readPanelData();
 void turnStepper(bool dir);
@@ -58,6 +60,7 @@ volatile uint8_t mission_state = NORMAL;
 // camera handle will also be global so we can call in loop
 Adafruit_VC0706 cam = Adafruit_VC0706(&Serial1);
 Adafruit_INA219 volt_cur_sensor;
+LIDARLite_v4LED myLidarLite;
 
 void setup() {
   // Initialize communication with all sensors
@@ -68,14 +71,11 @@ void setup() {
 
   // start serial link with RPi - this is crucial for data transfer
   Serial.begin(115200);
-  
-  //Serial.println("Begin");
 }
 
 
 
 void loop() {
-  //Serial.println("Loop");  
   // read all the sensor data
   int16_t temp = readTempSensor();
   
@@ -83,8 +83,6 @@ void loop() {
   uint8_t range = readRangeFinder();
   Panel_Power_Data panel_power = readPanelData();
   
-  //delay(2000);
-
   // Now, we need to put all this data into a serial frame which we will send to the Pi
   sensorDataToPi(temp, accel, range, panel_power);
   
@@ -184,11 +182,33 @@ struct Accel_Data readAccelData()
   return accel;
 }
 
-uint8_t readRangeFinder()
+uint16_t readRangeFinder()
 {
-  // i2c maybe?
-  uint8_t range = 0;
-  return range;
+  uint16_t distance = 0;
+  distanceSingle(&distance);
+ 
+  return distance;
+}
+
+//---------------------------------------------------------------------
+// Read Single Distance Measurement
+//
+// This is the simplest form of taking a measurement. This is a
+// blocking function as it will not return until a range has been
+// taken and a new distance measurement can be read.
+//---------------------------------------------------------------------
+uint8_t distanceSingle(uint16_t * distance)
+{
+    // 1. Trigger range measurement.
+    myLidarLite.takeRange();
+
+    // 2. Wait for busyFlag to indicate device is idle.
+    myLidarLite.waitForBusy();
+
+    // 3. Read new distance data from device registers
+    *distance = myLidarLite.readDistance();
+
+    return 1;
 }
 
 struct Panel_Power_Data readPanelData()
@@ -214,6 +234,9 @@ void initSensors()
   
   // init I2C for current/voltage sensor
   volt_cur_sensor.begin();
+
+  // init I2C for lidar lite  
+  myLidarLite.configure(0);
 }
 
 void turnStepper(bool dir)
