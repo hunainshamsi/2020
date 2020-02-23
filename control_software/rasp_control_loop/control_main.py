@@ -20,18 +20,16 @@ if __name__ == "__main__":
  
     # open the serial link using our class
     ser = SerialConnection(port, baud)
-    
-    # dummy test to try to receive an image
-    ser.receive_bytes()
 
-    cam = IncidenceAngleCamera(blur_radius, img_dim[0], img_dim[1])
+
+    #cam = IncidenceAngleCamera(blur_radius, img_dim[0], img_dim[1])
 
     # basically, we will have three infinite loops running concurrently
     # let the Linux OS handle the prioritization, should be fine
 
     with concurrent.futures.ThreadPoolExecutor() as exec:
         # camera continuous image stream, will write to data buf file
-        exec.submit(cam.cont_stream)
+        #exec.submit(cam.cont_stream)
         
         # infinite loop to receive data from the Arduino, also write to buf file
         exec.submit(ser.receive_bytes)

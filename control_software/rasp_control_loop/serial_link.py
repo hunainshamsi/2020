@@ -23,6 +23,8 @@ class SerialConnection:
 			# call the function to receive an image
 			if (pack == 'SNAP'):
 				self.receive_image()
+			else:
+				print(pack)
 				
 	# specialized function to recieve full image
 	def receive_image(self):				
