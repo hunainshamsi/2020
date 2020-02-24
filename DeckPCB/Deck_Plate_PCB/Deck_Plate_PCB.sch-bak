@@ -726,8 +726,8 @@ U 1 1 5E4D2D47
 P 2350 950
 F 0 "L1" H 2402 996 50  0000 L CNN
 F 1 "100uH" H 2402 905 50  0000 L CNN
-F 2 "" H 2350 950 50  0001 C CNN
-F 3 "~" H 2350 950 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1" H 2350 950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_L9008_SBCP-1104489.pdf" H 2350 950 50  0001 C CNN
 	1    2350 950 
 	1    0    0    -1  
 $EndComp
@@ -755,8 +755,8 @@ U 1 1 5E4DEAED
 P 2750 950
 F 0 "C1" H 2865 996 50  0000 L CNN
 F 1 "1000uF" H 2865 905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2788 800 50  0001 C CNN
-F 3 "~" H 2750 950 50  0001 C CNN
+F 2 "Deck_Plate_PCB:1000uF_Cap" H 2788 800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1181-947564.pdf" H 2750 950 50  0001 C CNN
 	1    2750 950 
 	1    0    0    -1  
 $EndComp
@@ -815,8 +815,8 @@ U 1 1 5E50A508
 P 2350 1900
 F 0 "L2" H 2402 1946 50  0000 L CNN
 F 1 "100uH" H 2402 1855 50  0000 L CNN
-F 2 "" H 2350 1900 50  0001 C CNN
-F 3 "~" H 2350 1900 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1" H 2350 1900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/212/KEM_L9008_SBCP-1104489.pdf" H 2350 1900 50  0001 C CNN
 	1    2350 1900
 	1    0    0    -1  
 $EndComp
@@ -844,8 +844,8 @@ U 1 1 5E50A520
 P 2750 1900
 F 0 "C2" H 2865 1946 50  0000 L CNN
 F 1 "1000uF" H 2865 1855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2788 1750 50  0001 C CNN
-F 3 "~" H 2750 1900 50  0001 C CNN
+F 2 "Deck_Plate_PCB:1000uF_Cap" H 2788 1750 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1181-947564.pdf" H 2750 1900 50  0001 C CNN
 	1    2750 1900
 	1    0    0    -1  
 $EndComp
@@ -1003,16 +1003,10 @@ F 3 "" H 3750 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3750 4400 3900 4400
-Text Label 3900 4400 0    50   ~ 0
-2(**)
 Wire Wire Line
 	3750 4500 3900 4500
-Text Label 3900 4500 0    50   ~ 0
-3(**)
 Wire Wire Line
 	3100 4500 2950 4500
-Text Label 2950 4500 2    50   ~ 0
-GPIO_B
 Wire Wire Line
 	3750 4900 3900 4900
 Text Label 3900 4900 0    50   ~ 0
@@ -1023,8 +1017,6 @@ Text Label 3900 4800 0    50   ~ 0
 21(SCL)
 Wire Wire Line
 	3100 4400 2950 4400
-Text Label 2950 4400 2    50   ~ 0
-GPIO_A
 Wire Wire Line
 	2950 4800 3100 4800
 Text Label 2950 4800 2    50   ~ 0
@@ -1050,8 +1042,6 @@ F 3 "" H 1050 4400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 4400 2150 4400
-Text Label 2150 4400 0    50   ~ 0
-5V_Bus_2
 Wire Wire Line
 	2000 4550 2150 4550
 Text Label 2150 4550 0    50   ~ 0
@@ -1112,29 +1102,10 @@ F 3 "https://www.adafruit.com/product/1413?gclid=CjwKCAiAvonyBRB7EiwAadauqf3mSuy
 $EndComp
 Text Notes 2350 4400 2    79   Italic 16
 Sensor Management Circuitry\n\n\n
-Wire Wire Line
-	3100 4600 2800 4600
-Text Label 2800 4600 2    50   ~ 0
-???
+Text Label 2950 4600 2    50   ~ 0
+3v3_Range
 Text Notes 2750 6750 2    79   Italic 16
 NASA Power and Telemetry Interface\n\n
-Text Notes 7050 6650 0    39   Italic 8
-- TODO: Clarify how the PiCam will be routed concerning the ZIF connection to RaspPi port\n
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5E456111
-P 1900 3200
-F 0 "BT1" H 1750 3050 50  0000 L CNN
-F 1 "Battery_Cell" V 2050 3000 50  0000 L CNN
-F 2 "" V 1900 3260 50  0001 C CNN
-F 3 "~" V 1900 3260 50  0001 C CNN
-	1    1900 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1700 3000 1900 3000
-Wire Wire Line
-	1900 3300 1700 3300
 Text Notes 8300 900  2    79   Italic 16
 RaspberryPi Interface\n\n\n
 $Comp
@@ -1148,14 +1119,6 @@ F 3 "" H 7000 3350 50  0001 C CNN
 	1    7000 3350
 	1    0    0    -1  
 $EndComp
-Text Label 6150 1950 2    50   ~ 0
-Bit_11
-Wire Wire Line
-	6300 1950 6150 1950
-Text Label 6150 2050 2    50   ~ 0
-Bit_12
-Wire Wire Line
-	6300 2050 6150 2050
 $Comp
 L power:GND #PWR0111
 U 1 1 5E5E8C93
@@ -1178,30 +1141,16 @@ F 3 "" H 7200 3350 50  0001 C CNN
 	1    7200 3350
 	1    0    0    -1  
 $EndComp
-Text Label 8050 1250 0    50   ~ 0
-Bit_2
 Wire Wire Line
 	7900 1250 8050 1250
 Text Label 8050 2150 0    50   ~ 0
-Bit_8
+Bit_7
 Wire Wire Line
 	7900 2150 8050 2150
 Text Label 8050 2250 0    50   ~ 0
-Bit_9
+Strobe
 Wire Wire Line
 	7900 2250 8050 2250
-Text Label 6150 2550 2    50   ~ 0
-Bit_16
-Wire Wire Line
-	6300 2550 6150 2550
-Text Label 6150 2450 2    50   ~ 0
-Bit_15
-Wire Wire Line
-	6300 2450 6150 2450
-Text Label 6150 2350 2    50   ~ 0
-Bit_14
-Wire Wire Line
-	6300 2350 6150 2350
 $Comp
 L power:GND #PWR0113
 U 1 1 5E59D276
@@ -1287,27 +1236,13 @@ F 3 "" H 7400 3350 50  0001 C CNN
 	1    7400 3350
 	1    0    0    -1  
 $EndComp
-Text Label 6150 2650 2    50   ~ 0
-Strobe
-Wire Wire Line
-	6300 2650 6150 2650
 NoConn ~ 6300 1850
-Text Label 8050 1950 0    50   ~ 0
-Bit_7
 Wire Wire Line
 	7900 1950 8050 1950
 Text Label 8050 1150 0    50   ~ 0
-Bit_1
+Bit_0
 Wire Wire Line
 	7900 1150 8050 1150
-Text Label 8050 2350 0    50   ~ 0
-Bit_10
-Wire Wire Line
-	7900 2350 8050 2350
-Text Label 6150 2250 2    50   ~ 0
-Bit_13
-Wire Wire Line
-	6300 2250 6150 2250
 $Comp
 L power:GND #PWR0117
 U 1 1 5E51B350
@@ -1331,19 +1266,19 @@ F 3 "" H 7100 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 8050 1850 0    50   ~ 0
-Bit_6
+Bit_5
 Wire Wire Line
 	7900 1850 8050 1850
 Text Label 8050 1750 0    50   ~ 0
-Bit_5
+Bit_4
 Wire Wire Line
 	7900 1750 8050 1750
 Text Label 8050 1550 0    50   ~ 0
-Bit_4
+Bit_3
 Wire Wire Line
 	7900 1550 8050 1550
 Text Label 8050 1450 0    50   ~ 0
-Bit_3
+Bit_2
 Wire Wire Line
 	7900 1450 8050 1450
 NoConn ~ 7900 2750
@@ -1578,12 +1513,12 @@ $EndComp
 $Comp
 L Device:R R3
 U 1 1 5E726B18
-P 4500 1450
-F 0 "R3" V 4293 1450 50  0000 C CNN
-F 1 "R" V 4384 1450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 1450 50  0001 C CNN
-F 3 "~" H 4500 1450 50  0001 C CNN
-	1    4500 1450
+P 4550 1450
+F 0 "R3" V 4343 1450 50  0000 C CNN
+F 1 "R" V 4434 1450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 1450 50  0001 C CNN
+F 3 "~" H 4550 1450 50  0001 C CNN
+	1    4550 1450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -2117,23 +2052,23 @@ $EndComp
 Wire Wire Line
 	4700 3650 4700 3750
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 5E5E7E9C
 P 4800 6700
-F 0 "C?" H 4915 6746 50  0000 L CNN
+F 0 "C5" H 4915 6746 50  0000 L CNN
 F 1 "220uF" H 4915 6655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4838 6550 50  0001 C CNN
-F 3 "~" H 4800 6700 50  0001 C CNN
+F 2 "Deck_Plate_PCB:220uF_Cap" H 4838 6550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4800 6700 50  0001 C CNN
 	1    4800 6700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5350 6550 5350 7000
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0143
 U 1 1 5E60FCA9
 P 4800 6850
-F 0 "#PWR?" H 4800 6600 50  0001 C CNN
+F 0 "#PWR0143" H 4800 6600 50  0001 C CNN
 F 1 "GND" V 4805 6722 50  0000 R CNN
 F 2 "" H 4800 6850 50  0001 C CNN
 F 3 "" H 4800 6850 50  0001 C CNN
@@ -2143,10 +2078,10 @@ $EndComp
 Wire Wire Line
 	4800 6550 5350 6550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0144
 U 1 1 5E62467C
 P 5050 7300
-F 0 "#PWR?" H 5050 7050 50  0001 C CNN
+F 0 "#PWR0144" H 5050 7050 50  0001 C CNN
 F 1 "GND" V 5055 7172 50  0000 R CNN
 F 2 "" H 5050 7300 50  0001 C CNN
 F 3 "" H 5050 7300 50  0001 C CNN
@@ -2154,10 +2089,10 @@ F 3 "" H 5050 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0145
 U 1 1 5E624BAC
 P 650 7300
-F 0 "#PWR?" H 650 7050 50  0001 C CNN
+F 0 "#PWR0145" H 650 7050 50  0001 C CNN
 F 1 "GND" V 655 7172 50  0000 R CNN
 F 2 "" H 650 7300 50  0001 C CNN
 F 3 "" H 650 7300 50  0001 C CNN
@@ -2165,10 +2100,10 @@ F 3 "" H 650 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H5
 U 1 1 5E63B3F7
 P 9350 6150
-F 0 "H?" H 9250 6104 50  0000 R CNN
+F 0 "H5" H 9250 6104 50  0000 R CNN
 F 1 "INA219" H 9250 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 9350 6150 50  0001 C CNN
 F 3 "~" H 9350 6150 50  0001 C CNN
@@ -2176,10 +2111,10 @@ F 3 "~" H 9350 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H6
 U 1 1 5E63DA2B
 P 9350 6350
-F 0 "H?" H 9250 6304 50  0000 R CNN
+F 0 "H6" H 9250 6304 50  0000 R CNN
 F 1 "INA219" H 9250 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 9350 6350 50  0001 C CNN
 F 3 "~" H 9350 6350 50  0001 C CNN
@@ -2187,10 +2122,10 @@ F 3 "~" H 9350 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H7
 U 1 1 5E63DE75
 P 9800 6150
-F 0 "H?" H 9700 6104 50  0000 R CNN
+F 0 "H7" H 9700 6104 50  0000 R CNN
 F 1 "INA219" H 9700 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 9800 6150 50  0001 C CNN
 F 3 "~" H 9800 6150 50  0001 C CNN
@@ -2198,10 +2133,10 @@ F 3 "~" H 9800 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H8
 U 1 1 5E63E369
 P 9800 6350
-F 0 "H?" H 9700 6304 50  0000 R CNN
+F 0 "H8" H 9700 6304 50  0000 R CNN
 F 1 "INA219" H 9700 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 9800 6350 50  0001 C CNN
 F 3 "~" H 9800 6350 50  0001 C CNN
@@ -2209,10 +2144,10 @@ F 3 "~" H 9800 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H9
 U 1 1 5E63E671
 P 10250 6150
-F 0 "H?" H 10150 6104 50  0000 R CNN
+F 0 "H9" H 10150 6104 50  0000 R CNN
 F 1 "ADXL377" H 10150 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 10250 6150 50  0001 C CNN
 F 3 "~" H 10250 6150 50  0001 C CNN
@@ -2220,10 +2155,10 @@ F 3 "~" H 10250 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H10
 U 1 1 5E63EB24
 P 10250 6350
-F 0 "H?" H 10150 6304 50  0000 R CNN
+F 0 "H10" H 10150 6304 50  0000 R CNN
 F 1 "ADXL377" H 10150 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 10250 6350 50  0001 C CNN
 F 3 "~" H 10250 6350 50  0001 C CNN
@@ -2231,10 +2166,10 @@ F 3 "~" H 10250 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H11
 U 1 1 5E63EEC6
 P 10750 6150
-F 0 "H?" H 10650 6104 50  0000 R CNN
+F 0 "H11" H 10650 6104 50  0000 R CNN
 F 1 "ADXL377" H 10650 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 10750 6150 50  0001 C CNN
 F 3 "~" H 10750 6150 50  0001 C CNN
@@ -2242,10 +2177,10 @@ F 3 "~" H 10750 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H12
 U 1 1 5E63F40C
 P 10750 6350
-F 0 "H?" H 10650 6304 50  0000 R CNN
+F 0 "H12" H 10650 6304 50  0000 R CNN
 F 1 "ADXL377" H 10650 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 10750 6350 50  0001 C CNN
 F 3 "~" H 10750 6350 50  0001 C CNN
@@ -2253,10 +2188,10 @@ F 3 "~" H 10750 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H3
 U 1 1 5E63F891
 P 8950 6150
-F 0 "H?" H 8850 6104 50  0000 R CNN
+F 0 "H3" H 8850 6104 50  0000 R CNN
 F 1 "Sunny" H 8850 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 8950 6150 50  0001 C CNN
 F 3 "~" H 8950 6150 50  0001 C CNN
@@ -2264,10 +2199,10 @@ F 3 "~" H 8950 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H4
 U 1 1 5E63FD37
 P 8950 6350
-F 0 "H?" H 8850 6304 50  0000 R CNN
+F 0 "H4" H 8850 6304 50  0000 R CNN
 F 1 "Sunny" H 8850 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 8950 6350 50  0001 C CNN
 F 3 "~" H 8950 6350 50  0001 C CNN
@@ -2275,10 +2210,10 @@ F 3 "~" H 8950 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H2
 U 1 1 5E6401D5
 P 8550 6350
-F 0 "H?" H 8450 6304 50  0000 R CNN
+F 0 "H2" H 8450 6304 50  0000 R CNN
 F 1 "Sunny" H 8450 6395 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 8550 6350 50  0001 C CNN
 F 3 "~" H 8550 6350 50  0001 C CNN
@@ -2286,14 +2221,119 @@ F 3 "~" H 8550 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H1
 U 1 1 5E640799
 P 8550 6150
-F 0 "H?" H 8450 6104 50  0000 R CNN
+F 0 "H1" H 8450 6104 50  0000 R CNN
 F 1 "Sunny" H 8450 6195 50  0000 R CNN
 F 2 "MountingHole:MountingHole_2.5mm" H 8550 6150 50  0001 C CNN
 F 3 "~" H 8550 6150 50  0001 C CNN
 	1    8550 6150
 	-1   0    0    1   
 $EndComp
+Text Notes 7050 6650 0    39   Italic 8
+- TODO: Finish assigning footprints for inductor and other discrete components\n
+Text Notes 7050 6750 0    39   Italic 8
+- TODO: Get with software and confirm signal naming. Go through component by component and make sure output and input names are correct
+$Comp
+L Connector:Conn_01x06_Male J4
+U 1 1 5E5491D0
+P 6900 5350
+F 0 "J4" V 6850 5000 50  0000 R CNN
+F 1 "Inhibit_Header" V 6850 5600 50  0000 R CNN
+F 2 "" H 6900 5350 50  0001 C CNN
+F 3 "~" H 6900 5350 50  0001 C CNN
+	1    6900 5350
+	0    1    1    0   
+$EndComp
+Text Label 7100 5550 3    50   ~ 0
+Sunny_Batt
+$Comp
+L power:GND #PWR0146
+U 1 1 5E54BECD
+P 7000 5550
+F 0 "#PWR0146" H 7000 5300 50  0001 C CNN
+F 1 "GND" V 7005 5422 50  0000 R CNN
+F 2 "" H 7000 5550 50  0001 C CNN
+F 3 "" H 7000 5550 50  0001 C CNN
+	1    7000 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Deck_Plate_PCB:Sunny_Batt U14
+U 1 1 5E562412
+P 7200 5750
+F 0 "U14" H 8200 5800 50  0000 L CNN
+F 1 "Sunny_Batt" H 7900 6200 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 7600 5850 50  0001 C CNN
+F 3 "" H 7600 5850 50  0001 C CNN
+	1    7200 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 5E56418E
+P 7600 5550
+F 0 "#PWR0147" H 7600 5300 50  0001 C CNN
+F 1 "GND" V 7605 5422 50  0000 R CNN
+F 2 "" H 7600 5550 50  0001 C CNN
+F 3 "" H 7600 5550 50  0001 C CNN
+	1    7600 5550
+	0    1    1    0   
+$EndComp
+Text Label 7600 5450 2    50   ~ 0
+Sunny_Batt
+NoConn ~ 3900 4400
+NoConn ~ 3900 4500
+NoConn ~ 2950 4400
+NoConn ~ 2950 4500
+Text Label 2150 4400 0    50   ~ 0
+3v3_Range
+Wire Wire Line
+	3100 4600 2950 4600
+$Comp
+L power:GND #PWR0148
+U 1 1 5E5EC828
+P 6800 5550
+F 0 "#PWR0148" H 6800 5300 50  0001 C CNN
+F 1 "GND" V 6805 5422 50  0000 R CNN
+F 2 "" H 6800 5550 50  0001 C CNN
+F 3 "" H 6800 5550 50  0001 C CNN
+	1    6800 5550
+	1    0    0    -1  
+$EndComp
+Text Label 6700 5550 3    50   ~ 0
+9V_Bus
+$Comp
+L power:GND #PWR0149
+U 1 1 5E5ED6C4
+P 6600 5550
+F 0 "#PWR0149" H 6600 5300 50  0001 C CNN
+F 1 "GND" V 6605 5422 50  0000 R CNN
+F 2 "" H 6600 5550 50  0001 C CNN
+F 3 "" H 6600 5550 50  0001 C CNN
+	1    6600 5550
+	1    0    0    -1  
+$EndComp
+Text Notes 7050 6850 0    39   Italic 8
+- TODO update Burn Wire transistors to new footprint (see PCB Changelog)
+Text Label 8050 1250 0    50   ~ 0
+Bit_1
+Text Label 8050 1950 0    50   ~ 0
+Bit_6
+NoConn ~ 6300 1950
+NoConn ~ 6300 2050
+NoConn ~ 6300 2250
+NoConn ~ 6300 2350
+NoConn ~ 6300 2450
+NoConn ~ 6300 2550
+NoConn ~ 6300 2650
+NoConn ~ 7900 2350
+NoConn ~ 11750 1750
+Wire Wire Line
+	4350 1450 4400 1450
+Text Label 6900 5550 3    50   ~ 0
+BurnWireSignal
+Text Notes 7050 6950 0    39   Italic 8
+- TODO get clarification on Burn Wire circuit
 $EndSCHEMATC
