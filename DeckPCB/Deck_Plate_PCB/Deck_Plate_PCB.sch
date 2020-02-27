@@ -35,81 +35,77 @@ A6
 Text Label 8900 3150 0    60   ~ 0
 A7
 Text Label 8900 3400 0    60   ~ 0
-A8
+Xout
 Text Label 8900 3500 0    60   ~ 0
-A9
+Yout
 Text Label 8900 3600 0    60   ~ 0
-A10
+Zout
 Text Label 8900 3700 0    60   ~ 0
 A11
 Text Label 8900 3800 0    60   ~ 0
 A12
 Text Label 8900 3900 0    60   ~ 0
 A13
-Text Label 8900 4000 0    60   ~ 0
-A14
-Text Label 8900 4100 0    60   ~ 0
-A15
+Text Label 9250 4000 2    60   ~ 0
+PayloadTemp
+Text Label 9250 4100 2    60   ~ 0
+SolarArrayTemp
 Text Label 10500 4650 1    60   ~ 0
-22
+TE_B
 Text Label 10400 4650 1    60   ~ 0
-24
+Digital_24
 Text Label 10300 4650 1    60   ~ 0
-26
+Digital_26
 Text Label 10200 4650 1    60   ~ 0
-28
+Digital_28
 Text Label 10100 4650 1    60   ~ 0
-30
+Digital_30
 Text Label 10000 4650 1    60   ~ 0
-32
+Digital_32
 Text Label 9900 4650 1    60   ~ 0
-34
+Digital_34
 Text Label 9800 4650 1    60   ~ 0
-36
+Digital_36
 Text Label 9700 4650 1    60   ~ 0
-38
+Digital_38
 Text Label 9600 4650 1    60   ~ 0
-40
+Digital_40
 Text Label 9500 4650 1    60   ~ 0
-42
+Digital_42
 Text Label 9400 4650 1    60   ~ 0
-44
+Digital_44
 Text Label 9300 4650 1    60   ~ 0
-46
+Digital_46
 Text Label 9200 4650 1    60   ~ 0
-48
+Digital_48
 Text Label 9100 4650 1    60   ~ 0
 50(MISO)
 Text Label 9000 4650 1    60   ~ 0
 52(SCK)
-Text Label 10500 5650 1    60   ~ 0
-23
-Text Label 10400 5650 1    60   ~ 0
-25
-Text Label 10300 5650 1    60   ~ 0
-27
-Text Label 10100 5650 1    60   ~ 0
-31
-Text Label 10200 5650 1    60   ~ 0
-29
-Text Label 10000 5650 1    60   ~ 0
-33
-Text Label 9900 5650 1    60   ~ 0
-35
-Text Label 9800 5650 1    60   ~ 0
-37
-Text Label 9700 5650 1    60   ~ 0
-39
-Text Label 9600 5650 1    60   ~ 0
-41
-Text Label 9500 5650 1    60   ~ 0
-43
-Text Label 9400 5650 1    60   ~ 0
-45
-Text Label 9300 5650 1    60   ~ 0
-47
-Text Label 9200 5650 1    60   ~ 0
-49
+Text Label 10500 5550 3    60   ~ 0
+TE_A
+Text Label 10400 5550 3    60   ~ 0
+Digital_25
+Text Label 10300 5550 3    60   ~ 0
+Digital_27
+Text Label 10100 5550 3    60   ~ 0
+Digital_31
+Text Label 10200 5550 3    60   ~ 0
+Digital_29
+Text Label 10000 5550 3    60   ~ 0
+Digital_33
+Text Label 9900 5550 3    60   ~ 0
+Digital_35
+Text Label 9800 5550 3    60   ~ 0
+Digital_37
+Text Label 9700 5550 3    60   ~ 0
+Digital_39
+Text Label 9400 5550 3    60   ~ 0
+Digital_45
+Text Label 9300 5550 3    60   ~ 0
+Digital_47
+Text Label 9200 5550 3    60   ~ 0
+Digital_49
 Text Label 9100 5750 1    60   ~ 0
 51(MOSI)
 Text Label 9000 5750 1    60   ~ 0
@@ -119,9 +115,9 @@ Text Label 10400 4100 0    60   ~ 0
 Text Label 10400 4000 0    60   ~ 0
 20(SDA)
 Text Label 10400 3900 0    60   ~ 0
-19(Rx1)
+TTL_RX
 Text Label 10400 3800 0    60   ~ 0
-18(Tx1)
+TTL_TX
 Text Label 10400 3700 0    60   ~ 0
 17(Rx2)
 Text Label 10400 3600 0    60   ~ 0
@@ -463,10 +459,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 3900 9350 3900
 Wire Wire Line
-	9350 4000 8900 4000
-Wire Wire Line
-	8900 4100 9350 4100
-Wire Wire Line
 	10400 3400 10150 3400
 Wire Wire Line
 	10150 3500 10400 3500
@@ -514,34 +506,6 @@ Wire Wire Line
 	9100 4850 9100 4650
 Wire Wire Line
 	9000 4850 9000 4650
-Wire Wire Line
-	10500 5350 10500 5650
-Wire Wire Line
-	10400 5350 10400 5650
-Wire Wire Line
-	10300 5350 10300 5650
-Wire Wire Line
-	10200 5350 10200 5650
-Wire Wire Line
-	10100 5350 10100 5650
-Wire Wire Line
-	10000 5350 10000 5650
-Wire Wire Line
-	9900 5350 9900 5650
-Wire Wire Line
-	9800 5350 9800 5650
-Wire Wire Line
-	9700 5350 9700 5650
-Wire Wire Line
-	9600 5350 9600 5650
-Wire Wire Line
-	9500 5350 9500 5650
-Wire Wire Line
-	9400 5350 9400 5650
-Wire Wire Line
-	9300 5350 9300 5650
-Wire Wire Line
-	9200 5350 9200 5650
 Wire Wire Line
 	9100 5350 9100 5750
 Wire Wire Line
@@ -701,7 +665,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 900  2200 900 
 Text Label 900  900  2    50   ~ 0
-NASA_28V
+28V_GSE_2
 $Comp
 L power:GND #PWR0102
 U 1 1 5E4BE0DA
@@ -790,7 +754,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 1850 2200 1850
 Text Label 900  1850 2    50   ~ 0
-NASA_28V
+28V_GSE_2
 $Comp
 L power:GND #PWR0103
 U 1 1 5E50A4FA
@@ -957,9 +921,9 @@ $EndComp
 Wire Wire Line
 	2500 3400 2600 3400
 Text Label 2600 3300 0    50   ~ 0
-SCL
+21(SCL)
 Text Label 2600 3200 0    50   ~ 0
-SDA
+20(SDA)
 Wire Wire Line
 	2600 3500 2600 3550
 Wire Notes Line
@@ -1059,11 +1023,11 @@ Wire Wire Line
 Text Label 900  4550 2    50   ~ 0
 I2C_SCL
 Text Label 900  6050 2    50   ~ 0
-A2
+Xout
 Text Label 900  5950 2    50   ~ 0
-A1
+Yout
 Text Label 900  5850 2    50   ~ 0
-A0
+Zout
 Wire Wire Line
 	1050 6050 900  6050
 Wire Wire Line
@@ -1395,7 +1359,7 @@ $EndComp
 Text Label 7850 4050 0    50   ~ 0
 5V_Bus_2
 Text Label 7500 3900 0    50   ~ 0
-TE_Rb
+TE_RB
 Wire Wire Line
 	7850 4650 8100 4650
 Connection ~ 7850 4650
@@ -1485,7 +1449,7 @@ $EndComp
 Text Label 6800 4050 0    50   ~ 0
 5V_Bus_2
 Text Label 6450 3900 0    50   ~ 0
-TE_Ra
+TE_RA
 Wire Wire Line
 	6800 4650 7050 4650
 Connection ~ 6800 4650
@@ -1502,67 +1466,53 @@ Wire Notes Line
 $Comp
 L Device:R R5
 U 1 1 5E725DD3
-P 5000 1000
-F 0 "R5" H 5070 1046 50  0000 L CNN
-F 1 "R" H 5070 955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4930 1000 50  0001 C CNN
-F 3 "~" H 5000 1000 50  0001 C CNN
-	1    5000 1000
+P 5300 1650
+F 0 "R5" H 5370 1696 50  0000 L CNN
+F 1 "4.7" H 5370 1605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5230 1650 50  0001 C CNN
+F 3 "~" H 5300 1650 50  0001 C CNN
+	1    5300 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R3
 U 1 1 5E726B18
-P 4550 1450
-F 0 "R3" V 4343 1450 50  0000 C CNN
-F 1 "R" V 4434 1450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 1450 50  0001 C CNN
-F 3 "~" H 4550 1450 50  0001 C CNN
-	1    4550 1450
-	0    1    1    0   
+P 4900 1650
+F 0 "R3" V 4693 1650 50  0000 C CNN
+F 1 "4.7" V 4784 1650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 1650 50  0001 C CNN
+F 3 "~" H 4900 1650 50  0001 C CNN
+	1    4900 1650
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Q_NPN_BCE Q1
 U 1 1 5E727DAC
-P 4900 1450
-F 0 "Q1" H 5091 1496 50  0000 L CNN
-F 1 "Q_NPN_BCE" H 5091 1405 50  0000 L CNN
-F 2 "" H 5100 1550 50  0001 C CNN
-F 3 "~" H 4900 1450 50  0001 C CNN
-	1    4900 1450
+P 5000 1100
+F 0 "Q1" H 5191 1146 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 5191 1055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-251-3_Vertical" H 5200 1200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/308/EN2085-D-1108072.pdf" H 5000 1100 50  0001 C CNN
+	1    5000 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 1650 5000 1750
+	5100 1300 5100 1400
 Wire Wire Line
-	5000 1900 5000 2000
-Wire Wire Line
-	5000 1250 5000 1150
-Wire Wire Line
-	5000 850  5000 750 
+	5100 900  5100 800 
 $Comp
 L power:GND #PWR0123
 U 1 1 5E771FE5
-P 5000 2000
-F 0 "#PWR0123" H 5000 1750 50  0001 C CNN
-F 1 "GND" H 5005 1827 50  0000 C CNN
-F 2 "" H 5000 2000 50  0001 C CNN
-F 3 "" H 5000 2000 50  0001 C CNN
-	1    5000 2000
+P 5100 1850
+F 0 "#PWR0123" H 5100 1600 50  0001 C CNN
+F 1 "GND" H 5105 1677 50  0000 C CNN
+F 2 "" H 5100 1850 50  0001 C CNN
+F 3 "" H 5100 1850 50  0001 C CNN
+	1    5100 1850
 	1    0    0    -1  
 $EndComp
-Text Label 4350 1700 0    50   ~ 0
+Text Label 4550 1100 3    50   ~ 0
 BurnWireSignal
-Wire Wire Line
-	4350 1450 4350 1700
-Text Label 5000 1750 0    50   ~ 0
-BurnResistorOut
-Text Label 5000 1900 0    50   ~ 0
-BurnResistorGND
-Text Label 5000 750  0    50   ~ 0
-5V_Bus_1
-Text Notes 5400 1050 2    79   Italic 16
-Burn Wire Circuit\n\n\n\n
 Wire Notes Line
 	500  2600 5800 2600
 $Comp
@@ -2238,51 +2188,27 @@ Text Notes 7050 6750 0    39   Italic 8
 $Comp
 L Connector:Conn_01x06_Male J4
 U 1 1 5E5491D0
-P 6900 5350
-F 0 "J4" V 6850 5000 50  0000 R CNN
-F 1 "Inhibit_Header" V 6850 5600 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6900 5350 50  0001 C CNN
-F 3 "~" H 6900 5350 50  0001 C CNN
-	1    6900 5350
+P 8050 5350
+F 0 "J4" V 8000 5000 50  0000 R CNN
+F 1 "Inhibit_Header" V 8000 5600 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8050 5350 50  0001 C CNN
+F 3 "~" H 8050 5350 50  0001 C CNN
+	1    8050 5350
 	0    1    1    0   
 $EndComp
-Text Label 7100 5550 3    50   ~ 0
+Text Label 8250 5550 3    50   ~ 0
 Sunny_Batt
 $Comp
 L power:GND #PWR0146
 U 1 1 5E54BECD
-P 7000 5550
-F 0 "#PWR0146" H 7000 5300 50  0001 C CNN
-F 1 "GND" V 7005 5422 50  0000 R CNN
-F 2 "" H 7000 5550 50  0001 C CNN
-F 3 "" H 7000 5550 50  0001 C CNN
-	1    7000 5550
+P 8150 5550
+F 0 "#PWR0146" H 8150 5300 50  0001 C CNN
+F 1 "GND" V 8155 5422 50  0000 R CNN
+F 2 "" H 8150 5550 50  0001 C CNN
+F 3 "" H 8150 5550 50  0001 C CNN
+	1    8150 5550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Deck_Plate_PCB:Sunny_Batt U14
-U 1 1 5E562412
-P 7200 5750
-F 0 "U14" H 8200 5800 50  0000 L CNN
-F 1 "Sunny_Batt" H 7900 6200 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 7600 5850 50  0001 C CNN
-F 3 "" H 7600 5850 50  0001 C CNN
-	1    7200 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0147
-U 1 1 5E56418E
-P 7600 5550
-F 0 "#PWR0147" H 7600 5300 50  0001 C CNN
-F 1 "GND" V 7605 5422 50  0000 R CNN
-F 2 "" H 7600 5550 50  0001 C CNN
-F 3 "" H 7600 5550 50  0001 C CNN
-	1    7600 5550
-	0    1    1    0   
-$EndComp
-Text Label 7600 5450 2    50   ~ 0
-Sunny_Batt
 NoConn ~ 3900 4400
 NoConn ~ 3900 4500
 NoConn ~ 2950 4400
@@ -2294,29 +2220,27 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0148
 U 1 1 5E5EC828
-P 6800 5550
-F 0 "#PWR0148" H 6800 5300 50  0001 C CNN
-F 1 "GND" V 6805 5422 50  0000 R CNN
-F 2 "" H 6800 5550 50  0001 C CNN
-F 3 "" H 6800 5550 50  0001 C CNN
-	1    6800 5550
+P 7950 5550
+F 0 "#PWR0148" H 7950 5300 50  0001 C CNN
+F 1 "GND" V 7955 5422 50  0000 R CNN
+F 2 "" H 7950 5550 50  0001 C CNN
+F 3 "" H 7950 5550 50  0001 C CNN
+	1    7950 5550
 	1    0    0    -1  
 $EndComp
-Text Label 6700 5550 3    50   ~ 0
+Text Label 7850 5550 3    50   ~ 0
 9V_Bus
 $Comp
 L power:GND #PWR0149
 U 1 1 5E5ED6C4
-P 6600 5550
-F 0 "#PWR0149" H 6600 5300 50  0001 C CNN
-F 1 "GND" V 6605 5422 50  0000 R CNN
-F 2 "" H 6600 5550 50  0001 C CNN
-F 3 "" H 6600 5550 50  0001 C CNN
-	1    6600 5550
+P 7750 5550
+F 0 "#PWR0149" H 7750 5300 50  0001 C CNN
+F 1 "GND" V 7755 5422 50  0000 R CNN
+F 2 "" H 7750 5550 50  0001 C CNN
+F 3 "" H 7750 5550 50  0001 C CNN
+	1    7750 5550
 	1    0    0    -1  
 $EndComp
-Text Notes 7050 6850 0    39   Italic 8
-- TODO update Burn Wire transistors to new footprint (see PCB Changelog)
 Text Label 8050 1250 0    50   ~ 0
 Bit_1
 Text Label 8050 1950 0    50   ~ 0
@@ -2330,10 +2254,80 @@ NoConn ~ 6300 2550
 NoConn ~ 6300 2650
 NoConn ~ 7900 2350
 NoConn ~ 11750 1750
-Wire Wire Line
-	4350 1450 4400 1450
-Text Label 6900 5550 3    50   ~ 0
+Text Label 8050 5550 3    50   ~ 0
 BurnWireSignal
-Text Notes 7050 6950 0    39   Italic 8
-- TODO get clarification on Burn Wire circuit
+Text Label 5100 800  0    50   ~ 0
+5V_Bus_1
+Wire Wire Line
+	5100 1400 5300 1400
+Wire Wire Line
+	5300 1400 5300 1500
+Wire Wire Line
+	5100 1400 4900 1400
+Wire Wire Line
+	4900 1400 4900 1500
+Connection ~ 5100 1400
+Wire Wire Line
+	4900 1800 5100 1800
+Wire Wire Line
+	5100 1800 5100 1850
+Wire Wire Line
+	5300 1800 5100 1800
+Connection ~ 5100 1800
+Text Notes 5450 1050 2    79   Italic 16
+Burn Wire Circuit\n\n\n\n
+Wire Wire Line
+	4550 1100 4800 1100
+Text Label 9600 5550 3    60   ~ 0
+Digital_41
+Text Label 9500 5350 3    60   ~ 0
+BurnWireSignal
+Wire Wire Line
+	10500 5350 10500 5550
+Wire Wire Line
+	10400 5350 10400 5550
+Wire Wire Line
+	10300 5350 10300 5550
+Wire Wire Line
+	10200 5350 10200 5550
+Wire Wire Line
+	10100 5350 10100 5550
+Wire Wire Line
+	10000 5350 10000 5550
+Wire Wire Line
+	9900 5350 9900 5550
+Wire Wire Line
+	9800 5350 9800 5550
+Wire Wire Line
+	9700 5350 9700 5550
+Wire Wire Line
+	9600 5350 9600 5550
+Wire Wire Line
+	9400 5350 9400 5550
+Wire Wire Line
+	9300 5350 9300 5550
+Wire Wire Line
+	9200 5350 9200 5550
+Wire Wire Line
+	9350 4100 9250 4100
+Text Notes 6750 3750 0    50   ~ 0
+DONE
+Text Notes 2450 2800 0    50   ~ 0
+DONE
+Text Notes 2250 5250 0    50   ~ 0
+DONE
+Text Notes 1200 5250 0    50   ~ 0
+DONE
+Text Notes 4900 2250 0    50   ~ 0
+DONE
+Text Notes 5450 2800 0    50   ~ 0
+DONE
+Wire Wire Line
+	9250 4000 9350 4000
+Text Notes 3250 5250 0    50   ~ 0
+DONE
+Text Notes 1800 650  0    50   ~ 0
+DONE
+Text Notes 6200 5400 0    31   ~ 0
+Make a 4-pin header (Inhibit_in, GND, Battery_out, GND)\nfor battery charging inhibit
 $EndSCHEMATC
