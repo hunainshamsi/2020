@@ -145,11 +145,11 @@ Text Label 10400 2550 0    60   ~ 0
 Text Label 10400 2650 0    60   ~ 0
 5(**)
 Text Label 10400 2750 0    60   ~ 0
-4(**)
+NASA_Analog_3
 Text Label 10400 2850 0    60   ~ 0
-3(**)
+NASA_Analog_2
 Text Label 10400 2950 0    60   ~ 0
-2(**)
+NASA_Analog_1
 Text Label 10400 3050 0    60   ~ 0
 1(Tx0)
 Text Label 10400 3150 0    60   ~ 0
@@ -612,23 +612,23 @@ $EndComp
 $Comp
 L Connector:DB37_Male_MountingHoles J2
 U 1 1 5E4749AA
-P 2650 7300
-F 0 "J2" V 2875 7268 50  0000 C CNN
-F 1 "NASA_Telemetry_Interface" V 2966 7268 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-37_Male_Vertical_P2.77x2.84mm_MountingHoles" H 2650 7300 50  0001 C CNN
-F 3 " ~" H 2650 7300 50  0001 C CNN
-	1    2650 7300
+P 2600 7400
+F 0 "J2" V 2825 7368 50  0000 C CNN
+F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-37_Male_Vertical_P2.77x2.84mm_MountingHoles" H 2600 7400 50  0001 C CNN
+F 3 " ~" H 2600 7400 50  0001 C CNN
+	1    2600 7400
 	0    1    1    0   
 $EndComp
 $Comp
 L Connector:DB15_Male_MountingHoles J3
 U 1 1 5E47F177
-P 5950 7300
-F 0 "J3" V 6149 7255 50  0000 C CNN
-F 1 "NASA PWR_Interface" V 6240 7255 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-15_Male_Vertical_P2.77x2.84mm_MountingHoles" H 5950 7300 50  0001 C CNN
-F 3 " ~" H 5950 7300 50  0001 C CNN
-	1    5950 7300
+P 5950 7400
+F 0 "J3" V 6149 7355 50  0000 C CNN
+F 1 "NASA PWR_Interface" V 6240 7355 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-15_Male_Vertical_P2.77x2.84mm_MountingHoles" H 5950 7400 50  0001 C CNN
+F 3 " ~" H 5950 7400 50  0001 C CNN
+	1    5950 7400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -839,8 +839,6 @@ Text Label 1000 3000 2    50   ~ 0
 Solar_IN+
 Text Label 1000 3100 2    50   ~ 0
 Solar_IN-
-Text Label 1000 3200 2    50   ~ 0
-LED+
 $Comp
 L power:GND #PWR0104
 U 1 1 5E583441
@@ -1011,14 +1009,6 @@ Wire Wire Line
 Text Label 2150 4550 0    50   ~ 0
 I2C_SDA
 Wire Wire Line
-	2000 4700 2150 4700
-Text Label 2150 4700 0    50   ~ 0
-GPIO_A
-Wire Wire Line
-	1050 4700 900  4700
-Text Label 900  4700 2    50   ~ 0
-GPIO_B
-Wire Wire Line
 	1050 4550 900  4550
 Text Label 900  4550 2    50   ~ 0
 I2C_SCL
@@ -1066,8 +1056,6 @@ F 3 "https://www.adafruit.com/product/1413?gclid=CjwKCAiAvonyBRB7EiwAadauqf3mSuy
 $EndComp
 Text Notes 2350 4400 2    79   Italic 16
 Sensor Management Circuitry\n\n\n
-Text Label 2950 4600 2    50   ~ 0
-3v3_Range
 Text Notes 2750 6750 2    79   Italic 16
 NASA Power and Telemetry Interface\n\n
 Text Notes 8300 900  2    79   Italic 16
@@ -1791,212 +1779,180 @@ Wire Notes Line
 	5550 6550 6950 6550
 Wire Notes Line
 	5550 5200 5550 6550
-Text Label 5250 7000 1    50   ~ 0
+Text Label 5250 7100 1    50   ~ 0
 28V_GSE_1
-Text Label 5450 7000 1    50   ~ 0
+Text Label 5450 7100 1    50   ~ 0
 TE-RA
-Text Label 5650 7000 1    50   ~ 0
+Text Label 5650 7100 1    50   ~ 0
 TE-RB
-Text Label 5850 7000 1    50   ~ 0
+Text Label 5850 7100 1    50   ~ 0
 TE-1
 $Comp
 L power:GND #PWR0131
 U 1 1 5E5353EC
-P 6050 7000
-F 0 "#PWR0131" H 6050 6750 50  0001 C CNN
-F 1 "GND" V 6055 6872 50  0000 R CNN
-F 2 "" H 6050 7000 50  0001 C CNN
-F 3 "" H 6050 7000 50  0001 C CNN
-	1    6050 7000
+P 6050 7100
+F 0 "#PWR0131" H 6050 6850 50  0001 C CNN
+F 1 "GND" V 6055 6972 50  0000 R CNN
+F 2 "" H 6050 7100 50  0001 C CNN
+F 3 "" H 6050 7100 50  0001 C CNN
+	1    6050 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0132
 U 1 1 5E536381
-P 6250 7000
-F 0 "#PWR0132" H 6250 6750 50  0001 C CNN
-F 1 "GND" V 6255 6872 50  0000 R CNN
-F 2 "" H 6250 7000 50  0001 C CNN
-F 3 "" H 6250 7000 50  0001 C CNN
-	1    6250 7000
+P 6250 7100
+F 0 "#PWR0132" H 6250 6850 50  0001 C CNN
+F 1 "GND" V 6255 6972 50  0000 R CNN
+F 2 "" H 6250 7100 50  0001 C CNN
+F 3 "" H 6250 7100 50  0001 C CNN
+	1    6250 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0133
 U 1 1 5E536901
-P 6450 7000
-F 0 "#PWR0133" H 6450 6750 50  0001 C CNN
-F 1 "GND" V 6455 6872 50  0000 R CNN
-F 2 "" H 6450 7000 50  0001 C CNN
-F 3 "" H 6450 7000 50  0001 C CNN
-	1    6450 7000
+P 6450 7100
+F 0 "#PWR0133" H 6450 6850 50  0001 C CNN
+F 1 "GND" V 6455 6972 50  0000 R CNN
+F 2 "" H 6450 7100 50  0001 C CNN
+F 3 "" H 6450 7100 50  0001 C CNN
+	1    6450 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0134
 U 1 1 5E536D83
-P 6650 7000
-F 0 "#PWR0134" H 6650 6750 50  0001 C CNN
-F 1 "GND" V 6655 6872 50  0000 R CNN
-F 2 "" H 6650 7000 50  0001 C CNN
-F 3 "" H 6650 7000 50  0001 C CNN
-	1    6650 7000
+P 6650 7100
+F 0 "#PWR0134" H 6650 6850 50  0001 C CNN
+F 1 "GND" V 6655 6972 50  0000 R CNN
+F 2 "" H 6650 7100 50  0001 C CNN
+F 3 "" H 6650 7100 50  0001 C CNN
+	1    6650 7100
 	-1   0    0    1   
 $EndComp
-Text Label 5350 7000 1    50   ~ 0
+Text Label 5350 7100 1    50   ~ 0
 28V_GSE_2
-Text Label 5550 7000 1    50   ~ 0
+Text Label 5550 7100 1    50   ~ 0
 TE-2
-Text Label 5750 7000 1    50   ~ 0
+Text Label 5750 7100 1    50   ~ 0
 TE-3
 $Comp
 L power:GND #PWR0135
 U 1 1 5E538EF0
-P 5950 7000
-F 0 "#PWR0135" H 5950 6750 50  0001 C CNN
-F 1 "GND" V 5955 6872 50  0000 R CNN
-F 2 "" H 5950 7000 50  0001 C CNN
-F 3 "" H 5950 7000 50  0001 C CNN
-	1    5950 7000
+P 5950 7100
+F 0 "#PWR0135" H 5950 6850 50  0001 C CNN
+F 1 "GND" V 5955 6972 50  0000 R CNN
+F 2 "" H 5950 7100 50  0001 C CNN
+F 3 "" H 5950 7100 50  0001 C CNN
+	1    5950 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0136
 U 1 1 5E5390EF
-P 6150 7000
-F 0 "#PWR0136" H 6150 6750 50  0001 C CNN
-F 1 "GND" V 6155 6872 50  0000 R CNN
-F 2 "" H 6150 7000 50  0001 C CNN
-F 3 "" H 6150 7000 50  0001 C CNN
-	1    6150 7000
+P 6150 7100
+F 0 "#PWR0136" H 6150 6850 50  0001 C CNN
+F 1 "GND" V 6155 6972 50  0000 R CNN
+F 2 "" H 6150 7100 50  0001 C CNN
+F 3 "" H 6150 7100 50  0001 C CNN
+	1    6150 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0137
 U 1 1 5E5394B1
-P 6350 7000
-F 0 "#PWR0137" H 6350 6750 50  0001 C CNN
-F 1 "GND" V 6355 6872 50  0000 R CNN
-F 2 "" H 6350 7000 50  0001 C CNN
-F 3 "" H 6350 7000 50  0001 C CNN
-	1    6350 7000
+P 6350 7100
+F 0 "#PWR0137" H 6350 6850 50  0001 C CNN
+F 1 "GND" V 6355 6972 50  0000 R CNN
+F 2 "" H 6350 7100 50  0001 C CNN
+F 3 "" H 6350 7100 50  0001 C CNN
+	1    6350 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0138
 U 1 1 5E539794
-P 6550 7000
-F 0 "#PWR0138" H 6550 6750 50  0001 C CNN
-F 1 "GND" V 6555 6872 50  0000 R CNN
-F 2 "" H 6550 7000 50  0001 C CNN
-F 3 "" H 6550 7000 50  0001 C CNN
-	1    6550 7000
+P 6550 7100
+F 0 "#PWR0138" H 6550 6850 50  0001 C CNN
+F 1 "GND" V 6555 6972 50  0000 R CNN
+F 2 "" H 6550 7100 50  0001 C CNN
+F 3 "" H 6550 7100 50  0001 C CNN
+	1    6550 7100
 	-1   0    0    1   
 $EndComp
-Text Label 850  7000 1    50   ~ 0
-Analog_1
-Text Label 1050 7000 1    50   ~ 0
-Analog_2
-Text Label 1250 7000 1    50   ~ 0
-Analog_3
-Text Label 1450 7000 1    50   ~ 0
-Analog_4
-Text Label 1650 7000 1    50   ~ 0
-Analog_5
-Text Label 1850 7000 1    50   ~ 0
-Analog_6
-Text Label 2050 7000 1    50   ~ 0
-Analog_7
-Text Label 2250 7000 1    50   ~ 0
-Analog_8
-Text Label 2450 7000 1    50   ~ 0
-Analog_9
-Text Label 2650 7000 1    50   ~ 0
-Analog_10
-Text Label 2850 7000 1    50   ~ 0
-Bit_1_MSB
-Text Label 3050 7000 1    50   ~ 0
+Text Label 800  7100 1    50   ~ 0
+NASA_Analog_1
+Text Label 1000 7100 1    50   ~ 0
+NASA_Analog_2
+Text Label 1200 7100 1    50   ~ 0
+NASA_Analog_3
+Text Label 1400 7100 1    50   ~ 0
+NASA_Analog_4
+Text Label 3000 7100 1    50   ~ 0
 Bit_2
-Text Label 3250 7000 1    50   ~ 0
+Text Label 3200 7100 1    50   ~ 0
 Bit_3
-Text Label 3450 7000 1    50   ~ 0
+Text Label 3400 7100 1    50   ~ 0
 Bit_4
-Text Label 3650 7000 1    50   ~ 0
+Text Label 3600 7100 1    50   ~ 0
 Bit_5
-Text Label 3850 7000 1    50   ~ 0
+Text Label 3800 7100 1    50   ~ 0
 Bit_6
-NoConn ~ 4050 7000
+NoConn ~ 4000 7100
 $Comp
 L power:GND #PWR0139
 U 1 1 5E557475
-P 4250 7000
-F 0 "#PWR0139" H 4250 6750 50  0001 C CNN
-F 1 "GND" V 4255 6872 50  0000 R CNN
-F 2 "" H 4250 7000 50  0001 C CNN
-F 3 "" H 4250 7000 50  0001 C CNN
-	1    4250 7000
+P 4200 7100
+F 0 "#PWR0139" H 4200 6850 50  0001 C CNN
+F 1 "GND" V 4205 6972 50  0000 R CNN
+F 2 "" H 4200 7100 50  0001 C CNN
+F 3 "" H 4200 7100 50  0001 C CNN
+	1    4200 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0140
 U 1 1 5E5589F0
-P 4450 7000
-F 0 "#PWR0140" H 4450 6750 50  0001 C CNN
-F 1 "GND" V 4455 6872 50  0000 R CNN
-F 2 "" H 4450 7000 50  0001 C CNN
-F 3 "" H 4450 7000 50  0001 C CNN
-	1    4450 7000
+P 4400 7100
+F 0 "#PWR0140" H 4400 6850 50  0001 C CNN
+F 1 "GND" V 4405 6972 50  0000 R CNN
+F 2 "" H 4400 7100 50  0001 C CNN
+F 3 "" H 4400 7100 50  0001 C CNN
+	1    4400 7100
 	-1   0    0    1   
 $EndComp
-Text Label 950  7000 1    50   ~ 0
+Text Label 900  7100 1    50   ~ 0
 Bit_7
-Text Label 1150 7000 1    50   ~ 0
-Bit_8
-Text Label 1350 7000 1    50   ~ 0
-Bit_9
-Text Label 1550 7000 1    50   ~ 0
-Bit_10
-Text Label 1750 7000 1    50   ~ 0
-Bit_11
-Text Label 1950 7000 1    50   ~ 0
-Bit_12
-Text Label 2150 7000 1    50   ~ 0
-Bit_13
-Text Label 2350 7000 1    50   ~ 0
-Bit_14
-Text Label 2550 7000 1    50   ~ 0
-Bit_15
-Text Label 2750 7000 1    50   ~ 0
-Bit_16_LSB
-Text Label 2950 7000 1    50   ~ 0
+Text Label 2900 7100 1    50   ~ 0
 Para_Strobe
-NoConn ~ 3150 7000
-NoConn ~ 3950 7000
-NoConn ~ 3750 7000
-Text Label 3350 7000 1    50   ~ 0
+NoConn ~ 3100 7100
+NoConn ~ 3900 7100
+NoConn ~ 3700 7100
+Text Label 3300 7100 1    50   ~ 0
 RS_DATA
-Text Label 3550 7000 1    50   ~ 0
+Text Label 3500 7100 1    50   ~ 0
 RS_GND
 $Comp
 L power:GND #PWR0141
 U 1 1 5E5AAFCD
-P 4150 7000
-F 0 "#PWR0141" H 4150 6750 50  0001 C CNN
-F 1 "GND" V 4155 6872 50  0000 R CNN
-F 2 "" H 4150 7000 50  0001 C CNN
-F 3 "" H 4150 7000 50  0001 C CNN
-	1    4150 7000
+P 4100 7100
+F 0 "#PWR0141" H 4100 6850 50  0001 C CNN
+F 1 "GND" V 4105 6972 50  0000 R CNN
+F 2 "" H 4100 7100 50  0001 C CNN
+F 3 "" H 4100 7100 50  0001 C CNN
+	1    4100 7100
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0142
 U 1 1 5E5AB3A5
-P 4350 7000
-F 0 "#PWR0142" H 4350 6750 50  0001 C CNN
-F 1 "GND" V 4355 6872 50  0000 R CNN
-F 2 "" H 4350 7000 50  0001 C CNN
-F 3 "" H 4350 7000 50  0001 C CNN
-	1    4350 7000
+P 4300 7100
+F 0 "#PWR0142" H 4300 6850 50  0001 C CNN
+F 1 "GND" V 4305 6972 50  0000 R CNN
+F 2 "" H 4300 7100 50  0001 C CNN
+F 3 "" H 4300 7100 50  0001 C CNN
+	1    4300 7100
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -2004,49 +1960,49 @@ Wire Wire Line
 $Comp
 L Device:C C5
 U 1 1 5E5E7E9C
-P 4800 6700
-F 0 "C5" H 4915 6746 50  0000 L CNN
-F 1 "220uF" H 4915 6655 50  0000 L CNN
-F 2 "Deck_Plate_PCB:220uF_Cap" H 4838 6550 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4800 6700 50  0001 C CNN
-	1    4800 6700
+P 4800 6800
+F 0 "C5" H 4915 6846 50  0000 L CNN
+F 1 "220uF" H 4915 6755 50  0000 L CNN
+F 2 "Deck_Plate_PCB:220uF_Cap" H 4838 6650 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4800 6800 50  0001 C CNN
+	1    4800 6800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 6550 5350 7000
+	5350 6650 5350 7100
 $Comp
 L power:GND #PWR0143
 U 1 1 5E60FCA9
-P 4800 6850
-F 0 "#PWR0143" H 4800 6600 50  0001 C CNN
-F 1 "GND" V 4805 6722 50  0000 R CNN
-F 2 "" H 4800 6850 50  0001 C CNN
-F 3 "" H 4800 6850 50  0001 C CNN
-	1    4800 6850
+P 4800 6950
+F 0 "#PWR0143" H 4800 6700 50  0001 C CNN
+F 1 "GND" V 4805 6822 50  0000 R CNN
+F 2 "" H 4800 6950 50  0001 C CNN
+F 3 "" H 4800 6950 50  0001 C CNN
+	1    4800 6950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4800 6550 5350 6550
+	4800 6650 5350 6650
 $Comp
 L power:GND #PWR0144
 U 1 1 5E62467C
-P 5050 7300
-F 0 "#PWR0144" H 5050 7050 50  0001 C CNN
-F 1 "GND" V 5055 7172 50  0000 R CNN
-F 2 "" H 5050 7300 50  0001 C CNN
-F 3 "" H 5050 7300 50  0001 C CNN
-	1    5050 7300
+P 5050 7400
+F 0 "#PWR0144" H 5050 7150 50  0001 C CNN
+F 1 "GND" V 5055 7272 50  0000 R CNN
+F 2 "" H 5050 7400 50  0001 C CNN
+F 3 "" H 5050 7400 50  0001 C CNN
+	1    5050 7400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0145
 U 1 1 5E624BAC
-P 650 7300
-F 0 "#PWR0145" H 650 7050 50  0001 C CNN
-F 1 "GND" V 655 7172 50  0000 R CNN
-F 2 "" H 650 7300 50  0001 C CNN
-F 3 "" H 650 7300 50  0001 C CNN
-	1    650  7300
+P 600 7400
+F 0 "#PWR0145" H 600 7150 50  0001 C CNN
+F 1 "GND" V 605 7272 50  0000 R CNN
+F 2 "" H 600 7400 50  0001 C CNN
+F 3 "" H 600 7400 50  0001 C CNN
+	1    600  7400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2186,61 +2142,26 @@ Text Notes 7050 6650 0    39   Italic 8
 Text Notes 7050 6750 0    39   Italic 8
 - TODO: Get with software and confirm signal naming. Go through component by component and make sure output and input names are correct
 $Comp
-L Connector:Conn_01x06_Male J4
+L Connector:Conn_01x02_Male J4
 U 1 1 5E5491D0
-P 8050 5350
-F 0 "J4" V 8000 5000 50  0000 R CNN
-F 1 "Inhibit_Header" V 8000 5600 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8050 5350 50  0001 C CNN
-F 3 "~" H 8050 5350 50  0001 C CNN
-	1    8050 5350
+P 7400 5600
+F 0 "J4" V 7700 5700 50  0000 R CNN
+F 1 "Motor_Inhibit" V 7350 5850 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7400 5600 50  0001 C CNN
+F 3 "~" H 7400 5600 50  0001 C CNN
+	1    7400 5600
 	0    1    1    0   
 $EndComp
-Text Label 8250 5550 3    50   ~ 0
-Sunny_Batt
-$Comp
-L power:GND #PWR0146
-U 1 1 5E54BECD
-P 8150 5550
-F 0 "#PWR0146" H 8150 5300 50  0001 C CNN
-F 1 "GND" V 8155 5422 50  0000 R CNN
-F 2 "" H 8150 5550 50  0001 C CNN
-F 3 "" H 8150 5550 50  0001 C CNN
-	1    8150 5550
-	1    0    0    -1  
-$EndComp
+Text Label 6150 5800 3    50   ~ 0
+Sunny_Batt_Out
 NoConn ~ 3900 4400
 NoConn ~ 3900 4500
 NoConn ~ 2950 4400
 NoConn ~ 2950 4500
-Text Label 2150 4400 0    50   ~ 0
-3v3_Range
 Wire Wire Line
 	3100 4600 2950 4600
-$Comp
-L power:GND #PWR0148
-U 1 1 5E5EC828
-P 7950 5550
-F 0 "#PWR0148" H 7950 5300 50  0001 C CNN
-F 1 "GND" V 7955 5422 50  0000 R CNN
-F 2 "" H 7950 5550 50  0001 C CNN
-F 3 "" H 7950 5550 50  0001 C CNN
-	1    7950 5550
-	1    0    0    -1  
-$EndComp
-Text Label 7850 5550 3    50   ~ 0
+Text Label 7400 5800 3    50   ~ 0
 9V_Bus
-$Comp
-L power:GND #PWR0149
-U 1 1 5E5ED6C4
-P 7750 5550
-F 0 "#PWR0149" H 7750 5300 50  0001 C CNN
-F 1 "GND" V 7755 5422 50  0000 R CNN
-F 2 "" H 7750 5550 50  0001 C CNN
-F 3 "" H 7750 5550 50  0001 C CNN
-	1    7750 5550
-	1    0    0    -1  
-$EndComp
 Text Label 8050 1250 0    50   ~ 0
 Bit_1
 Text Label 8050 1950 0    50   ~ 0
@@ -2254,7 +2175,7 @@ NoConn ~ 6300 2550
 NoConn ~ 6300 2650
 NoConn ~ 7900 2350
 NoConn ~ 11750 1750
-Text Label 8050 5550 3    50   ~ 0
+Text Label 7750 5800 3    50   ~ 0
 BurnWireSignal
 Text Label 5100 800  0    50   ~ 0
 5V_Bus_1
@@ -2328,6 +2249,117 @@ Text Notes 3250 5250 0    50   ~ 0
 DONE
 Text Notes 1800 650  0    50   ~ 0
 DONE
-Text Notes 6200 5400 0    31   ~ 0
-Make a 4-pin header (Inhibit_in, GND, Battery_out, GND)\nfor battery charging inhibit
+$Comp
+L Connector:Conn_01x04_Male J5
+U 1 1 5E594812
+P 6250 5600
+F 0 "J5" V 6550 5700 50  0000 L CNN
+F 1 "SunnyBuddy_Inhibit" V 6200 5150 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6250 5600 50  0001 C CNN
+F 3 "~" H 6250 5600 50  0001 C CNN
+	1    6250 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0146
+U 1 1 5E596961
+P 6050 5800
+F 0 "#PWR0146" H 6050 5550 50  0001 C CNN
+F 1 "GND" V 6055 5672 50  0000 R CNN
+F 2 "" H 6050 5800 50  0001 C CNN
+F 3 "" H 6050 5800 50  0001 C CNN
+	1    6050 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 5E5A7FCB
+P 6350 5800
+F 0 "#PWR0147" H 6350 5550 50  0001 C CNN
+F 1 "GND" V 6355 5672 50  0000 R CNN
+F 2 "" H 6350 5800 50  0001 C CNN
+F 3 "" H 6350 5800 50  0001 C CNN
+	1    6350 5800
+	0    -1   -1   0   
+$EndComp
+Text Label 6250 5800 3    50   ~ 0
+Batt_In
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5E5C0AEB
+P 6800 5600
+F 0 "J6" V 7100 5700 50  0000 C CNN
+F 1 "Batt_JST_Conn" V 6750 5650 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 6800 5600 50  0001 C CNN
+F 3 "~" H 6800 5600 50  0001 C CNN
+	1    6800 5600
+	0    1    1    0   
+$EndComp
+Text Label 6800 5800 3    50   ~ 0
+Batt_In
+$Comp
+L power:GND #PWR0148
+U 1 1 5E5C3263
+P 6700 5800
+F 0 "#PWR0148" H 6700 5550 50  0001 C CNN
+F 1 "GND" V 6705 5672 50  0000 R CNN
+F 2 "" H 6700 5800 50  0001 C CNN
+F 3 "" H 6700 5800 50  0001 C CNN
+	1    6700 5800
+	1    0    0    -1  
+$EndComp
+Text Label 7650 5800 3    50   ~ 0
+BurnWireSignal
+Text Label 7300 5800 3    50   ~ 0
+9V_Bus
+$Comp
+L Connector:Conn_01x02_Male J7
+U 1 1 5E5D856C
+P 7750 5600
+F 0 "J7" V 8050 5650 50  0000 L CNN
+F 1 "BurWire_Inhibit" V 7700 5550 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7750 5600 50  0001 C CNN
+F 3 "~" H 7750 5600 50  0001 C CNN
+	1    7750 5600
+	0    1    1    0   
+$EndComp
+Text Notes 6750 5850 2    79   Italic 16
+Electrical Inhibits\n\n\n\n
+$Comp
+L power:+3V3 #PWR0149
+U 1 1 5E62C873
+P 2950 4600
+F 0 "#PWR0149" H 2950 4450 50  0001 C CNN
+F 1 "+3.3V" V 2950 4850 50  0000 C CNN
+F 2 "" H 2950 4600 50  0000 C CNN
+F 3 "" H 2950 4600 50  0000 C CNN
+	1    2950 4600
+	0    -1   -1   0   
+$EndComp
+Text Label 2150 4400 0    50   ~ 0
+5V_Bus_1
+NoConn ~ 2000 4700
+NoConn ~ 1050 4700
+Text Notes 3350 4150 0    50   ~ 0
+DONE
+Text Notes 700  4800 0    50   ~ 0
+DONE
+Text Notes 6900 5400 0    50   ~ 0
+DONE
+NoConn ~ 1100 7100
+NoConn ~ 1300 7100
+NoConn ~ 1500 7100
+NoConn ~ 1600 7100
+NoConn ~ 1700 7100
+NoConn ~ 1800 7100
+NoConn ~ 1900 7100
+NoConn ~ 2000 7100
+NoConn ~ 2100 7100
+NoConn ~ 2200 7100
+NoConn ~ 2300 7100
+NoConn ~ 2400 7100
+NoConn ~ 2500 7100
+NoConn ~ 2600 7100
+NoConn ~ 2700 7100
+NoConn ~ 2800 7100
 $EndSCHEMATC
