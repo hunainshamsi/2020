@@ -602,31 +602,31 @@ $Comp
 L Deck_Plate_PCB:LIDAR-LITE_V4_Range U7
 U 1 1 5E458126
 P 450 5350
-F 0 "U7" H 1850 5550 50  0000 C CNN
-F 1 "LIDAR-LITE_V4_Range" H 1550 6450 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1900 6300 50  0001 C CNN
+F 0 "U7" H 1850 6050 50  0000 C CNN
+F 1 "Lidar_RangeFinder" H 1550 6450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1900 6300 50  0001 C CNN
 F 3 "https://static.garmin.com/pumac/LIDAR-Lite%20LED%20v4%20Instructions_EN-US.pdf" H 1900 6300 50  0001 C CNN
 	1    450  5350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:DB37_Male_MountingHoles J2
+L Connector:DB37_Male J2
 U 1 1 5E4749AA
 P 2600 7400
 F 0 "J2" V 2825 7368 50  0000 C CNN
 F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-37_Male_Vertical_P2.77x2.84mm_MountingHoles" H 2600 7400 50  0001 C CNN
+F 2 "Deck_Plate_PCB:NASA_Telem_37-pin_DSub" H 2600 7400 50  0001 C CNN
 F 3 " ~" H 2600 7400 50  0001 C CNN
 	1    2600 7400
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:DB15_Male_MountingHoles J3
+L Connector:DB15_Male J3
 U 1 1 5E47F177
 P 5950 7400
 F 0 "J3" V 6149 7355 50  0000 C CNN
 F 1 "NASA PWR_Interface" V 6240 7355 50  0000 C CNN
-F 2 "Connector_Dsub:DSUB-15_Male_Vertical_P2.77x2.84mm_MountingHoles" H 5950 7400 50  0001 C CNN
+F 2 "Deck_Plate_PCB:NASA_PWR_15-pin_DSub" H 5950 7400 50  0001 C CNN
 F 3 " ~" H 5950 7400 50  0001 C CNN
 	1    5950 7400
 	0    1    1    0   
@@ -836,9 +836,9 @@ Wire Wire Line
 Wire Wire Line
 	1100 3100 1000 3100
 Text Label 1000 3000 2    50   ~ 0
-Solar_IN+
-Text Label 1000 3100 2    50   ~ 0
 Solar_IN-
+Text Label 1000 3100 2    50   ~ 0
+Solar_IN+
 $Comp
 L power:GND #PWR0104
 U 1 1 5E583441
@@ -899,10 +899,6 @@ Wire Wire Line
 	2500 3300 2600 3300
 Wire Wire Line
 	2500 3500 2600 3500
-Text Label 2600 3000 0    50   ~ 0
-Solar_IN+
-Text Label 2600 3100 0    50   ~ 0
-Solar_IN-
 Text Label 2600 3550 0    50   ~ 0
 5V_Bus_1
 $Comp
@@ -987,10 +983,6 @@ Wire Wire Line
 	3100 4900 2950 4900
 Text Label 2950 4900 2    50   ~ 0
 I2C_SDA
-NoConn ~ 1050 5000
-NoConn ~ 1050 4850
-NoConn ~ 2000 4850
-NoConn ~ 2000 5000
 $Comp
 L power:GND #PWR0108
 U 1 1 5E743786
@@ -1347,7 +1339,7 @@ $EndComp
 Text Label 7850 4050 0    50   ~ 0
 5V_Bus_2
 Text Label 7500 3900 0    50   ~ 0
-TE_RB
+TE-RB
 Wire Wire Line
 	7850 4650 8100 4650
 Connection ~ 7850 4650
@@ -1437,7 +1429,7 @@ $EndComp
 Text Label 6800 4050 0    50   ~ 0
 5V_Bus_2
 Text Label 6450 3900 0    50   ~ 0
-TE_RA
+TE-RA
 Wire Wire Line
 	6800 4650 7050 4650
 Connection ~ 6800 4650
@@ -1779,14 +1771,10 @@ Wire Notes Line
 	5550 6550 6950 6550
 Wire Notes Line
 	5550 5200 5550 6550
-Text Label 5250 7100 1    50   ~ 0
-28V_GSE_1
 Text Label 5450 7100 1    50   ~ 0
 TE-RA
 Text Label 5650 7100 1    50   ~ 0
 TE-RB
-Text Label 5850 7100 1    50   ~ 0
-TE-1
 $Comp
 L power:GND #PWR0131
 U 1 1 5E5353EC
@@ -1833,10 +1821,6 @@ F 3 "" H 6650 7100 50  0001 C CNN
 $EndComp
 Text Label 5350 7100 1    50   ~ 0
 28V_GSE_2
-Text Label 5550 7100 1    50   ~ 0
-TE-2
-Text Label 5750 7100 1    50   ~ 0
-TE-3
 $Comp
 L power:GND #PWR0135
 U 1 1 5E538EF0
@@ -1984,157 +1968,69 @@ $EndComp
 Wire Wire Line
 	4800 6650 5350 6650
 $Comp
-L power:GND #PWR0144
-U 1 1 5E62467C
-P 5050 7400
-F 0 "#PWR0144" H 5050 7150 50  0001 C CNN
-F 1 "GND" V 5055 7272 50  0000 R CNN
-F 2 "" H 5050 7400 50  0001 C CNN
-F 3 "" H 5050 7400 50  0001 C CNN
-	1    5050 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0145
-U 1 1 5E624BAC
-P 600 7400
-F 0 "#PWR0145" H 600 7150 50  0001 C CNN
-F 1 "GND" V 605 7272 50  0000 R CNN
-F 2 "" H 600 7400 50  0001 C CNN
-F 3 "" H 600 7400 50  0001 C CNN
-	1    600  7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H5
-U 1 1 5E63B3F7
-P 9350 6150
-F 0 "H5" H 9250 6104 50  0000 R CNN
-F 1 "INA219" H 9250 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 9350 6150 50  0001 C CNN
-F 3 "~" H 9350 6150 50  0001 C CNN
-	1    9350 6150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 5E63DA2B
-P 9350 6350
-F 0 "H6" H 9250 6304 50  0000 R CNN
-F 1 "INA219" H 9250 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 9350 6350 50  0001 C CNN
-F 3 "~" H 9350 6350 50  0001 C CNN
-	1    9350 6350
-	-1   0    0    1   
-$EndComp
-$Comp
-L Mechanical:MountingHole H7
-U 1 1 5E63DE75
-P 9800 6150
-F 0 "H7" H 9700 6104 50  0000 R CNN
-F 1 "INA219" H 9700 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 9800 6150 50  0001 C CNN
-F 3 "~" H 9800 6150 50  0001 C CNN
-	1    9800 6150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Mechanical:MountingHole H8
-U 1 1 5E63E369
-P 9800 6350
-F 0 "H8" H 9700 6304 50  0000 R CNN
-F 1 "INA219" H 9700 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 9800 6350 50  0001 C CNN
-F 3 "~" H 9800 6350 50  0001 C CNN
-	1    9800 6350
-	-1   0    0    1   
-$EndComp
-$Comp
 L Mechanical:MountingHole H9
 U 1 1 5E63E671
-P 10250 6150
-F 0 "H9" H 10150 6104 50  0000 R CNN
-F 1 "ADXL377" H 10150 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10250 6150 50  0001 C CNN
-F 3 "~" H 10250 6150 50  0001 C CNN
-	1    10250 6150
+P 10600 6150
+F 0 "H9" H 10500 6104 50  0000 R CNN
+F 1 "Accel_mount" H 10500 6195 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 10600 6150 50  0001 C CNN
+F 3 "~" H 10600 6150 50  0001 C CNN
+	1    10600 6150
 	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole H10
 U 1 1 5E63EB24
-P 10250 6350
-F 0 "H10" H 10150 6304 50  0000 R CNN
-F 1 "ADXL377" H 10150 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10250 6350 50  0001 C CNN
-F 3 "~" H 10250 6350 50  0001 C CNN
-	1    10250 6350
-	-1   0    0    1   
-$EndComp
-$Comp
-L Mechanical:MountingHole H11
-U 1 1 5E63EEC6
-P 10750 6150
-F 0 "H11" H 10650 6104 50  0000 R CNN
-F 1 "ADXL377" H 10650 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10750 6150 50  0001 C CNN
-F 3 "~" H 10750 6150 50  0001 C CNN
-	1    10750 6150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Mechanical:MountingHole H12
-U 1 1 5E63F40C
-P 10750 6350
-F 0 "H12" H 10650 6304 50  0000 R CNN
-F 1 "ADXL377" H 10650 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10750 6350 50  0001 C CNN
-F 3 "~" H 10750 6350 50  0001 C CNN
-	1    10750 6350
+P 10600 6350
+F 0 "H10" H 10500 6304 50  0000 R CNN
+F 1 "Accel_mount" H 10500 6395 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 10600 6350 50  0001 C CNN
+F 3 "~" H 10600 6350 50  0001 C CNN
+	1    10600 6350
 	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 5E63F891
-P 8950 6150
-F 0 "H3" H 8850 6104 50  0000 R CNN
-F 1 "Sunny" H 8850 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 8950 6150 50  0001 C CNN
-F 3 "~" H 8950 6150 50  0001 C CNN
-	1    8950 6150
+P 9900 6150
+F 0 "H3" H 9800 6104 50  0000 R CNN
+F 1 "Accel_mount" H 9800 6195 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 9900 6150 50  0001 C CNN
+F 3 "~" H 9900 6150 50  0001 C CNN
+	1    9900 6150
 	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 5E63FD37
-P 8950 6350
-F 0 "H4" H 8850 6304 50  0000 R CNN
-F 1 "Sunny" H 8850 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 8950 6350 50  0001 C CNN
-F 3 "~" H 8950 6350 50  0001 C CNN
-	1    8950 6350
+P 9900 6350
+F 0 "H4" H 9800 6304 50  0000 R CNN
+F 1 "Accel_mount" H 9800 6395 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 9900 6350 50  0001 C CNN
+F 3 "~" H 9900 6350 50  0001 C CNN
+	1    9900 6350
 	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5E6401D5
-P 8550 6350
-F 0 "H2" H 8450 6304 50  0000 R CNN
-F 1 "Sunny" H 8450 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 8550 6350 50  0001 C CNN
-F 3 "~" H 8550 6350 50  0001 C CNN
-	1    8550 6350
+P 9300 6350
+F 0 "H2" H 9200 6304 50  0000 R CNN
+F 1 "9V_mount" H 9200 6395 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9300 6350 50  0001 C CNN
+F 3 "~" H 9300 6350 50  0001 C CNN
+	1    9300 6350
 	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5E640799
-P 8550 6150
-F 0 "H1" H 8450 6104 50  0000 R CNN
-F 1 "Sunny" H 8450 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 8550 6150 50  0001 C CNN
-F 3 "~" H 8550 6150 50  0001 C CNN
-	1    8550 6150
+P 9300 6150
+F 0 "H1" H 9200 6104 50  0000 R CNN
+F 1 "9V_mount" H 9200 6195 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9300 6150 50  0001 C CNN
+F 3 "~" H 9300 6150 50  0001 C CNN
+	1    9300 6150
 	-1   0    0    1   
 $EndComp
 Text Notes 7050 6650 0    39   Italic 8
@@ -2338,11 +2234,9 @@ F 3 "" H 2950 4600 50  0000 C CNN
 $EndComp
 Text Label 2150 4400 0    50   ~ 0
 5V_Bus_1
-NoConn ~ 2000 4700
-NoConn ~ 1050 4700
 Text Notes 3350 4150 0    50   ~ 0
 DONE
-Text Notes 700  4800 0    50   ~ 0
+Text Notes 1300 4750 0    50   ~ 0
 DONE
 Text Notes 6900 5400 0    50   ~ 0
 DONE
@@ -2362,4 +2256,60 @@ NoConn ~ 2500 7100
 NoConn ~ 2600 7100
 NoConn ~ 2700 7100
 NoConn ~ 2800 7100
+Text Notes 4450 6250 0    50   ~ 0
+DONE
+NoConn ~ 5250 7100
+NoConn ~ 5850 7100
+NoConn ~ 5750 7100
+NoConn ~ 5550 7100
+Text Notes 1500 3600 0    50   ~ 0
+DONE
+$Comp
+L Mechanical:MountingHole H15
+U 1 1 5E5EBE19
+P 8850 6350
+F 0 "H15" H 8750 6304 50  0000 R CNN
+F 1 "Enclos" H 8750 6395 50  0000 R CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 8850 6350 50  0001 C CNN
+F 3 "~" H 8850 6350 50  0001 C CNN
+	1    8850 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H16
+U 1 1 5E5EC212
+P 8850 6150
+F 0 "H16" H 8750 6104 50  0000 R CNN
+F 1 "Enclos" H 8750 6195 50  0000 R CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 8850 6150 50  0001 C CNN
+F 3 "~" H 8850 6150 50  0001 C CNN
+	1    8850 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H14
+U 1 1 5E5EC76A
+P 8400 6350
+F 0 "H14" H 8300 6304 50  0000 R CNN
+F 1 "Enclos" H 8300 6395 50  0000 R CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 8400 6350 50  0001 C CNN
+F 3 "~" H 8400 6350 50  0001 C CNN
+	1    8400 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H13
+U 1 1 5E5ECA7F
+P 8400 6150
+F 0 "H13" H 8300 6104 50  0000 R CNN
+F 1 "Enclos" H 8300 6195 50  0000 R CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 8400 6150 50  0001 C CNN
+F 3 "~" H 8400 6150 50  0001 C CNN
+	1    8400 6150
+	-1   0    0    1   
+$EndComp
+Text Label 2600 3000 0    50   ~ 0
+SolarCell+
+Text Label 2600 3100 0    50   ~ 0
+Solar_IN+
 $EndSCHEMATC
