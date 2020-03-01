@@ -53,7 +53,7 @@ SolarArrayTemp
 Text Label 10500 4650 1    60   ~ 0
 TE_B
 Text Label 10400 4650 1    60   ~ 0
-Digital_24
+Dir
 Text Label 10300 4650 1    60   ~ 0
 Digital_26
 Text Label 10200 4650 1    60   ~ 0
@@ -85,7 +85,7 @@ Text Label 9000 4650 1    60   ~ 0
 Text Label 10500 5550 3    60   ~ 0
 TE_A
 Text Label 10400 5550 3    60   ~ 0
-Digital_25
+Step
 Text Label 10300 5550 3    60   ~ 0
 Digital_27
 Text Label 10100 5550 3    60   ~ 0
@@ -143,7 +143,7 @@ Text Label 10400 2450 0    60   ~ 0
 Text Label 10400 2550 0    60   ~ 0
 6(**)
 Text Label 10400 2650 0    60   ~ 0
-5(**)
+NASA_Analog_4
 Text Label 10400 2750 0    60   ~ 0
 NASA_Analog_3
 Text Label 10400 2850 0    60   ~ 0
@@ -1107,54 +1107,6 @@ F 3 "" H 6900 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0114
-U 1 1 5E59C862
-P 5800 1700
-F 0 "#PWR0114" H 5800 1450 50  0001 C CNN
-F 1 "GND" H 5805 1527 50  0000 C CNN
-F 2 "" H 5800 1700 50  0001 C CNN
-F 3 "" H 5800 1700 50  0001 C CNN
-	1    5800 1700
-	1    0    0    -1  
-$EndComp
-Text Label 5800 700  0    50   ~ 0
-TTL_RX
-Wire Wire Line
-	5800 800  5800 700 
-$Comp
-L Device:R R6
-U 1 1 5E590153
-P 5800 950
-F 0 "R6" H 5870 996 50  0000 L CNN
-F 1 "10K" H 5870 905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5730 950 50  0001 C CNN
-F 3 "~" H 5800 950 50  0001 C CNN
-	1    5800 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5E58F78F
-P 5800 1550
-F 0 "R7" H 5870 1596 50  0000 L CNN
-F 1 "10K" H 5870 1505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5730 1550 50  0001 C CNN
-F 3 "~" H 5800 1550 50  0001 C CNN
-	1    5800 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 1250 5800 1400
-Connection ~ 5800 1250
-Wire Wire Line
-	5800 1100 5800 1250
-Wire Wire Line
-	6300 1250 5800 1250
-Text Label 6150 1150 2    50   ~ 0
-TTL_TX
-Wire Wire Line
-	6300 1150 6150 1150
-$Comp
 L power:GND #PWR0115
 U 1 1 5E56BFDB
 P 6700 3350
@@ -1495,42 +1447,6 @@ Text Label 4550 1100 3    50   ~ 0
 BurnWireSignal
 Wire Notes Line
 	500  2600 5800 2600
-$Comp
-L Deck_Plate_PCB:TTL_Camera U9
-U 1 1 5E7B135A
-P 1600 5900
-F 0 "U9" H 2300 6000 50  0000 L CNN
-F 1 "TTL_Camera" H 2150 6500 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1600 5900 50  0001 C CNN
-F 3 "https://learn.adafruit.com/ttl-serial-camera" H 1600 5900 50  0001 C CNN
-	1    1600 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 5400 1950 5400
-Wire Wire Line
-	2050 5500 1950 5500
-Wire Wire Line
-	2050 5600 1950 5600
-Wire Wire Line
-	2050 5700 1950 5700
-Text Label 1950 5400 2    50   ~ 0
-5V_Bus_2
-$Comp
-L power:GND #PWR0124
-U 1 1 5E80010A
-P 1950 5500
-F 0 "#PWR0124" H 1950 5250 50  0001 C CNN
-F 1 "GND" V 1955 5372 50  0000 R CNN
-F 2 "" H 1950 5500 50  0001 C CNN
-F 3 "" H 1950 5500 50  0001 C CNN
-	1    1950 5500
-	0    1    1    0   
-$EndComp
-Text Label 1950 5600 2    50   ~ 0
-TTL_RX
-Text Label 1950 5700 2    50   ~ 0
-TTL_TX
 $Comp
 L Deck_Plate_PCB:LM20 U10
 U 1 1 5E822D4F
@@ -2017,7 +1933,7 @@ U 1 1 5E6401D5
 P 9300 6350
 F 0 "H2" H 9200 6304 50  0000 R CNN
 F 1 "9V_mount" H 9200 6395 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 9300 6350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9300 6350 50  0001 C CNN
 F 3 "~" H 9300 6350 50  0001 C CNN
 	1    9300 6350
 	-1   0    0    1   
@@ -2028,7 +1944,7 @@ U 1 1 5E640799
 P 9300 6150
 F 0 "H1" H 9200 6104 50  0000 R CNN
 F 1 "9V_mount" H 9200 6195 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 9300 6150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9300 6150 50  0001 C CNN
 F 3 "~" H 9300 6150 50  0001 C CNN
 	1    9300 6150
 	-1   0    0    1   
@@ -2130,8 +2046,6 @@ Wire Wire Line
 Text Notes 6750 3750 0    50   ~ 0
 DONE
 Text Notes 2450 2800 0    50   ~ 0
-DONE
-Text Notes 2250 5250 0    50   ~ 0
 DONE
 Text Notes 1200 5250 0    50   ~ 0
 DONE
@@ -2312,4 +2226,74 @@ Text Label 2600 3000 0    50   ~ 0
 SolarCell+
 Text Label 2600 3100 0    50   ~ 0
 Solar_IN+
+Text Notes 3350 3850 0    50   ~ 0
+Other\n
+Text Notes 4450 6400 0    50   ~ 0
+other
+Text Notes 6700 6300 0    50   ~ 0
+other\n
+Text Notes 1800 3700 0    50   ~ 0
+Other\n
+Text Notes 4900 2400 0    50   ~ 0
+Other
+NoConn ~ 9200 4650
+NoConn ~ 9300 4650
+NoConn ~ 9400 4650
+NoConn ~ 9500 4650
+NoConn ~ 9600 4650
+NoConn ~ 9700 4650
+NoConn ~ 9800 4650
+NoConn ~ 9900 4650
+NoConn ~ 10000 4650
+NoConn ~ 10100 4650
+NoConn ~ 10200 4650
+NoConn ~ 10300 4650
+NoConn ~ 10300 5550
+NoConn ~ 10200 5550
+NoConn ~ 10100 5550
+NoConn ~ 10000 5550
+NoConn ~ 9900 5550
+NoConn ~ 9800 5550
+NoConn ~ 9700 5550
+NoConn ~ 9600 5550
+NoConn ~ 9400 5550
+NoConn ~ 9300 5550
+NoConn ~ 9200 5550
+NoConn ~ 9100 5750
+NoConn ~ 9000 5750
+NoConn ~ 9100 4650
+NoConn ~ 9000 4650
+NoConn ~ 8900 3700
+NoConn ~ 8900 3800
+NoConn ~ 8900 3900
+NoConn ~ 8900 3150
+NoConn ~ 8900 3050
+NoConn ~ 8900 2950
+NoConn ~ 8900 2850
+NoConn ~ 8900 2750
+NoConn ~ 8900 2650
+NoConn ~ 8900 2550
+NoConn ~ 8900 2450
+NoConn ~ 10400 2450
+NoConn ~ 10400 2550
+NoConn ~ 10400 3050
+NoConn ~ 10400 3150
+NoConn ~ 10400 1550
+NoConn ~ 10400 1650
+NoConn ~ 10400 1750
+NoConn ~ 10400 1850
+NoConn ~ 10400 1950
+NoConn ~ 10400 2050
+NoConn ~ 10400 3400
+NoConn ~ 10400 3500
+NoConn ~ 10400 3600
+NoConn ~ 10400 3700
+Wire Wire Line
+	6300 1150 6200 1150
+Wire Wire Line
+	6300 1250 6200 1250
+Text Label 6200 1150 2    50   ~ 0
+TTL_TX
+Text Label 6200 1250 2    50   ~ 0
+TTL_RX
 $EndSCHEMATC
