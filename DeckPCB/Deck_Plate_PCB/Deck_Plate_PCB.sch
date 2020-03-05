@@ -263,17 +263,6 @@ $EndComp
 Text Label 8600 1550 0    60   ~ 0
 Reset
 $Comp
-L power:+5V #PWR02
-U 1 1 56D71D10
-P 9000 1050
-F 0 "#PWR02" H 9000 900 50  0001 C CNN
-F 1 "+5V" V 9000 1250 50  0000 C CNN
-F 2 "" H 9000 1050 50  0000 C CNN
-F 3 "" H 9000 1050 50  0000 C CNN
-	1    9000 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR03
 U 1 1 56D721E6
 P 9250 2150
@@ -530,17 +519,6 @@ Wire Wire Line
 	10750 5350 10600 5350
 Wire Wire Line
 	10750 4850 10600 4850
-$Comp
-L power:+5V #PWR06
-U 1 1 56D75AB8
-P 10750 4550
-F 0 "#PWR06" H 10750 4400 50  0001 C CNN
-F 1 "+5V" H 10750 4690 50  0000 C CNN
-F 2 "" H 10750 4550 50  0000 C CNN
-F 3 "" H 10750 4550 50  0000 C CNN
-	1    10750 4550
-	1    0    0    -1  
-$EndComp
 Connection ~ 10750 4850
 Wire Wire Line
 	10750 4550 10750 4850
@@ -1730,12 +1708,12 @@ SCL
 Text Label 3900 4350 3    50   ~ 0
 SDA
 $Comp
-L Connector:Conn_01x03_Male J9
+L Connector:Conn_01x04_Male J9
 U 1 1 5E677FD9
 P 3650 1750
 F 0 "J9" V 3900 1900 50  0000 L CNN
 F 1 "Power" V 3600 1600 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3650 1750 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3650 1750 50  0001 C CNN
 F 3 "~" H 3650 1750 50  0001 C CNN
 	1    3650 1750
 	0    1    1    0   
@@ -1866,4 +1844,17 @@ Text Label 1100 7100 1    50   ~ 0
 Bit_7
 NoConn ~ 6300 1150
 NoConn ~ 6300 1250
+NoConn ~ 9000 1050
+NoConn ~ 10750 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5E6AE9BE
+P 3450 1950
+F 0 "#PWR?" H 3450 1700 50  0001 C CNN
+F 1 "GND" H 3455 1777 50  0000 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "" H 3450 1950 50  0001 C CNN
+	1    3450 1950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

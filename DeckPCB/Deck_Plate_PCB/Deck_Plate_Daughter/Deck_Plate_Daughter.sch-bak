@@ -30,8 +30,6 @@ Wire Wire Line
 	1300 1000 1150 1000
 Wire Wire Line
 	1300 1200 1150 1200
-Text Label 1150 900  2    50   ~ 0
-Solar_IN-
 Text Label 1150 1000 2    50   ~ 0
 Solar_IN+
 $Comp
@@ -106,9 +104,9 @@ SolarCell+
 Text Label 3000 1000 0    50   ~ 0
 Solar_IN+
 Text Label 3000 1100 0    50   ~ 0
-20(SDA)
+SDA
 Text Label 3000 1200 0    50   ~ 0
-21(SCL)
+SCL
 $Comp
 L power:GND #PWR0102
 U 1 1 5E60F06B
@@ -121,72 +119,6 @@ F 3 "" H 3000 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 3000 1400 0    50   ~ 0
-5V_Bus_1
-$Comp
-L Deck_Plate_Daughter-rescue:Device_Q_NPN_BCE-Deck_Plate_PCB-cache Q1
-U 1 1 5E6100C5
-P 1450 3550
-F 0 "Q1" H 1641 3596 50  0000 L CNN
-F 1 "Device_Q_NPN_BCE" H 1641 3505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-251-3_Vertical" H 1650 3650 50  0001 C CNN
-F 3 "" H 1450 3550 50  0001 C CNN
-	1    1450 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5E610D52
-P 1350 4000
-F 0 "R2" H 1420 4046 50  0000 L CNN
-F 1 "4.7" H 1420 3955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 4000 50  0001 C CNN
-F 3 "~" H 1350 4000 50  0001 C CNN
-	1    1350 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5E611957
-P 1750 4000
-F 0 "R3" H 1820 4046 50  0000 L CNN
-F 1 "4.7" H 1820 3955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1680 4000 50  0001 C CNN
-F 3 "~" H 1750 4000 50  0001 C CNN
-	1    1750 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 3750 1550 3850
-Wire Wire Line
-	1550 3850 1750 3850
-Wire Wire Line
-	1550 3850 1350 3850
-Connection ~ 1550 3850
-Wire Wire Line
-	1350 4150 1350 4200
-Wire Wire Line
-	1350 4200 1550 4200
-Wire Wire Line
-	1750 4200 1750 4150
-$Comp
-L power:GND #PWR0103
-U 1 1 5E61DCB1
-P 1550 4200
-F 0 "#PWR0103" H 1550 3950 50  0001 C CNN
-F 1 "GND" H 1555 4027 50  0000 C CNN
-F 2 "" H 1550 4200 50  0001 C CNN
-F 3 "" H 1550 4200 50  0001 C CNN
-	1    1550 4200
-	1    0    0    -1  
-$EndComp
-Connection ~ 1550 4200
-Wire Wire Line
-	1550 4200 1750 4200
-Text Label 1250 3550 2    50   ~ 0
-BurnWireSignal
-Wire Wire Line
-	1550 3350 1550 3150
-Text Label 1550 3150 0    50   ~ 0
 5V_Bus_1
 $Comp
 L Deck_Plate_PCB:Big_Easy_Driver U3
@@ -257,40 +189,29 @@ $Comp
 L Connector:Conn_01x04_Male J1
 U 1 1 5E692559
 P 5500 950
-F 0 "J1" V 5800 1000 50  0000 L CNN
-F 1 "SunnyBuddy_Inhibit" V 5450 700 50  0000 L CNN
+F 0 "J1" V 5950 1100 50  0000 L CNN
+F 1 "SunnyBuddy_Inhibit" V 5450 600 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5500 950 50  0001 C CNN
 F 3 "~" H 5500 950 50  0001 C CNN
 	1    5500 950 
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0109
-U 1 1 5E693738
-P 5300 1150
-F 0 "#PWR0109" H 5300 900 50  0001 C CNN
-F 1 "GND" V 5305 1022 50  0000 R CNN
-F 2 "" H 5300 1150 50  0001 C CNN
-F 3 "" H 5300 1150 50  0001 C CNN
-	1    5300 1150
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR0110
 U 1 1 5E693E04
-P 5600 1150
-F 0 "#PWR0110" H 5600 900 50  0001 C CNN
-F 1 "GND" V 5605 1022 50  0000 R CNN
-F 2 "" H 5600 1150 50  0001 C CNN
-F 3 "" H 5600 1150 50  0001 C CNN
-	1    5600 1150
-	0    -1   -1   0   
+P 5400 1250
+F 0 "#PWR0110" H 5400 1000 50  0001 C CNN
+F 1 "GND" V 5405 1122 50  0000 R CNN
+F 2 "" H 5400 1250 50  0001 C CNN
+F 3 "" H 5400 1250 50  0001 C CNN
+	1    5400 1250
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5400 1150 5400 1250
 Wire Wire Line
 	5500 1150 5500 1250
-Text Label 5400 1250 3    50   ~ 0
+Text Label 5300 1250 3    50   ~ 0
 Sunny_Batt_Out
 Text Label 5500 1250 3    50   ~ 0
 Batt_IN
@@ -359,27 +280,27 @@ BurnWireSignal
 Text Label 7750 1250 3    50   ~ 0
 BurnWireSignal
 $Comp
-L Connector:Conn_01x03_Male J5
+L Connector:Conn_01x04_Male J5
 U 1 1 5E6C52D2
-P 4100 3650
-F 0 "J5" H 4400 3500 50  0000 L CNN
-F 1 "Power" H 4050 3850 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4100 3650 50  0001 C CNN
-F 3 "~" H 4100 3650 50  0001 C CNN
-	1    4100 3650
+P 750 4500
+F 0 "J5" H 750 4200 50  0000 L CNN
+F 1 "Power" H 700 4700 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 750 4500 50  0001 C CNN
+F 3 "~" H 750 4500 50  0001 C CNN
+	1    750  4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 3750 4400 3750
+	950  4600 1050 4600
 Wire Wire Line
-	4300 3550 4400 3550
+	950  4400 1050 4400
 Wire Wire Line
-	4300 3650 4400 3650
-Text Label 4400 3550 0    50   ~ 0
+	950  4500 1050 4500
+Text Label 1050 4400 0    50   ~ 0
 5V_Bus_1
-Text Label 4400 3650 0    50   ~ 0
+Text Label 1050 4500 0    50   ~ 0
 9V_Bus
-Text Label 4400 3750 0    50   ~ 0
+Text Label 1050 4600 0    50   ~ 0
 5V_Bus_2
 $Comp
 L Connector:Raspberry_Pi_2_3 J6
@@ -631,42 +552,42 @@ $EndComp
 $Comp
 L Connector:Conn_01x09_Male J7
 U 1 1 5EDC5910
-P 4100 2850
-F 0 "J7" H 4450 2400 50  0000 C CNN
-F 1 "Board_to_Board" H 4350 3400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 4100 2850 50  0001 C CNN
-F 3 "~" H 4100 2850 50  0001 C CNN
-	1    4100 2850
+P 750 3700
+F 0 "J7" H 1100 3250 50  0000 C CNN
+F 1 "Board_to_Board" H 1000 4250 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 750 3700 50  0001 C CNN
+F 3 "~" H 750 3700 50  0001 C CNN
+	1    750  3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 2650 4400 2650
+	950  3500 1050 3500
 Wire Wire Line
-	4300 2750 4400 2750
+	950  3600 1050 3600
 Wire Wire Line
-	4300 2850 4400 2850
+	950  3700 1050 3700
 Wire Wire Line
-	4300 2950 4400 2950
+	950  3800 1050 3800
 Wire Wire Line
-	4300 3050 4400 3050
-Text Label 4400 2650 0    50   ~ 0
+	950  3900 1050 3900
+Text Label 1050 3500 0    50   ~ 0
 TTL_TX
-Text Label 4400 2750 0    50   ~ 0
+Text Label 1050 3600 0    50   ~ 0
 TTL_RX
-Text Label 4400 2850 0    50   ~ 0
+Text Label 1050 3700 0    50   ~ 0
 BurnWireSignal
-Text Label 4400 2950 0    50   ~ 0
+Text Label 1050 3800 0    50   ~ 0
 Step
-Text Label 4400 3050 0    50   ~ 0
+Text Label 1050 3900 0    50   ~ 0
 Dir
 Wire Wire Line
-	4300 3150 4400 3150
+	950  4000 1050 4000
 Wire Wire Line
-	4300 2550 4400 2550
-Text Label 4400 2450 0    50   ~ 0
-20(SDA)
-Text Label 4400 2550 0    50   ~ 0
-21(SCL)
+	950  3400 1050 3400
+Text Label 1050 3300 0    50   ~ 0
+SDA
+Text Label 1050 3400 0    50   ~ 0
+SCL
 $Comp
 L Mechanical:MountingHole H11
 U 1 1 5EDEF9B3
@@ -778,33 +699,55 @@ F 3 "~" H 6950 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 2450 4400 2450
+	950  3300 1050 3300
 Wire Wire Line
-	4300 3250 4400 3250
-Text Label 4400 3150 0    50   ~ 0
+	950  4100 1050 4100
+Text Label 1050 4000 0    50   ~ 0
 SolarArrayTemp
-Text Label 4400 3250 0    50   ~ 0
+Text Label 1050 4100 0    50   ~ 0
 PayloadTemp
 NoConn ~ 8900 1350
 NoConn ~ 8900 1450
-Wire Notes Line
-	500  2850 3800 2850
-Wire Notes Line
-	3800 500  3800 4500
 Wire Notes Line
 	3850 2000 8250 2000
 Text Notes 3900 650  0    79   Italic 16
 Inhibit Circuitry
 Text Notes 550  650  0    79   Italic 16
 Solar Panel and Sensor Mangement
-Text Notes 500  3000 0    79   Italic 16
-BurnWire Circuitry
-Text Notes 3850 2200 0    79   Italic 16
+Text Notes 500  3050 0    79   Italic 16
 Signal and Power Board-to-Board Transfer
-Wire Notes Line
-	500  4500 8250 4500
-Wire Notes Line
-	8250 500  8250 4500
 Text Notes 8350 650  0    79   Italic 16
 RaspberryPI Interface
+Wire Notes Line
+	500  2850 3800 2850
+Wire Notes Line
+	3800 2850 3800 500 
+$Comp
+L power:GND #PWR0103
+U 1 1 5E687FD9
+P 1150 900
+F 0 "#PWR0103" H 1150 650 50  0001 C CNN
+F 1 "GND" V 1155 772 50  0000 R CNN
+F 2 "" H 1150 900 50  0001 C CNN
+F 3 "" H 1150 900 50  0001 C CNN
+	1    1150 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 1150 5300 1250
+Text Label 5600 1350 3    50   ~ 0
+Sunny_Batt_Out
+Wire Wire Line
+	5600 1150 5600 1350
+$Comp
+L power:GND #PWR0106
+U 1 1 5E69FEA7
+P 950 4700
+F 0 "#PWR0106" H 950 4450 50  0001 C CNN
+F 1 "GND" H 955 4527 50  0000 C CNN
+F 2 "" H 950 4700 50  0001 C CNN
+F 3 "" H 950 4700 50  0001 C CNN
+	1    950  4700
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
