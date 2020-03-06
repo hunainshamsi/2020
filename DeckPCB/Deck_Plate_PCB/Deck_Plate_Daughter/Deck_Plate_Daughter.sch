@@ -749,10 +749,10 @@ F 3 "" H 950 4700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0107
 U 1 1 5E6EFB98
 P 7750 1250
-F 0 "#PWR?" H 7750 1000 50  0001 C CNN
+F 0 "#PWR0107" H 7750 1000 50  0001 C CNN
 F 1 "GND" V 7755 1122 50  0000 R CNN
 F 2 "" H 7750 1250 50  0001 C CNN
 F 3 "" H 7750 1250 50  0001 C CNN
@@ -763,4 +763,60 @@ Text Label 7850 1150 3    50   ~ 0
 5V_Bus_1
 Text Label 7950 1150 3    50   ~ 0
 BurnWireSignal
+$Comp
+L Connector:Conn_01x02_Male J8
+U 1 1 5E6215D5
+P 1850 3300
+F 0 "J8" H 2450 3100 50  0000 C CNN
+F 1 "SensorEndPanel" H 2100 3450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 3300 50  0001 C CNN
+F 3 "~" H 1850 3300 50  0001 C CNN
+	1    1850 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3300 2150 3300
+Wire Wire Line
+	2050 3400 2150 3400
+Text Label 2150 3300 0    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR0108
+U 1 1 5E6261E7
+P 2150 3400
+F 0 "#PWR0108" H 2150 3150 50  0001 C CNN
+F 1 "GND" H 2155 3227 50  0000 C CNN
+F 2 "" H 2150 3400 50  0001 C CNN
+F 3 "" H 2150 3400 50  0001 C CNN
+	1    2150 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J9
+U 1 1 5E62AB42
+P 1850 3750
+F 0 "J9" H 2450 3550 50  0000 C CNN
+F 1 "Payload_NextFlex" H 2100 3900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 3750 50  0001 C CNN
+F 3 "~" H 1850 3750 50  0001 C CNN
+	1    1850 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3750 2150 3750
+Wire Wire Line
+	2050 3850 2150 3850
+Text Label 2150 3750 0    50   ~ 0
+5V_Bus_1
+$Comp
+L power:GND #PWR0109
+U 1 1 5E62DFA6
+P 2150 3850
+F 0 "#PWR0109" H 2150 3600 50  0001 C CNN
+F 1 "GND" H 2155 3677 50  0000 C CNN
+F 2 "" H 2150 3850 50  0001 C CNN
+F 3 "" H 2150 3850 50  0001 C CNN
+	1    2150 3850
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

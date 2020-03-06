@@ -79,36 +79,8 @@ Text Label 3550 1850 0    50   ~ 0
 5V_Bus_1
 Text Label 3100 2150 2    50   ~ 0
 BurnWireSignal
-$Comp
-L Connector:Conn_01x03_Male J1
-U 1 1 5E6D3E34
-P 1300 2500
-F 0 "J1" H 1650 2300 50  0000 C CNN
-F 1 "Board_to_Board" H 1550 2750 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1300 2500 50  0001 C CNN
-F 3 "~" H 1300 2500 50  0001 C CNN
-	1    1300 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 2400 1600 2400
-Wire Wire Line
-	1500 2600 1600 2600
-Text Label 1600 2400 0    50   ~ 0
+Text Label 1550 2750 0    50   ~ 0
 BurnWireSignal
-Text Label 1500 2500 0    50   ~ 0
-5V_Bus_1
-$Comp
-L power:GND #PWR0104
-U 1 1 5E6D5ACD
-P 1600 2600
-F 0 "#PWR0104" H 1600 2350 50  0001 C CNN
-F 1 "GND" H 1605 2427 50  0000 C CNN
-F 2 "" H 1600 2600 50  0001 C CNN
-F 3 "" H 1600 2600 50  0001 C CNN
-	1    1600 2600
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5E6D9CFE
@@ -152,5 +124,57 @@ F 2 "MountingHole:MountingHole_3.2mm_M3" H 7850 6300 50  0001 C CNN
 F 3 "~" H 7850 6300 50  0001 C CNN
 	1    7850 6300
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5E6393AF
+P 1250 1950
+F 0 "J2" H 1600 1900 50  0000 C CNN
+F 1 "5V_Bus_1" H 1358 2040 50  0000 C CNN
+F 2 "Deck_Plate_PCB:Terminal_Lug_PCB" H 1250 1950 50  0001 C CNN
+F 3 "~" H 1250 1950 50  0001 C CNN
+	1    1250 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1950 1550 1950
+Text Label 1550 1950 0    50   ~ 0
+5V_Bus_1
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5E63BC0F
+P 1250 2350
+F 0 "J1" H 1600 2300 50  0000 C CNN
+F 1 "GND" H 1300 2450 50  0000 C CNN
+F 2 "Deck_Plate_PCB:Terminal_Lug_PCB" H 1250 2350 50  0001 C CNN
+F 3 "~" H 1250 2350 50  0001 C CNN
+	1    1250 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2350 1550 2350
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5E63C2C1
+P 1250 2750
+F 0 "J3" H 1600 2700 50  0000 C CNN
+F 1 "BurnWireSignal" H 1500 2850 50  0000 C CNN
+F 2 "Deck_Plate_PCB:Terminal_Lug_PCB" H 1250 2750 50  0001 C CNN
+F 3 "~" H 1250 2750 50  0001 C CNN
+	1    1250 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2750 1550 2750
+$Comp
+L power:GND #PWR0102
+U 1 1 5E63C41A
+P 1550 2350
+F 0 "#PWR0102" H 1550 2100 50  0001 C CNN
+F 1 "GND" H 1555 2177 50  0000 C CNN
+F 2 "" H 1550 2350 50  0001 C CNN
+F 3 "" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
