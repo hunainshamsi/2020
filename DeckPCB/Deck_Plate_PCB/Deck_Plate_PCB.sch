@@ -46,8 +46,8 @@ Text Label 8900 3800 0    60   ~ 0
 A12
 Text Label 8900 3900 0    60   ~ 0
 A13
-Text Label 9250 4000 2    60   ~ 0
-PayloadTemp
+Text Label 8900 4000 0    60   ~ 0
+A14
 Text Label 9250 4100 2    60   ~ 0
 SolarArrayTemp
 Text Label 10500 4650 1    60   ~ 0
@@ -138,12 +138,8 @@ Text Label 10400 1950 0    60   ~ 0
 9(**)
 Text Label 10400 2050 0    60   ~ 0
 8(**)
-Text Label 10400 2450 0    60   ~ 0
-7(**)
 Text Label 10400 2550 0    60   ~ 0
 6(**)
-Text Label 10400 2650 0    60   ~ 0
-NASA_Analog_4_IN
 Text Label 10400 2750 0    60   ~ 0
 NASA_Analog_3_IN
 Text Label 10400 2850 0    60   ~ 0
@@ -1535,8 +1531,6 @@ Wire Wire Line
 	9200 5350 9200 5550
 Wire Wire Line
 	9350 4100 9250 4100
-Wire Wire Line
-	9250 4000 9350 4000
 Text Notes 1800 650  0    50   ~ 0
 DONE
 $Comp
@@ -1652,7 +1646,6 @@ NoConn ~ 8900 2750
 NoConn ~ 8900 2650
 NoConn ~ 8900 2550
 NoConn ~ 8900 2450
-NoConn ~ 10400 2450
 NoConn ~ 10400 2550
 NoConn ~ 10400 3050
 NoConn ~ 10400 3150
@@ -1837,10 +1830,10 @@ NoConn ~ 6300 1250
 NoConn ~ 9000 1050
 NoConn ~ 10750 4550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5E6AE9BE
 P 3450 1950
-F 0 "#PWR?" H 3450 1700 50  0001 C CNN
+F 0 "#PWR0104" H 3450 1700 50  0001 C CNN
 F 1 "GND" H 3455 1777 50  0000 C CNN
 F 2 "" H 3450 1950 50  0001 C CNN
 F 3 "" H 3450 1950 50  0001 C CNN
@@ -1848,21 +1841,21 @@ F 3 "" H 3450 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LF356 U?
+L Amplifier_Operational:LF356 U1
 U 1 1 5E6B9F34
 P 1750 5650
-F 0 "U?" H 2094 5696 50  0000 L CNN
+F 0 "U1" H 2094 5696 50  0000 L CNN
 F 1 "LF356" H 2094 5605 50  0000 L CNN
-F 2 "" H 1800 5700 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 1800 5700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lf357.pdf" H 1900 5800 50  0001 C CNN
 	1    1750 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5E6CD96B
 P 1300 5850
-F 0 "C?" H 1050 5800 50  0000 L CNN
+F 0 "C4" H 1050 5800 50  0000 L CNN
 F 1 "0.1uF" H 1000 5700 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 1338 5700 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 1300 5850 50  0001 C CNN
@@ -1870,21 +1863,21 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 1300 5850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5E6CDDBA
-P 1100 5350
-F 0 "C?" V 950 5450 50  0000 L CNN
-F 1 "0.1uF" V 950 5150 50  0000 L CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 1138 5200 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 1100 5350 50  0001 C CNN
-	1    1100 5350
+P 1100 5300
+F 0 "C3" V 950 5400 50  0000 L CNN
+F 1 "0.1uF" V 950 5100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 1138 5150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 1100 5300 50  0001 C CNN
+	1    1100 5300
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5E6CEB65
 P 800 5550
-F 0 "R?" H 870 5596 50  0000 L CNN
+F 0 "R1" H 870 5596 50  0000 L CNN
 F 1 "6.8K" H 870 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 730 5550 50  0001 C CNN
 F 3 "~" H 800 5550 50  0001 C CNN
@@ -1892,10 +1885,10 @@ F 3 "~" H 800 5550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5E6CEF6C
 P 1150 5550
-F 0 "R?" H 1220 5596 50  0000 L CNN
+F 0 "R2" H 1220 5596 50  0000 L CNN
 F 1 "6.8K" H 1220 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1080 5550 50  0001 C CNN
 F 3 "~" H 1150 5550 50  0001 C CNN
@@ -1903,10 +1896,10 @@ F 3 "~" H 1150 5550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Regulator_SwitchedCapacitor:MAX1044 U?
+L Regulator_SwitchedCapacitor:MAX1044 U10
 U 1 1 5E7204A7
 P 4850 1700
-F 0 "U?" H 4850 2267 50  0000 C CNN
+F 0 "U10" H 4850 2267 50  0000 C CNN
 F 1 "MAX1044" H 4850 2176 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 4950 1600 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf" H 4950 1600 50  0001 C CNN
@@ -1914,10 +1907,10 @@ F 3 "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf" H 4950 160
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0105
 U 1 1 5E721EC2
 P 4450 1900
-F 0 "#PWR?" H 4450 1650 50  0001 C CNN
+F 0 "#PWR0105" H 4450 1650 50  0001 C CNN
 F 1 "GND" V 4455 1772 50  0000 R CNN
 F 2 "" H 4450 1900 50  0001 C CNN
 F 3 "" H 4450 1900 50  0001 C CNN
@@ -1925,10 +1918,10 @@ F 3 "" H 4450 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C13
 U 1 1 5E722E13
 P 5400 1800
-F 0 "C?" H 5250 1700 50  0000 L CNN
+F 0 "C13" H 5250 1700 50  0000 L CNN
 F 1 "10uF" H 5450 1700 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5438 1650 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5400 1800 50  0001 C CNN
@@ -1936,10 +1929,10 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5400 1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0123
 U 1 1 5E73CDA0
 P 4850 2200
-F 0 "#PWR?" H 4850 1950 50  0001 C CNN
+F 0 "#PWR0123" H 4850 1950 50  0001 C CNN
 F 1 "GND" V 4855 2072 50  0000 R CNN
 F 2 "" H 4850 2200 50  0001 C CNN
 F 3 "" H 4850 2200 50  0001 C CNN
@@ -1947,10 +1940,10 @@ F 3 "" H 4850 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C8
 U 1 1 5E73D211
 P 4300 1550
-F 0 "C?" H 4100 1600 50  0000 L CNN
+F 0 "C8" H 4100 1600 50  0000 L CNN
 F 1 "0.1uF" H 4050 1450 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 4338 1400 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4300 1550 50  0001 C CNN
@@ -1958,10 +1951,10 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4300 1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0125
 U 1 1 5E73E3FA
 P 4300 1700
-F 0 "#PWR?" H 4300 1450 50  0001 C CNN
+F 0 "#PWR0125" H 4300 1450 50  0001 C CNN
 F 1 "GND" V 4305 1572 50  0000 R CNN
 F 2 "" H 4300 1700 50  0001 C CNN
 F 3 "" H 4300 1700 50  0001 C CNN
@@ -1969,10 +1962,10 @@ F 3 "" H 4300 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C14
 U 1 1 5E74B04C
 P 5600 1550
-F 0 "C?" H 5400 1550 50  0000 L CNN
+F 0 "C14" H 5400 1550 50  0000 L CNN
 F 1 "10uF" H 5350 1450 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5638 1400 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5600 1550 50  0001 C CNN
@@ -1984,12 +1977,12 @@ Wire Wire Line
 Text Label 5650 1400 0    50   ~ 0
 -9V_Bus
 Text Label 4200 1400 2    50   ~ 0
-9V_bus
+9V_Bus
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0126
 U 1 1 5E774E7A
 P 5600 1700
-F 0 "#PWR?" H 5600 1450 50  0001 C CNN
+F 0 "#PWR0126" H 5600 1450 50  0001 C CNN
 F 1 "GND" H 5800 1700 50  0000 R CNN
 F 2 "" H 5600 1700 50  0001 C CNN
 F 3 "" H 5600 1700 50  0001 C CNN
@@ -2020,16 +2013,12 @@ Wire Wire Line
 	650  5550 600  5550
 Wire Wire Line
 	950  5550 1000 5550
-Wire Wire Line
-	950  5350 950  5550
 Connection ~ 950  5550
 Wire Wire Line
 	1300 5550 1450 5550
 Wire Wire Line
 	1300 5700 1300 5550
 Connection ~ 1300 5550
-Wire Wire Line
-	1250 5350 1250 5300
 Wire Wire Line
 	1250 5300 2050 5300
 Wire Wire Line
@@ -2046,10 +2035,10 @@ Connection ~ 2050 5650
 Wire Wire Line
 	2050 5650 2150 5650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0127
 U 1 1 5E844D1C
 P 1300 6000
-F 0 "#PWR?" H 1300 5750 50  0001 C CNN
+F 0 "#PWR0127" H 1300 5750 50  0001 C CNN
 F 1 "GND" V 1305 5872 50  0000 R CNN
 F 2 "" H 1300 6000 50  0001 C CNN
 F 3 "" H 1300 6000 50  0001 C CNN
@@ -2061,21 +2050,21 @@ NASA_Analog_1_IN
 Text Label 2150 5650 1    50   ~ 0
 NASA_Analog_1_OUT
 $Comp
-L Amplifier_Operational:LF356 U?
+L Amplifier_Operational:LF356 U12
 U 1 1 5E84B0DC
 P 5650 4450
-F 0 "U?" H 5994 4496 50  0000 L CNN
+F 0 "U12" H 5994 4496 50  0000 L CNN
 F 1 "LF356" H 5994 4405 50  0000 L CNN
-F 2 "" H 5700 4500 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5700 4500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lf357.pdf" H 5800 4600 50  0001 C CNN
 	1    5650 4450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C12
 U 1 1 5E84B0E6
 P 5200 4650
-F 0 "C?" H 4950 4600 50  0000 L CNN
+F 0 "C12" H 4950 4600 50  0000 L CNN
 F 1 "0.1uF" H 4900 4500 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5238 4500 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5200 4650 50  0001 C CNN
@@ -2083,21 +2072,21 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5200 4650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C10
 U 1 1 5E84B0F0
-P 5000 4150
-F 0 "C?" V 4850 4250 50  0000 L CNN
-F 1 "0.1uF" V 4850 3950 50  0000 L CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5038 4000 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5000 4150 50  0001 C CNN
-	1    5000 4150
+P 5000 4100
+F 0 "C10" V 4850 4200 50  0000 L CNN
+F 1 "0.1uF" V 4850 3900 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5038 3950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5000 4100 50  0001 C CNN
+	1    5000 4100
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R14
 U 1 1 5E84B0FA
 P 4700 4350
-F 0 "R?" H 4770 4396 50  0000 L CNN
+F 0 "R14" H 4770 4396 50  0000 L CNN
 F 1 "6.8K" H 4770 4305 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 4350 50  0001 C CNN
 F 3 "~" H 4700 4350 50  0001 C CNN
@@ -2105,10 +2094,10 @@ F 3 "~" H 4700 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R16
 U 1 1 5E84B104
 P 5050 4350
-F 0 "R?" H 5120 4396 50  0000 L CNN
+F 0 "R16" H 5120 4396 50  0000 L CNN
 F 1 "6.8K" H 5120 4305 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4980 4350 50  0001 C CNN
 F 3 "~" H 5050 4350 50  0001 C CNN
@@ -2123,16 +2112,12 @@ Wire Wire Line
 	4550 4350 4500 4350
 Wire Wire Line
 	4850 4350 4900 4350
-Wire Wire Line
-	4850 4150 4850 4350
 Connection ~ 4850 4350
 Wire Wire Line
 	5200 4350 5350 4350
 Wire Wire Line
 	5200 4500 5200 4350
 Connection ~ 5200 4350
-Wire Wire Line
-	5150 4150 5150 4100
 Wire Wire Line
 	5150 4100 5950 4100
 Wire Wire Line
@@ -2149,10 +2134,10 @@ Connection ~ 5950 4450
 Wire Wire Line
 	5950 4450 6050 4450
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0128
 U 1 1 5E84B120
 P 5200 4800
-F 0 "#PWR?" H 5200 4550 50  0001 C CNN
+F 0 "#PWR0128" H 5200 4550 50  0001 C CNN
 F 1 "GND" V 5205 4672 50  0000 R CNN
 F 2 "" H 5200 4800 50  0001 C CNN
 F 3 "" H 5200 4800 50  0001 C CNN
@@ -2160,25 +2145,25 @@ F 3 "" H 5200 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4500 4350 1    50   ~ 0
-NASA_Analog_4_IN
+PayloadTemp
 Text Label 6050 4450 1    50   ~ 0
 NASA_Analog_4_OUT
 $Comp
-L Amplifier_Operational:LF356 U?
+L Amplifier_Operational:LF356 U11
 U 1 1 5E86C6C4
 P 5500 5650
-F 0 "U?" H 5844 5696 50  0000 L CNN
+F 0 "U11" H 5844 5696 50  0000 L CNN
 F 1 "LF356" H 5844 5605 50  0000 L CNN
-F 2 "" H 5550 5700 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5550 5700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lf357.pdf" H 5650 5800 50  0001 C CNN
 	1    5500 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C11
 U 1 1 5E86C6CE
 P 5050 5850
-F 0 "C?" H 4800 5800 50  0000 L CNN
+F 0 "C11" H 4800 5800 50  0000 L CNN
 F 1 "0.1uF" H 4750 5700 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5088 5700 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5050 5850 50  0001 C CNN
@@ -2186,21 +2171,21 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 5050 5850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C9
 U 1 1 5E86C6D8
-P 4850 5350
-F 0 "C?" V 4700 5450 50  0000 L CNN
-F 1 "0.1uF" V 4700 5150 50  0000 L CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 4888 5200 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4850 5350 50  0001 C CNN
-	1    4850 5350
+P 4850 5300
+F 0 "C9" V 4700 5400 50  0000 L CNN
+F 1 "0.1uF" V 4700 5100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 4888 5150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 4850 5300 50  0001 C CNN
+	1    4850 5300
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5E86C6E2
 P 4550 5550
-F 0 "R?" H 4620 5596 50  0000 L CNN
+F 0 "R5" H 4620 5596 50  0000 L CNN
 F 1 "6.8K" H 4620 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 5550 50  0001 C CNN
 F 3 "~" H 4550 5550 50  0001 C CNN
@@ -2208,10 +2193,10 @@ F 3 "~" H 4550 5550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 5E86C6EC
 P 4900 5550
-F 0 "R?" H 4970 5596 50  0000 L CNN
+F 0 "R15" H 4970 5596 50  0000 L CNN
 F 1 "6.8K" H 4970 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 5550 50  0001 C CNN
 F 3 "~" H 4900 5550 50  0001 C CNN
@@ -2226,16 +2211,12 @@ Wire Wire Line
 	4400 5550 4350 5550
 Wire Wire Line
 	4700 5550 4750 5550
-Wire Wire Line
-	4700 5350 4700 5550
 Connection ~ 4700 5550
 Wire Wire Line
 	5050 5550 5200 5550
 Wire Wire Line
 	5050 5700 5050 5550
 Connection ~ 5050 5550
-Wire Wire Line
-	5000 5350 5000 5300
 Wire Wire Line
 	5000 5300 5800 5300
 Wire Wire Line
@@ -2252,10 +2233,10 @@ Connection ~ 5800 5650
 Wire Wire Line
 	5800 5650 5900 5650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0129
 U 1 1 5E86C708
 P 5050 6000
-F 0 "#PWR?" H 5050 5750 50  0001 C CNN
+F 0 "#PWR0129" H 5050 5750 50  0001 C CNN
 F 1 "GND" V 5055 5872 50  0000 R CNN
 F 2 "" H 5050 6000 50  0001 C CNN
 F 3 "" H 5050 6000 50  0001 C CNN
@@ -2267,21 +2248,21 @@ NASA_Analog_3_IN
 Text Label 5900 5650 1    50   ~ 0
 NASA_Analog_3_OUT
 $Comp
-L Amplifier_Operational:LF356 U?
+L Amplifier_Operational:LF356 U4
 U 1 1 5E88426E
 P 3650 5650
-F 0 "U?" H 3994 5696 50  0000 L CNN
+F 0 "U4" H 3994 5696 50  0000 L CNN
 F 1 "LF356" H 3994 5605 50  0000 L CNN
-F 2 "" H 3700 5700 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 3700 5700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lf357.pdf" H 3800 5800 50  0001 C CNN
 	1    3650 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C7
 U 1 1 5E884278
 P 3200 5850
-F 0 "C?" H 2950 5800 50  0000 L CNN
+F 0 "C7" H 2950 5800 50  0000 L CNN
 F 1 "0.1uF" H 2900 5700 50  0000 L CNN
 F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 3238 5700 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 3200 5850 50  0001 C CNN
@@ -2289,21 +2270,21 @@ F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 3200 5850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 5E884282
-P 3000 5350
-F 0 "C?" V 2850 5450 50  0000 L CNN
-F 1 "0.1uF" V 2850 5150 50  0000 L CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 3038 5200 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 3000 5350 50  0001 C CNN
-	1    3000 5350
+P 3000 5300
+F 0 "C6" V 2850 5400 50  0000 L CNN
+F 1 "0.1uF" V 2850 5100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 3038 5150 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/ABA0000C1184-947404.pdf" H 3000 5300 50  0001 C CNN
+	1    3000 5300
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5E88428C
 P 2700 5550
-F 0 "R?" H 2770 5596 50  0000 L CNN
+F 0 "R3" H 2770 5596 50  0000 L CNN
 F 1 "6.8K" H 2770 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2630 5550 50  0001 C CNN
 F 3 "~" H 2700 5550 50  0001 C CNN
@@ -2311,10 +2292,10 @@ F 3 "~" H 2700 5550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5E884296
 P 3050 5550
-F 0 "R?" H 3120 5596 50  0000 L CNN
+F 0 "R4" H 3120 5596 50  0000 L CNN
 F 1 "6.8K" H 3120 5505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2980 5550 50  0001 C CNN
 F 3 "~" H 3050 5550 50  0001 C CNN
@@ -2329,16 +2310,12 @@ Wire Wire Line
 	2550 5550 2500 5550
 Wire Wire Line
 	2850 5550 2900 5550
-Wire Wire Line
-	2850 5350 2850 5550
 Connection ~ 2850 5550
 Wire Wire Line
 	3200 5550 3350 5550
 Wire Wire Line
 	3200 5700 3200 5550
 Connection ~ 3200 5550
-Wire Wire Line
-	3150 5350 3150 5300
 Wire Wire Line
 	3150 5300 3950 5300
 Wire Wire Line
@@ -2355,10 +2332,10 @@ Connection ~ 3950 5650
 Wire Wire Line
 	3950 5650 4050 5650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0130
 U 1 1 5E8842B2
 P 3200 6000
-F 0 "#PWR?" H 3200 5750 50  0001 C CNN
+F 0 "#PWR0130" H 3200 5750 50  0001 C CNN
 F 1 "GND" V 3205 5872 50  0000 R CNN
 F 2 "" H 3200 6000 50  0001 C CNN
 F 3 "" H 3200 6000 50  0001 C CNN
@@ -2389,4 +2366,30 @@ Wire Notes Line
 	6950 6300 6950 6500
 Text Notes 7050 6500 2    79   Italic 16
 PWM Signal Conditioning\n\n\n
+Text Label 10400 2450 0    60   ~ 0
+7(**)
+NoConn ~ 10400 2650
+Text Label 10400 2650 0    50   ~ 0
+5(**)
+NoConn ~ 1850 5950
+NoConn ~ 1750 5950
+NoConn ~ 3750 5950
+NoConn ~ 3650 5950
+NoConn ~ 5600 5950
+NoConn ~ 5500 5950
+NoConn ~ 5750 4750
+NoConn ~ 5650 4750
+Wire Wire Line
+	2850 5300 2850 5550
+Wire Wire Line
+	950  5300 950  5550
+Wire Wire Line
+	4700 5300 4700 5550
+Wire Wire Line
+	4850 4100 4850 4350
+NoConn ~ 4450 1700
+NoConn ~ 10400 2450
+Wire Wire Line
+	8900 4000 9350 4000
+NoConn ~ 8900 4000
 $EndSCHEMATC
