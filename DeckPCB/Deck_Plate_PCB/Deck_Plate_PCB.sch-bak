@@ -46,8 +46,8 @@ Text Label 8900 3800 0    60   ~ 0
 A12
 Text Label 8900 3900 0    60   ~ 0
 A13
-Text Label 9250 4000 2    60   ~ 0
-PayloadTemp
+Text Label 8900 4000 0    60   ~ 0
+A14
 Text Label 9250 4100 2    60   ~ 0
 SolarArrayTemp
 Text Label 10500 4650 1    60   ~ 0
@@ -558,17 +558,6 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1950 5000 50 
 F 3 "https://static.garmin.com/pumac/LIDAR-Lite%20LED%20v4%20Instructions_EN-US.pdf" H 1950 5000 50  0001 C CNN
 	1    500  4050
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:DB37_Male J2
-U 1 1 5E4749AA
-P 2600 7400
-F 0 "J2" V 2825 7368 50  0000 C CNN
-F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
-F 2 "Deck_Plate_PCB:NASA_Telem_37-pin_DSub" H 2600 7400 50  0001 C CNN
-F 3 " ~" H 2600 7400 50  0001 C CNN
-	1    2600 7400
-	0    1    1    0   
 $EndComp
 $Comp
 L Connector:DB15_Male J3
@@ -1531,8 +1520,6 @@ Wire Wire Line
 	9200 5350 9200 5550
 Wire Wire Line
 	9350 4100 9250 4100
-Wire Wire Line
-	9250 4000 9350 4000
 Text Notes 1800 650  0    50   ~ 0
 DONE
 $Comp
@@ -1548,20 +1535,8 @@ F 3 "" H 3000 3300 50  0000 C CNN
 $EndComp
 Text Label 2200 3100 0    50   ~ 0
 5V_Bus_1
-NoConn ~ 1300 7100
-NoConn ~ 1500 7100
-NoConn ~ 1600 7100
-NoConn ~ 1700 7100
-NoConn ~ 1800 7100
-NoConn ~ 1900 7100
-NoConn ~ 2000 7100
-NoConn ~ 2100 7100
 NoConn ~ 2200 7100
-NoConn ~ 2300 7100
 NoConn ~ 2400 7100
-NoConn ~ 2500 7100
-NoConn ~ 2600 7100
-NoConn ~ 2700 7100
 NoConn ~ 5250 7100
 NoConn ~ 5850 7100
 NoConn ~ 5750 7100
@@ -2391,4 +2366,38 @@ Wire Wire Line
 	4850 4100 4850 4350
 NoConn ~ 4450 1700
 NoConn ~ 10400 2450
+Wire Wire Line
+	8900 4000 9350 4000
+NoConn ~ 8900 4000
+$Comp
+L Connector:DB37_Male J2
+U 1 1 5E4749AA
+P 2600 7400
+F 0 "J2" V 2825 7368 50  0000 C CNN
+F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
+F 2 "Deck_Plate_PCB:NASA_Telem_37-pin_DSub" H 2600 7400 50  0001 C CNN
+F 3 " ~" H 2600 7400 50  0001 C CNN
+	1    2600 7400
+	0    1    1    0   
+$EndComp
+Text Label 1300 7100 1    50   ~ 0
+Bit_8
+Text Label 1500 7100 1    50   ~ 0
+Bit_9
+NoConn ~ 2000 7100
+NoConn ~ 1800 7100
+NoConn ~ 1600 7100
+Text Label 1700 7100 1    50   ~ 0
+Bit_10
+Text Label 1900 7100 1    50   ~ 0
+Bit_11
+Text Label 2100 7100 1    50   ~ 0
+Bit_12
+Text Label 2300 7100 1    50   ~ 0
+Bit_13
+Text Label 2500 7100 1    50   ~ 0
+Bit_14
+Text Label 2700 7100 1    50   ~ 0
+Bit_15
+NoConn ~ 2600 7100
 $EndSCHEMATC

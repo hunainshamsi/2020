@@ -560,17 +560,6 @@ F 3 "https://static.garmin.com/pumac/LIDAR-Lite%20LED%20v4%20Instructions_EN-US.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:DB37_Male J2
-U 1 1 5E4749AA
-P 2600 7400
-F 0 "J2" V 2825 7368 50  0000 C CNN
-F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
-F 2 "Deck_Plate_PCB:NASA_Telem_37-pin_DSub" H 2600 7400 50  0001 C CNN
-F 3 " ~" H 2600 7400 50  0001 C CNN
-	1    2600 7400
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:DB15_Male J3
 U 1 1 5E47F177
 P 5950 7400
@@ -1016,14 +1005,8 @@ Text Label 8050 1450 0    50   ~ 0
 Bit_2
 Wire Wire Line
 	7900 1450 8050 1450
-NoConn ~ 7900 2750
-NoConn ~ 6300 1450
-NoConn ~ 7900 2850
-NoConn ~ 7900 2550
-NoConn ~ 7900 2450
 NoConn ~ 7000 750 
 NoConn ~ 6300 1650
-NoConn ~ 6300 1550
 NoConn ~ 6300 2750
 NoConn ~ 7300 750 
 NoConn ~ 7200 750 
@@ -1497,7 +1480,6 @@ NoConn ~ 6300 2350
 NoConn ~ 6300 2450
 NoConn ~ 6300 2550
 NoConn ~ 6300 2650
-NoConn ~ 7900 2350
 NoConn ~ 11750 1750
 Text Label 9600 5550 3    60   ~ 0
 Digital_41
@@ -1546,20 +1528,8 @@ F 3 "" H 3000 3300 50  0000 C CNN
 $EndComp
 Text Label 2200 3100 0    50   ~ 0
 5V_Bus_1
-NoConn ~ 1300 7100
-NoConn ~ 1500 7100
-NoConn ~ 1600 7100
-NoConn ~ 1700 7100
-NoConn ~ 1800 7100
-NoConn ~ 1900 7100
-NoConn ~ 2000 7100
-NoConn ~ 2100 7100
 NoConn ~ 2200 7100
-NoConn ~ 2300 7100
 NoConn ~ 2400 7100
-NoConn ~ 2500 7100
-NoConn ~ 2600 7100
-NoConn ~ 2700 7100
 NoConn ~ 5250 7100
 NoConn ~ 5850 7100
 NoConn ~ 5750 7100
@@ -1825,8 +1795,6 @@ Text Label 2800 7100 1    50   ~ 0
 Bit_0
 Text Label 1100 7100 1    50   ~ 0
 Bit_7
-NoConn ~ 6300 1150
-NoConn ~ 6300 1250
 NoConn ~ 9000 1050
 NoConn ~ 10750 4550
 $Comp
@@ -2392,4 +2360,63 @@ NoConn ~ 10400 2450
 Wire Wire Line
 	8900 4000 9350 4000
 NoConn ~ 8900 4000
+$Comp
+L Connector:DB37_Male J2
+U 1 1 5E4749AA
+P 2600 7400
+F 0 "J2" V 2825 7368 50  0000 C CNN
+F 1 "NASA_Telemetry_Interface" V 2916 7368 50  0000 C CNN
+F 2 "Deck_Plate_PCB:NASA_Telem_37-pin_DSub" H 2600 7400 50  0001 C CNN
+F 3 " ~" H 2600 7400 50  0001 C CNN
+	1    2600 7400
+	0    1    1    0   
+$EndComp
+Text Label 1300 7100 1    50   ~ 0
+Bit_8
+Text Label 1500 7100 1    50   ~ 0
+Bit_9
+NoConn ~ 2000 7100
+NoConn ~ 1800 7100
+NoConn ~ 1600 7100
+Text Label 1700 7100 1    50   ~ 0
+Bit_10
+Text Label 1900 7100 1    50   ~ 0
+Bit_11
+Text Label 2100 7100 1    50   ~ 0
+Bit_12
+Text Label 2300 7100 1    50   ~ 0
+Bit_13
+Text Label 2500 7100 1    50   ~ 0
+Bit_14
+Text Label 2700 7100 1    50   ~ 0
+Bit_15
+NoConn ~ 2600 7100
+Text Label 8050 2350 0    50   ~ 0
+Bit_8
+Text Label 8050 2450 0    50   ~ 0
+Bit_9
+Text Label 8050 2550 0    50   ~ 0
+Bit_10
+Text Label 8050 2750 0    50   ~ 0
+Bit_11
+Text Label 8050 2850 0    50   ~ 0
+Bit_12
+Text Label 6300 1150 2    50   ~ 0
+Bit_13
+Text Label 6300 1250 2    50   ~ 0
+Bit_14
+Text Label 6300 1450 2    50   ~ 0
+Bit_15
+Text Label 6300 1550 2    50   ~ 0
+Bit_16
+Wire Wire Line
+	7900 2350 8050 2350
+Wire Wire Line
+	7900 2450 8050 2450
+Wire Wire Line
+	7900 2550 8050 2550
+Wire Wire Line
+	7900 2750 8050 2750
+Wire Wire Line
+	7900 2850 8050 2850
 $EndSCHEMATC
