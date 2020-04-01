@@ -1,4 +1,11 @@
-20571484244526
+25334059618583
+Deck_Plate_PCB
+9V_MountingHole_2.2mm
+
+
+0
+0
+0
 Deck_Plate_PCB
 220uF_Cap
 
@@ -21,12 +28,26 @@ ADXL337
 7
 7
 Deck_Plate_PCB
+Accel_MountingHole_2.5mm
+
+
+0
+0
+0
+Deck_Plate_PCB
 Adafruit_INA219_Breakout_header
 
 
 0
 8
 8
+Deck_Plate_PCB
+BigEasy_MountingHole_3.2mm_M3
+
+
+0
+0
+0
 Deck_Plate_PCB
 Big_Easy_Driver
 

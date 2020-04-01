@@ -1,4 +1,4 @@
-(module NASA_PWR_15-pin_DSub (layer F.Cu) (tedit 5E595717)
+(module NASA_PWR_15-pin_DSub (layer F.Cu) (tedit 5E838314)
   (descr "15-pin D-Sub connector, straight/vertical, THT-mount, male, pitch 2.77x2.84mm, distance of mounting holes 33.3mm, see https://disti-assets.s3.amazonaws.com/tonar/files/datasheets/16730.pdf")
   (tags "15-pin D-Sub connector straight vertical THT male pitch 2.77x2.84mm mounting holes distance 33.3mm")
   (fp_text reference J3 (at 21.324 6.142) (layer F.SilkS)
@@ -53,7 +53,7 @@
   (pad 3 thru_hole circle (at 5.54 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
   (pad 2 thru_hole circle (at 2.77 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
   (pad 1 thru_hole rect (at 0 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/Connector_Dsub.3dshapes/DSUB-15_Male_Vertical_P2.77x2.84mm.wrl
+  (model "C:/Program Files/KiCad/share/kicad/modules/Connector_Dsub.pretty/DSUB-15_Female_Vertical_P2.77x2.84mm.kicad_mod"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
