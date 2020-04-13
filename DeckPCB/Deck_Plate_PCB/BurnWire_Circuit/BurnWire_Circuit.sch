@@ -76,7 +76,7 @@ Connection ~ 3550 2800
 Wire Wire Line
 	3250 2800 3550 2800
 Text Label 3550 1850 0    50   ~ 0
-5V_Bus_1
+5V_Bus_2
 Text Label 3100 2150 2    50   ~ 0
 BurnWireSignal
 Text Label 1550 2750 0    50   ~ 0
@@ -130,7 +130,7 @@ L Connector:Conn_01x01_Male J2
 U 1 1 5E6393AF
 P 1250 1950
 F 0 "J2" H 1600 1900 50  0000 C CNN
-F 1 "5V_Bus_1" H 1358 2040 50  0000 C CNN
+F 1 "5V_Bus_2" H 1358 2040 50  0000 C CNN
 F 2 "Deck_Plate_PCB:Terminal_Lug_PCB" H 1250 1950 50  0001 C CNN
 F 3 "~" H 1250 1950 50  0001 C CNN
 	1    1250 1950
@@ -139,7 +139,7 @@ $EndComp
 Wire Wire Line
 	1450 1950 1550 1950
 Text Label 1550 1950 0    50   ~ 0
-5V_Bus_1
+5V_Bus_2
 $Comp
 L Connector:Conn_01x01_Male J1
 U 1 1 5E63BC0F

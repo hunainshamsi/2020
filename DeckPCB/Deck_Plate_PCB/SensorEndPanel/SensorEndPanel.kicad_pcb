@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 14)
-    (tracks 12)
+    (tracks 18)
     (zones 0)
     (modules 11)
     (nets 6)
@@ -60,7 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -446,6 +446,12 @@
   (gr_line (start 175.514 25.4) (end 175.514 44.45) (layer F.SilkS) (width 0.12))
   (gr_line (start 48.26 25.4) (end 175.514 25.4) (layer F.SilkS) (width 0.12))
 
+  (via (at 133.48 36.38) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (segment (start 131.968 36.382) (end 133.478 36.382) (width 0.25) (layer F.Cu) (net 1))
+  (segment (start 133.478 36.382) (end 133.48 36.38) (width 0.25) (layer F.Cu) (net 1))
+  (segment (start 131.518 36.382) (end 131.968 36.382) (width 0.25) (layer F.Cu) (net 1))
+  (segment (start 131.318 33.722) (end 131.318 36.182) (width 0.25) (layer F.Cu) (net 1))
+  (segment (start 131.318 36.182) (end 131.518 36.382) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 130.668 40.244) (end 130.81 40.386) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 130.668 36.382) (end 130.668 40.244) (width 0.25) (layer F.Cu) (net 2))
   (segment (start 144.526 42.926) (end 146.012001 41.439999) (width 0.25) (layer F.Cu) (net 2))
@@ -459,7 +465,7 @@
   (segment (start 130.668 32.722) (end 133.418 29.972) (width 0.25) (layer F.Cu) (net 4))
   (segment (start 130.668 33.722) (end 130.668 32.722) (width 0.25) (layer F.Cu) (net 4))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5E9287CB) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
