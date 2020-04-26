@@ -239,9 +239,18 @@ void initSensors()
   myLidarLite.configure(0);
 }
 
-void turnStepper(bool dir)
+void turnStepper(bool dir) // Code from Matt's motorcontroller code
 {
-  
+ 
+  if  (*distance>10) {
+  for(x= 0; x<700; x++)  //Moving motor for (2*delay)*(x)=.56 seconds
+      {
+      digitalWrite(stp,HIGH); //Trigger one step forward
+      delayMicroseconds(400);
+      digitalWrite(stp,LOW); //Pull step pin low so it can be triggered again
+      delayMicroseconds(400);
+      }
+  }
 }
 
 void timer_event_IRQ(void)
