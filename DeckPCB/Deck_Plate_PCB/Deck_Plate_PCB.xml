@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\Kris\Desktop\RockSat-X 2020\PCB\2020\DeckPCB\Deck_Plate_PCB\Deck_Plate_PCB.sch</source>
-    <date>4/8/2020 11:44:50 PM</date>
+    <date>4/30/2020 10:36:05 PM</date>
     <tool>Eeschema (5.1.5)-3</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -241,7 +241,11 @@
     <comp ref="R13">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.seielect.com/catalog/sei-rnf_rnmf.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">RNF14FTD10K0CT-ND</field>
+        <field name="Manufacture P/N">RNF14FTD10K0</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E68566C</tstamp>
@@ -273,7 +277,11 @@
     <comp ref="R10">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
-      <datasheet>~</datasheet>
+      <datasheet>https://www.seielect.com/catalog/sei-rnf_rnmf.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">RNF14FTD10K0CT-ND</field>
+        <field name="Manufacture P/N">RNF14FTD10K0</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E6D8B9C</tstamp>
@@ -361,6 +369,11 @@
     <comp ref="C6">
       <value>10uF</value>
       <footprint>Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal</footprint>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/leadmlcc_halogenfree_fg_en.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">445-173370-1-ND</field>
+        <field name="Manufacture P/N">FG24X7R1A106KRT06</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E884282</tstamp>
@@ -384,6 +397,11 @@
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal</footprint>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/leadmlcc_halogenfree_fg_en.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">445-173370-1-ND</field>
+        <field name="Manufacture P/N">FG24X7R1A106KRT06</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E90CD5F</tstamp>
@@ -399,6 +417,11 @@
     <comp ref="C4">
       <value>10uF</value>
       <footprint>Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal</footprint>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/leadmlcc_halogenfree_fg_en.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">445-173370-1-ND</field>
+        <field name="Manufacture P/N">FG24X7R1A106KRT06</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E91D3E6</tstamp>
@@ -414,6 +437,11 @@
     <comp ref="C7">
       <value>10uF</value>
       <footprint>Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal</footprint>
+      <datasheet>https://product.tdk.com/info/en/catalog/datasheets/leadmlcc_halogenfree_fg_en.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">445-173370-1-ND</field>
+        <field name="Manufacture P/N">FG24X7R1A106KRT06</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E92CD92</tstamp>
@@ -1319,7 +1347,7 @@
       <node ref="P4" pin="8"/>
       <node ref="J8" pin="8"/>
     </net>
-    <net code="79" name="/PayloadTemp">
+    <net code="79" name="/Box_Temp">
       <node ref="R4" pin="2"/>
       <node ref="J8" pin="9"/>
     </net>
