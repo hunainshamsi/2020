@@ -231,6 +231,7 @@ void initSensors()
   else
     Serial.println("No TTL Serial Camera");
   cam.setImageSize(VC0706_160x120); // other options: VC0706_320x240, VC0706_640x480
+  delay(3000);
   
   // init I2C for current/voltage sensor
   volt_cur_sensor.begin();

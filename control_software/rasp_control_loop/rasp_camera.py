@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 # need these for making the video
-import time, os, datetime
+import time, os, datetime, math
 
 class IncidenceAngleCamera:
 	# basic function to initialize the camera based on the picamera library
@@ -39,13 +39,13 @@ class IncidenceAngleCamera:
 			(minV, maxV, minL, maxL) = cv2.minMaxLoc(bw)
 			
 			# Computer the incidence angle based on position in frame. use "diagonal 2D angle"
-			percent_l = float(maxL / self.cam.resolution[0]) 
-			percent_v = float(maxV / self.cam.resolution[1])
+			percent_l = float(maxL[0] / self.cam.resolution[0]) 
+			percent_v = float(maxL[1] / self.cam.resolution[1])
 			angle_l = (62.2/2.0)*(percent_l-0.5)
 			angle_v = (48.8/2.0)*(percent_v-0.5)
-			incidence_angle = sqrt(angle_l*angle_l + angle_v*angle_v)
+			incidence_angle = math.sqrt(angle_l*angle_l + angle_v*angle_v)
 
-			print(incidence_angle)
+			print("IncidenceAngle:", incidence_angle)
 			
 			# push the raw image to a file
 			filename = 'outputs/raspi_images/raw/%09d.png'%count
