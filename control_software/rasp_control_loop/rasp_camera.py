@@ -83,5 +83,5 @@ class IncidenceAngleCamera:
 
 
 if __name__ == "__main__":
-	cam = IncidenceAngleCamera(111, 1920, 1080)
+	cam = IncidenceAngleCamera(31, 920, 480)
 	cam.cont_stream()

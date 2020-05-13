@@ -18,7 +18,9 @@
 #define ACCEL_Y A9
 #define ACCEL_Z A10
 #define TEMP A15
-
+#define STEP 32
+#define DIR 31
+#define INT_PIN 2
 
 
 // struct holding accel data (after conversion)
@@ -56,6 +58,7 @@ void timer_event_IRQ(void);
 
 // this will be our one global variable to hold our state (so we can update in ISR)
 volatile uint8_t mission_state = NORMAL;
+volatile byte state = LOW;
 
 // camera handle will also be global so we can call in loop
 Adafruit_VC0706 cam = Adafruit_VC0706(&Serial1);
@@ -76,6 +79,9 @@ void setup() {
 
 
 void loop() {
+  // static because it holds data between calls
+  static uint8_t im_count = 0;
+  
   // read all the sensor data
   int16_t temp = readTempSensor();
   
@@ -86,20 +92,28 @@ void loop() {
   // Now, we need to put all this data into a serial frame which we will send to the Pi
   sensorDataToPi(temp, accel, range, panel_power);
   
-  if (!takeTTLPicture())
-  {
-    // ERROR, have to figure out how to handle...
-  }
-  
-  TTLImageToPi();
+  // send every 10 loops, don't bog down other data
+//  if (im_count > 10)
+//  {
+//    if (!takeTTLPicture())
+//    {
+//      // ERROR, have to figure out how to handle...
+//    }
+//    
+//    TTLImageToPi();
+//    im_count = 0;
+//  }
+//  im_count ++;
 
   // command the stepper to move if necessary
   if (mission_state != NORMAL)
   {
     if (mission_state == EXTEND)
       turnStepper(0);
-    else
+    else if (mission_state == RETRACT)
       turnStepper(1); // command RETRACT
+    else
+      mission_state = NORMAL;  
   }
 }  
 
@@ -109,7 +123,7 @@ void sensorDataToPi(uint16_t temp, Accel_Data accel, uint8_t range, Panel_Power_
   char buffer[100];
   int volt_dec = 1000*(panel_power.voltage - (int)panel_power.voltage);
   int curr_dec = 1000*(panel_power.current - (int)panel_power.current);
-  sprintf(buffer, "%d, %d, %d, %d, %d, %0d.%d, %0d.%d\n", temp, accel.x, accel.y, accel.z,
+  sprintf(buffer, "Data %d, %d, %d, %d, %d, %0d.%d, %0d.%d\n", temp, accel.x, accel.y, accel.z,
             range, (int)panel_power.voltage, volt_dec, (int)panel_power.current, curr_dec);
   
   Serial.write(buffer);
@@ -238,15 +252,58 @@ void initSensors()
 
   // init I2C for lidar lite  
   myLidarLite.configure(0);
+  
+  // configure stepper pins as outputs
+  pinMode(STEP, OUTPUT);
+  pinMode(DIR, OUTPUT);
+  digitalWrite(STEP, LOW);
+  digitalWrite(DIR, LOW);
+  
+  // debugging
+  pinMode(53, OUTPUT);
+  digitalWrite(53, LOW);
+  
+  // set up the interrupt on Pin 2
+  pinMode(INT_PIN, INPUT);
+  attachInterrupt(0, timer_event_IRQ, RISING);
+  
 }
 
 void turnStepper(bool dir)
 {
-  
+  if (dir)
+    digitalWrite(DIR, LOW);
+  else
+    digitalWrite(DIR, HIGH);
+    
+  for (int i = 0; i < 1000; i ++)
+  {
+    digitalWrite(STEP, HIGH);
+    delay(1);
+    digitalWrite(STEP, LOW);
+    delay(1);
+  }
 }
 
 void timer_event_IRQ(void)
 {
-  // will have to enable another interrupt that determine when to stop
+  static unsigned long debounce = 0;
+  unsigned long int_time = millis();
   
+  if (int_time - debounce > 200)
+  {
+    // will have to enable another interrupt that determine when to stop
+    if (mission_state == NORMAL)
+      mission_state = EXTEND;
+    else if (mission_state == EXTEND)
+      mission_state = RETRACT;
+    else
+      mission_state = SHUTDOWN;
+      
+    // debugging with LED on pin 53
+    state = !state;
+    
+    digitalWrite(53, state);
+  }
+  debounce = int_time;
 }

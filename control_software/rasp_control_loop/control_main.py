@@ -22,7 +22,7 @@ if __name__ == "__main__":
     ser = SerialConnection(port, baud)
 
 
-    cam = IncidenceAngleCamera(blur_radius, img_dim[0], img_dim[1])
+    #cam = IncidenceAngleCamera(blur_radius, img_dim[0], img_dim[1])
 
     # basically, we will have three infinite loops running concurrently
     # let the Linux OS handle the prioritization, should be fine
