@@ -93,17 +93,17 @@ void loop() {
   sensorDataToPi(temp, accel, range, panel_power);
   
   // send every 10 loops, don't bog down other data
-//  if (im_count > 10)
-//  {
-//    if (!takeTTLPicture())
-//    {
-//      // ERROR, have to figure out how to handle...
-//    }
-//    
-//    TTLImageToPi();
-//    im_count = 0;
-//  }
-//  im_count ++;
+  if (im_count > 10)
+  {
+    if (!takeTTLPicture())
+    {
+      // ERROR, have to figure out how to handle...
+    }
+    
+    TTLImageToPi();
+    im_count = 0;
+  }
+  im_count ++;
 
   // command the stepper to move if necessary
   if (mission_state != NORMAL)

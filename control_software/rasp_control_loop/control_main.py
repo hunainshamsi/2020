@@ -1,3 +1,18 @@
+####################################################################################################
+# RockSat-X 2020 - Virginia Tech
+# Maintainer: Spencer Buebel (stbuebel@vt.edu)
+# Purpose:
+#       This code was supposed to run the entire mission, using python concurrent threads.
+#       See note below as to why this didn't happen and current state of code base.
+####################################################################################################
+
+
+# Note: DEPRECATED
+# We aren't using this anymore... No reason to rely on software implemented
+# threading when we can leverage Linux kernel level threading. Just run
+# each script as a background process using a shell script.
+
+
 # custom libray for camera functions
 from rasp_camera import IncidenceAngleCamera
 

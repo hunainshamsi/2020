@@ -1,3 +1,11 @@
+####################################################################################################
+# RockSat-X 2020 - Virginia Tech
+# Maintainer: Spencer Buebel (stbuebel@vt.edu)
+# Purpose:
+#       This script runs the Rasp Pi camera, including the OpenCV script to detect the position
+#       of the sun in frame. It is one of several scripts that will run during this mission.
+####################################################################################################
+
 # pi camera stuff
 from picamera.array import PiRGBArray
 from picamera import PiCamera
@@ -16,7 +24,6 @@ class IncidenceAngleCamera:
 		self.blur = blur_rad
 		
 	# infinite loop function we'll use to read images and get incidence angle
-	# TODO: calculate incidence angle based on FOV - should be straighforward
 	def cont_stream(self):
 		start = time.time() # used for framerate calculation
 		
@@ -72,7 +79,7 @@ class IncidenceAngleCamera:
 			#print("Frame rate:", 1/(time.time() - start), "\r", end='')
 			#start = time.time()
 
-	# turn the image sequences into video		
+	# turn the image sequences into video - we'll do this after launch
 	def make_video_from_images(self):
 		t = datetime.datetime.now().strftime("%H_%M_%S")
 

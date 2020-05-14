@@ -1,4 +1,13 @@
-import serial, binascii, os, cv2 # cv2 just for debugging
+####################################################################################################
+# RockSat-X 2020 - Virginia Tech
+# Maintainer: Spencer Buebel (stbuebel@vt.edu)
+# Purpose:
+#       This script handles the serial connection between the Rasp Pi and Arduino. It receives a JPG
+#       from the Arduino, and restores it to image form from bytes. It also receives packets of data
+#		with all the sensor information being exchanged.
+####################################################################################################
+
+import serial, binascii, os, cv2
 
 class SerialConnection:
 	# open the serial connection
@@ -12,6 +21,8 @@ class SerialConnection:
     
     # we will ensure that every line sent is terminated with '\n'
 	def receive_bytes(self):
+		outfile = open("/home/pi/Documents/2020/control_software/rasp_control_loop/sensor_data.txt", "w")
+		
 		while True:
 			data_packet = self.seri.readline()
 			
@@ -24,6 +35,7 @@ class SerialConnection:
 			if (pack == 'SNAP'):
 				self.receive_image()
 			elif pack[0:4] == 'Data':
+				outfile.write(str(pack[4:]) + "\n")
 				print(pack[4:])
 				
 	# specialized function to recieve full image
@@ -54,3 +66,9 @@ class SerialConnection:
 		# show the image, but this is for debugging - won't do this in flight.
 		cv2.imshow("cur_img", cur_img)
 		key = cv2.waitKey(1) & 0xFF
+
+if __name__ == "__main__":
+ 
+    # open the serial link using our class
+    ser = SerialConnection("/dev/ttyACM0", 115200)
+    ser.receive_bytes()
