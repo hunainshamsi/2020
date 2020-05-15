@@ -20,6 +20,7 @@
 #define TEMP A15
 #define STEP 32
 #define DIR 31
+#define STEP_EN 33
 #define INT_PIN 2
 
 
@@ -108,12 +109,18 @@ void loop() {
   // command the stepper to move if necessary
   if (mission_state != NORMAL)
   {
+    digitalWrite(STEP_EN, HIGH);
+
     if (mission_state == EXTEND)
       turnStepper(0);
     else if (mission_state == RETRACT)
       turnStepper(1); // command RETRACT
     else
+    {
+      digitalWrite(STEP_EN, LOW);
+
       mission_state = NORMAL;  
+    }
   }
 }  
 
@@ -256,6 +263,8 @@ void initSensors()
   // configure stepper pins as outputs
   pinMode(STEP, OUTPUT);
   pinMode(DIR, OUTPUT);
+  pinMode(STEP_EN, OUTPUT);
+  digitalWrite(STEP_EN, LOW);
   digitalWrite(STEP, LOW);
   digitalWrite(DIR, LOW);
   
@@ -276,7 +285,7 @@ void turnStepper(bool dir)
   else
     digitalWrite(DIR, HIGH);
     
-  for (int i = 0; i < 1000; i ++)
+  for (int i = 0; i < 100; i ++)
   {
     digitalWrite(STEP, HIGH);
     delay(1);

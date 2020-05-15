@@ -36,7 +36,49 @@ if __name__ == "__main__":
 	parsed_data = np.array(parsed_data)
 	print(parsed_data[:,4])
 	
-	
-	figure(1)
+	# lidar data
+	plt.figure()
 	plt.plot(times, parsed_data[:,4])
+	plt.xlabel('Time (steps)')
+	plt.ylabel('Distance (cm)')
+	plt.title('LIDAR Data')
+	plt.grid(True)
+	plt.savefig('plots/lidar.png')
+	#plt.show()
+	
+	
+	# temp data
+	plt.figure()
+	plt.plot(times, parsed_data[:,0])
+	plt.xlabel('Time (steps)')
+	plt.ylabel('Temp (C)')
+	plt.title('Temperature Data')
+	plt.grid(True)
+	plt.savefig('plots/temp.png')
+	#plt.show()
+	
+	
+	# accel data
+	plt.figure()
+	plt.plot(times, parsed_data[:,1], label='x')
+	plt.plot(times, parsed_data[:,2], label='y')
+	plt.plot(times, parsed_data[:,3], label='z')
+	plt.xlabel('Time (steps)')
+	plt.ylabel('Acceleration (m/s^2)')
+	plt.title('Acceleromter Data')
+	plt.grid(True)
+	plt.savefig('plots/accel.png')
+	#plt.show()
+	
+	# power data
+	plt.figure()
+	plt.plot(times, parsed_data[:,5], label='Voltage (V)')
+	plt.plot(times, parsed_data[:,6], label='Current (mA)')
+	plt.xlabel('Time (steps)')
+	plt.ylabel('Voltage (V)')
+	plt.title('Power Data')
+	plt.grid(True)
+	plt.savefig('plots/power.png')
 	plt.show()
+
+
