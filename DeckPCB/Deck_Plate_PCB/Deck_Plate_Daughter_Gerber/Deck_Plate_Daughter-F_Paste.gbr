@@ -1,0 +1,21 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,(5.1.5)-3*
+G04 #@! TF.CreationDate,2020-04-14T00:16:00-04:00*
+G04 #@! TF.ProjectId,Deck_Plate_Daughter,4465636b-5f50-46c6-9174-655f44617567,rev?*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Paste,Top*
+G04 #@! TF.FilePolarity,Positive*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (5.1.5)-3) date 2020-04-14 00:16:00*
+%MOMM*%
+%LPD*%
+G04 APERTURE LIST*
+%ADD10R,1.500000X0.400000*%
+G04 APERTURE END LIST*
+D10*
+X119620000Y-75030000D03*
+X119620000Y-76330000D03*
+X116960000Y-76330000D03*
+X116960000Y-75680000D03*
+X116960000Y-75030000D03*
+M02*

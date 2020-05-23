@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name SunnyBuddy-v13)(type KiCad)(uri "$(KIPRJMOD)/SunnyBuddy-v13.pretty")(options "")(descr ""))
-)

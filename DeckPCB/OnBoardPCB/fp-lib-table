@@ -1,5 +1,0 @@
-(fp_lib_table
-  (lib (name digikey-footprints)(type KiCad)(uri C:/Users/kathr/Desktop/RockSatX/digikey-kicad-library-master/digikey-kicad-library-master/digikey-footprints.pretty)(options "")(descr ""))
-  (lib (name footprints)(type KiCad)(uri C:/Users/kathr/Desktop/RockSatX/ul_LM20CIM7XNOPB/footprints.pretty)(options "")(descr ""))
-  (lib (name AdafruitParts)(type KiCad)(uri ${KIPRJMOD}/AdafruitParts.pretty)(options "")(descr ""))
-)

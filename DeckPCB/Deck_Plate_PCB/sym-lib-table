@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name INA219_Breakout)(type Legacy)(uri ${KIPRJMOD}/INA219_Breakout.lib)(options "")(descr ""))
+  (lib (name Deck_Plate_PCB)(type Legacy)(uri ${KIPRJMOD}/Deck_Plate_PCB.lib)(options "")(descr ""))
+)

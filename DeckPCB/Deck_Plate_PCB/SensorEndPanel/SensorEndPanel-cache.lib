@@ -1,0 +1,120 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Conn_01x03_Male
+#
+DEF Connector_Conn_01x03_Male J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Conn_01x03_Male" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+S 34 105 0 95 1 1 6 F
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+P 2 1 1 6 50 100 34 100 N
+X Pin_1 1 200 100 150 L 50 50 1 1 P
+X Pin_2 2 200 0 150 L 50 50 1 1 P
+X Pin_3 3 200 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Deck_Plate_PCB_LM20
+#
+DEF Deck_Plate_PCB_LM20 U 0 40 Y Y 1 F N
+F0 "U" 850 100 50 H V C CNN
+F1 "Deck_Plate_PCB_LM20" 750 800 50 H V C CNN
+F2 "" 100 200 50 H I C CNN
+F3 "" 100 200 50 H I C CNN
+DRAW
+S 650 750 900 150 0 1 0 f
+X NC 1 550 650 100 R 50 50 1 1 N
+X GND 2 550 550 100 R 50 50 1 1 P
+X Vout 3 550 450 100 R 50 50 1 1 O
+X Vin 4 550 350 100 R 50 50 1 1 W
+X GND 5 550 250 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Deck_Plate_PCB_PiCam
+#
+DEF Deck_Plate_PCB_PiCam U 0 40 Y Y 1 F N
+F0 "U" 400 -50 50 H V C CNN
+F1 "Deck_Plate_PCB_PiCam" 100 350 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 200 150 50 0 0 0 Camera Normal 0 C C
+S 0 0 450 300 0 1 0 f
+ENDDRAW
+ENDDEF
+#
+# Device_C
+#
+DEF Device_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R
+#
+DEF Device_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Mechanical_MountingHole
+#
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+#End Library
